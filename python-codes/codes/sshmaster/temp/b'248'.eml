@@ -1,0 +1,345 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:aed:24d9:0:0:0:0:0 with SMTP id u25csp366333qtc;
+        Fri, 3 May 2019 02:38:04 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwTQbmDeQwGupfSw72c1f5TYyGH9xwOAAJIF8pCILTFFuCq1nRYQArZMn1SL2IJ6EnOI7Xx
+X-Received: by 2002:ac8:222f:: with SMTP id o44mr7612730qto.198.1556876284565;
+        Fri, 03 May 2019 02:38:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1556876284; cv=none;
+        d=google.com; s=arc-20160816;
+        b=aKd20MTcnDDQq3l/FO4OEMgMw4URKmGkTyl8jX1dJ2hQSDEj/cK8RBBvxv1dSIckpK
+         TJCJsE66Q4H9tEKCCAjaLd7Szi77qNHitpJqxyn/uB6KckBxJmTE7kcw73OX0JqL5N2s
+         wun8dVXJq1TI6tz3xnGRR5WJdm6spZYPGP/Qzr5OX3mP4LOqO1lIh75FCFXPJTmr9U3x
+         Z/0b2YgiLR1TM+x7PnadqaNOvqv1BvfrzFPxa0qyCXGtV3rD7Qiw9Z2BfNB0pHIFv93v
+         wRfWhy12BsK/jIEhlzc0kscVm9zv/RVDFgOo2cp5rM/pGT8MEcOziM5eFS7gruc0U1SU
+         a8AA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:message-id:feedback-id:list-unsubscribe:errors-to
+         :reply-to:from:subject:to:date:dkim-signature;
+        bh=n5i0li98irN0HGO7xYYBQPV8QJ+FMOzQW6ZTiO2soig=;
+        b=0qWQscLnVGK2MU/CNhssNg/mtB4JBHStfNbrJZPGhafrnyMBREV59ZBGqGbnK7lKOO
+         ikI3Ol42YZsHt+Ytedm1fVT8mxrz2KRD7xHHZLW3OkhnWSJ2oFAYo2wokMiA0yGfCRzb
+         5R+9MgzCS4ROZQZo59TU34W+pQxDlyKQnsIDzWJ7UgkQifq4LU9bQGH0iPUQ5GJfhnw3
+         H0HRFY2e93MLb6whqlJ+skiMkvJ+/pbtRH5+4C+EV5ABKBQUeQL/z65Ol93b9kb9/B5G
+         Kaog+HPEgcAsI8dJs/vh8ltIgrYOXFjRV8rZvx0FrFZnm5dItVAs7ejasopEOTl4E9gk
+         y0eg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=m7TqcSHt;
+       spf=pass (google.com: domain of notification@facebookmail.com designates 69.171.232.135 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+Return-Path: <notification@facebookmail.com>
+Received: from mx-out.facebook.com (69-171-232-135.mail-mail.facebook.com. [69.171.232.135])
+        by mx.google.com with ESMTPS id 1si1103649qts.224.2019.05.03.02.38.04
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 03 May 2019 02:38:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of notification@facebookmail.com designates 69.171.232.135 as permitted sender) client-ip=69.171.232.135;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=m7TqcSHt;
+       spf=pass (google.com: domain of notification@facebookmail.com designates 69.171.232.135 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1556876283;
+	bh=n5i0li98irN0HGO7xYYBQPV8QJ+FMOzQW6ZTiO2soig=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=m7TqcSHtqJEYjs9R5Xgj8VJBpZKmYj3PiOTY/ruSxRQ/xuKHBmiLXByL9DyEr/t6P
+	 643C28UDPfJ86K6/m+PhZE27r5Y1/GFLw/abdZSGXkJvyOwHdnANG2AuRi4e81DZrN
+	 WXtg3tWbivFwuAAYKiMOYXzsmo2VRIPjSX9x6KpU=
+Received: from facebook.com (Wqp2NgBWrN37eHkjPaDZ43cZhb5LkcCi4gDo7YSJFTVYSpZCQDugLIBM9Dhev1Za 2401:db00:2040:913f:face:0000:0009:0000)
+ by facebook.com with Thrift id 260c85f46d8711e99cda000af7a9accc-b8f3a540;
+ Fri, 03 May 2019 02:38:03 -0700
+X-Facebook: from 2401:db00:2020:d04c:face:0:55:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Fri, 3 May 2019 02:38:03 -0700
+To: Geeta Diwaker <geetadiwaker81@gmail.com>
+Subject: Geeta, you have 1 friend request
+X-Priority: 3
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification@facebookmail.com
+From: "Facebook" <notification@facebookmail.com>
+Reply-to: noreply <noreply@facebookmail.com>
+Errors-To: notification@facebookmail.com
+X-Facebook-Notify: stale_notifications; mailid=587f8383273cdG5afb4cd6fe28G587f881c8769fG32b
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS0I7GrvFz4aA89E&u=100035372449320&mid=587f8383273cdG5afb4cd6fe28G587f881c8769fG32b>
+Feedback-ID: 0:stale_notifications:Facebook
+X-FACEBOOK-PRIORITY: 1
+X-Auto-Response-Suppress: All
+Message-ID: <9da3c6d5ad7d4fe88132cf13aeecf857@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_9da3c6d5ad7d4fe88132cf13aeecf857"
+
+
+--b1_9da3c6d5ad7d4fe88132cf13aeecf857
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Go to Facebook
+https://www.facebook.com/n/?aref=3D1556876282590879&medium=3Demail&mid=3D5=
+87f8383273cdG5afb4cd6fe28G587f881c8769fG32b&bcode=3D2.1556876283.Abxm1zqLO=
+iOmpD2ogHg&n_m=3Dgeetadiwaker81%40gmail.com&lloc=3D2nd_cta
+
+
+View Notifications
+https://www.facebook.com/n/?notifications%2F&aref=3D1556876282590879&mediu=
+m=3Demail&mid=3D587f8383273cdG5afb4cd6fe28G587f881c8769fG32b&bcode=3D2.155=
+6876283.Abxm1zqLOiOmpD2ogHg&n_m=3Dgeetadiwaker81%40gmail.com&lloc=3D1st_ct=
+a
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Hi Geeta,
+
+A lot has happened on Facebook since you last logged in. Here are some =
+notifications you've missed from your friends.
+
+"=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A01 friend request"
+
+Thanks,
+The Facebook Team
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to geetadiwaker81@gmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS0I7GrvFz4aA89E&u=3D100035372449320&mi=
+d=3D587f8383273cdG5afb4cd6fe28G587f881c8769fG32b
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+To help keep your account secure, please don't forward this email. Follow =
+the link below to learn more.
+https://www.facebook.com/email_forward_notice/?mid=3D587f8383273cdG5afb4cd=
+6fe28G587f881c8769fG32b
+
+
+--b1_9da3c6d5ad7d4fe88132cf13aeecf857
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional =
+//EN"><html><head><title>Facebook</title><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Dutf-8" /><style>@media all and (max-width: =
+480px){*[class].ib_t{min-width:100% =
+!important}*[class].ib_row{display:block =
+!important}*[class].ib_ext{display:block !important;padding:10px 0 5px =
+0;vertical-align:top !important;width:100% =
+!important}*[class].ib_img,*[class].ib_mid{vertical-align:top =
+!important}*[class].mb_blk{display:block =
+!important;padding-bottom:10px;width:100% =
+!important}*[class].mb_hide{display:none =
+!important}*[class].mb_inl{display:inline =
+!important}*[class].d_mb_flex{display:block !important}}.d_mb_show{display=
+:none}.d_mb_show_center{display:table;margin:auto}.d_mb_flex{display:flex}=
+@media only screen and (max-device-width: 480px){.d_mb_hide{display:none =
+!important}.d_mb_show{display:block !important}.d_mb_flex{display:block =
+!important}}.mb_text h1,.mb_text h2,.mb_text h3,.mb_text h4,.mb_text =
+h5,.mb_text h6{line-height:normal}.mb_work_text =
+h1{font-size:18px;line-height:normal;margin-top:4px}.mb_work_text =
+h2,.mb_work_text =
+h3{font-size:16px;line-height:normal;margin-top:4px}.mb_work_text =
+h4,.mb_work_text h5,.mb_work_text =
+h6{font-size:14px;line-height:normal}.mb_work_text =
+a{color:#1270e9}.mb_work_text p{margin-top:4px}</style></head><body =
+style=3D"margin:0;padding:0;" dir=3D"ltr" bgcolor=3D"#ffffff"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" =
+id=3D"email_table" style=3D"border-collapse:collapse;"><tr><td =
+id=3D"email_content" style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;background:#ffffff;"><table =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr style=3D""><td height=3D"20" =
+style=3D"line-height:20px;" colspan=3D"3">&nbsp;</td></tr><tr><td =
+height=3D"1" colspan=3D"3" style=3D"line-height:1px;"><span =
+style=3D"color:#FFFFFF;font-size:1px;">=C2=A0 A lot has happened on =
+Facebook since you last logged in. Here are some notifications you&#039;ve =
+missed from your friends. =C2=A0 =C2=A0=C2=A0=C2=A0 Geeta Diwaker =C2=A0 =
+=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 1 friend request =C2=A0 =
+=C2=A0</span></td></tr><tr><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"15" style=3D"line-height:15px;" =
+colspan=3D"3">&nbsp;</td></tr><tr><td width=3D"32" align=3D"left" =
+valign=3D"middle" style=3D"height:32;line-height:0px;"><a =
+href=3D"https://www.facebook.com/n/?notifications%2F&amp;aref=3D1556876282=
+590879&amp;medium=3Demail&amp;mid=3D587f8383273cdG5afb4cd6fe28G587f881c876=
+9fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=3Dgeetadiwaker=
+81%40gmail.com&amp;lloc=3Dlogo" =
+style=3D"color:#3b5998;text-decoration:none;"><img =
+src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/nblMrq1jYuK.png" =
+width=3D"32" height=3D"32" style=3D"border:0;" /></a></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+width=3D"100%" style=3D""><a href=3D"https://www.facebook.com/n/?notificat=
+ions%2F&amp;aref=3D1556876282590879&amp;medium=3Demail&amp;mid=3D587f83832=
+73cdG5afb4cd6fe28G587f881c8769fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmp=
+D2ogHg&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dlogo" =
+style=3D"color:#3b5998;text-decoration:none;font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:19p=
+x;line-height:32px;">You have new notifications.</a></td></tr><tr =
+style=3D"border-bottom:solid 1px #e5e5e5;"><td height=3D"15" =
+style=3D"line-height:15px;" colspan=3D"3">&nbsp;</td></tr></table></td><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td =
+style=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16p=
+x;line-height:21px;color:#141823;">A lot has happened on Facebook since =
+you last logged in. Here are some notifications you&#039;ve missed from =
+your friends.</span></td></tr><tr style=3D""><td height=3D"28" =
+style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D""><table =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;font-f=
+amily:LucidaGrande,tahoma,verdana,arial,sans-serif;border:solid 1px =
+#DDDFE2;border-radius:3px;padding:16px 16px 6px =
+16px;display:block;background:#FFFFFF;box-shadow:0px 2px 6px 0px =
+#DDDFE2;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D""><a =
+href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2F&amp;aref=3D1=
+556876282590879&amp;medium=3Demail&amp;mid=3D587f8383273cdG5afb4cd6fe28G58=
+7f881c8769fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=3Dgee=
+tadiwaker81%40gmail.com&amp;lloc=3Dprofile_pic" =
+style=3D"color:#3b5998;text-decoration:none;"><img src=3D"https://scontent=
+.xx.fbcdn.net/v/t1.0-1/c25.0.100.100a/p100x100/57096948_109238260265255_49=
+05226408676032512_n.jpg?_nc_cat=3D108&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp=
+;_nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D1052988d104b754fe0e2c353bfb=
+c96a1&amp;oe=3D5D3520DD" width=3D"50" height=3D"50" style=3D"border:0;" =
+/></a></td><td width=3D"10" =
+style=3D"display:block;width:10px;">&nbsp;&nbsp;&nbsp;</td><td =
+width=3D"100%" style=3D""><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D""><a href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2=
+F&amp;aref=3D1556876282590879&amp;medium=3Demail&amp;mid=3D587f8383273cdG5=
+afb4cd6fe28G587f881c8769fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmpD2ogHg=
+&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dprofile_pic" =
+style=3D"color:#141823;text-decoration:none;font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16p=
+x;line-height:21px;font-weight:bold;">Geeta =
+Diwaker</a></td></tr></table></td></tr><tr style=3D""><td height=3D"10" =
+style=3D"line-height:10px;">&nbsp;</td></tr><tr><td colspan=3D"3" =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center" style=3D"border-collapse:collapse;"><tr =
+style=3D"border-top:solid 1px #e5e5e5;"><td height=3D"15" =
+style=3D"line-height:15px;">&nbsp;</td></tr><tr><td width=3D"34" =
+style=3D"display:block;width:34px;">&nbsp;&nbsp;&nbsp;</td><td =
+valign=3D"middle" style=3D""><a href=3D"https://www.facebook.com/n/?findfr=
+iends%2Fbrowser%2F&amp;aref=3D1556876282590879&amp;medium=3Demail&amp;mid=
+=3D587f8383273cdG5afb4cd6fe28G587f881c8769fG32b&amp;bcode=3D2.1556876283.A=
+bxm1zqLOiOmpD2ogHg&amp;n_m=3Dgeetadiwaker81%40gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;"><img =
+src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/ea9nkGTNEnq.gif" =
+style=3D"border:0;" /></a></td><td width=3D"10" =
+style=3D"display:block;width:10px;">&nbsp;&nbsp;&nbsp;</td><td =
+width=3D"100%" valign=3D"middle" style=3D""><span class=3D"mb_text" =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:16px;line-height:21px;color:#141823;"><a =
+href=3D"https://www.facebook.com/n/?findfriends%2Fbrowser%2F&amp;aref=3D15=
+56876282590879&amp;medium=3Demail&amp;mid=3D587f8383273cdG5afb4cd6fe28G587=
+f881c8769fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=3Dgeet=
+adiwaker81%40gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;"><b>1</b> friend =
+request</a></span></td></tr><tr style=3D""><td height=3D"3" =
+style=3D"line-height:3px;">&nbsp;</td></tr></table></td></tr></table></td>=
+</tr></table></td></tr><tr style=3D""><td height=3D"28" =
+style=3D"line-height:28px;">&nbsp;</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"2" style=3D"line-height:2px;" =
+colspan=3D"3">&nbsp;</td></tr><tr><td class=3D"mb_blk" style=3D""><a =
+href=3D"https://www.facebook.com/n/?aref=3D1556876282590879&amp;medium=3De=
+mail&amp;mid=3D587f8383273cdG5afb4cd6fe28G587f881c8769fG32b&amp;bcode=3D2.=
+1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;ll=
+oc=3D2nd_cta" style=3D"color:#3b5998;text-decoration:none;"><table =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-collapse:colla=
+pse;border-radius:2px;text-align:center;display:block;border:solid 1px =
+#c9ccd1;box-shadow:0 1px 0 rgba(0, 0, 0, =
+0.04);background:#f6f7f8;padding:7px 16px 11px 16px;"><a =
+href=3D"https://www.facebook.com/n/?aref=3D1556876282590879&amp;medium=3De=
+mail&amp;mid=3D587f8383273cdG5afb4cd6fe28G587f881c8769fG32b&amp;bcode=3D2.=
+1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;ll=
+oc=3D2nd_cta" =
+style=3D"color:#3b5998;text-decoration:none;display:block;"><center><font =
+size=3D"3"><span style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;white-space:nowrap;font-weight:bold=
+;vertical-align:middle;color:#525252;text-shadow:0 1px 0 =
+#ffffff;font-size:14px;line-height:14px;">Go&nbsp;to&nbsp;Facebook</span><=
+/font></center></a></td></tr></table></a></td><td width=3D"10" =
+style=3D"display:block;width:10px;" =
+class=3D"mb_hide">&nbsp;&nbsp;&nbsp;</td><td class=3D"mb_blk" =
+style=3D""><a href=3D"https://www.facebook.com/n/?notifications%2F&amp;are=
+f=3D1556876282590879&amp;medium=3Demail&amp;mid=3D587f8383273cdG5afb4cd6fe=
+28G587f881c8769fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=
+=3Dgeetadiwaker81%40gmail.com&amp;lloc=3D1st_cta" =
+style=3D"color:#3b5998;text-decoration:none;"><table border=3D"0" =
+width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-collapse:colla=
+pse;border-radius:2px;text-align:center;display:block;border:solid 1px =
+#344c80;box-shadow:inset 0 1px 1px rgba(255, 255, 255, 0.1),0 1px 0 =
+rgba(0, 0, 0, 0.1);background:#4c649b;padding:7px 16px 11px 16px;"><a =
+href=3D"https://www.facebook.com/n/?notifications%2F&amp;aref=3D1556876282=
+590879&amp;medium=3Demail&amp;mid=3D587f8383273cdG5afb4cd6fe28G587f881c876=
+9fG32b&amp;bcode=3D2.1556876283.Abxm1zqLOiOmpD2ogHg&amp;n_m=3Dgeetadiwaker=
+81%40gmail.com&amp;lloc=3D1st_cta" =
+style=3D"color:#3b5998;text-decoration:none;display:block;"><center><font =
+size=3D"3"><span style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;white-space:nowrap;font-weight:bold=
+;vertical-align:middle;color:#ffffff;text-shadow:0 -1px 0 =
+#415686;font-size:14px;line-height:14px;">View&nbsp;Notifications</span></=
+font></center></a></td></tr></table></a></td><td width=3D"100%" =
+class=3D"mb_hide" style=3D""></td></tr><tr style=3D""><td height=3D"32" =
+style=3D"line-height:32px;" colspan=3D"3">&nbsp;</td></tr></table></td><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"left" style=3D"border-collapse:collapse;"><tr =
+style=3D"border-top:solid 1px #e5e5e5;"><td height=3D"19" =
+style=3D"line-height:19px;">&nbsp;</td></tr><tr><td =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">This =
+message was sent to <a href=3D"mailto:geetadiwaker81&#064;gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;">geetadiwaker81&#064;gmail.co=
+m</a>. If you don&#039;t want to receive these emails from Facebook in the =
+future, please <a href=3D"https://www.facebook.com/o.php?k=3DAS0I7GrvFz4aA=
+89E&amp;u=3D100035372449320&amp;mid=3D587f8383273cdG5afb4cd6fe28G587f881c8=
+769fG32b" =
+style=3D"color:#3b5998;text-decoration:none;">unsubscribe</a>.<br =
+/>Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo =
+Park, CA 94025</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;"><span =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">To help =
+keep your account secure, please don&#039;t forward this email. <a =
+href=3D"https://www.facebook.com/email_forward_notice/?mid=3D587f8383273cd=
+G5afb4cd6fe28G587f881c8769fG32b" =
+style=3D"color:#3b5998;text-decoration:none;">Learn =
+more.</a></span></td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr =
+style=3D""><td height=3D"20" style=3D"line-height:20px;" =
+colspan=3D"3">&nbsp;</td></tr></table><span style=3D""><img =
+src=3D"https://www.facebook.com/email_open_log_pic.php?mid=3D587f8383273cd=
+G5afb4cd6fe28G587f881c8769fG32b" style=3D"border:0;width:1px;height:1px;" =
+/></span></td></tr></table></body></html>
+
+
+
+--b1_9da3c6d5ad7d4fe88132cf13aeecf857--
+

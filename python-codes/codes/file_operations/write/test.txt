@@ -1,0 +1,7 @@
+
+
+Java
+A suite of computer software products and specifications from Sun Microsystems 
+for developing apps that can run on many different types of computers.
+
+     

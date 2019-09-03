@@ -1,0 +1,131 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:ac8:26af:0:0:0:0:0 with SMTP id 44csp1006948qto;
+        Fri, 21 Jun 2019 12:56:29 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqxDOuN1xnTbP626zfHJieJ/CUDEm736Jmbu3pC8ceb9NYXjo4DYTkKRZTpQContx2CFn6Jf
+X-Received: by 2002:a17:902:9a91:: with SMTP id w17mr36603513plp.126.1561146988947;
+        Fri, 21 Jun 2019 12:56:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1561146988; cv=none;
+        d=google.com; s=arc-20160816;
+        b=F/y/yt7sdKt1jXuNpwfkpTPvx5woTwT42XtQu2R9PeitMp/ncHsXOMXiuGbef/N5G2
+         SIRGa+nta8zFw2LkUw22uS32q0zzYiGQhVsxrP14lrsnOTnv9mQASg3ezMPm37oGu0/d
+         W0e0r++s5rX2KaoIS+YusQxV8DbookX0COtUFoFpxnvj3tHbmmpELHr1FYQh/1w2npID
+         tO8SGUGpFbt1RBIZ6eqBWAQtLuCBUbwE/wvBWXuLhxmz27A6YGo44E7zp4zM+G7qhn7p
+         iZw3F15XOQdL5UWp5RGtMSYIt/yqCIUXdC8l0pMbTxg2hGhJ+v2/cRaBFbUxVmdvo/xV
+         Zqhg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:content-transfer-encoding:subject:date:to:from:sender
+         :mime-version:dkim-signature;
+        bh=XRTfWNz8utu0RLDWfmzpHbmQOcsdAIf0/R5VsjweWMI=;
+        b=ZQbPsMsidyNFdF/T4gBdPQTp+BlRxTTMhmlL/F43ng7znE1G7fHnRiId/jO+iyXmiu
+         L05WYA46lJlSGx45RWsEDwu6qn9YjQ8ZOdGm8ujjk0AN6d8kyr55Y1MCVrqsg7mEgaCI
+         4jHPL8q+JzB/eF+94xJXuT9HCi97OyqpU2MxyMrM6Qo3N8YeCGeAckXr6/Lj3IVvi/Pb
+         YlS221kA3lDgZTyEEY9wBr4UXaJI99aaec/+QF53HTF+XYekok5cxvGXKpKH84kjOr77
+         f63OOLtNLOKUThFonEYVZ3R55vS2j7iXQGq6QTNZixo/05bp/JjZ0eVbBzAi9VgnN3k0
+         1VHg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@akbartravels.com header.s=email header.b=Af2HSbNp;
+       spf=pass (google.com: domain of info@akbartravels.com designates 121.243.95.146 as permitted sender) smtp.mailfrom=info@akbartravels.com
+Return-Path: <info@akbartravels.com>
+Received: from mx.akbartravelsonline.com (mx.akbartravelsonline.com. [121.243.95.146])
+        by mx.google.com with ESMTPS id o1si3509899plb.337.2019.06.21.12.56.28
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 21 Jun 2019 12:56:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of info@akbartravels.com designates 121.243.95.146 as permitted sender) client-ip=121.243.95.146;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@akbartravels.com header.s=email header.b=Af2HSbNp;
+       spf=pass (google.com: domain of info@akbartravels.com designates 121.243.95.146 as permitted sender) smtp.mailfrom=info@akbartravels.com
+DKIM-Signature: a=rsa-sha256; t=1561146986; x=1561751786; s=email; d=akbartravels.com; c=relaxed/relaxed; v=1; bh=XRTfWNz8utu0RLDWfmzpHbmQOcsdAIf0/R5VsjweWMI=; h=From:Sender:Subject:Date:Message-ID:To:MIME-Version:Content-Type:Content-Transfer-Encoding;
+   b=Af2HSbNplKvlDsy0OQODKDY6qj1PJZtLulxVDChE7Yy5PQrT6HwuQS8kRKoBQKqYCyTIcd0z4NXE04r8Y+tLTzTb1MhbjV2fWozyNEPRlhKB1JF1zNk8+vmgMDPNY+6VbNrcnelqWtnj3J7Oy7b087cN7V7USy55GcZqkL0y3l8=
+Received: from B2CFrontend1 ([52.74.208.123])
+        by mx.akbartravelsonline.com (IceWarp 11.4.6.0 RHEL7 x64) with ASMTP id 201906220126265398
+        for <geetadiwaker81@gmail.com>; Sat, 22 Jun 2019 01:26:26 +0530
+MIME-Version: 1.0
+Sender: info@akbartravels.com
+From: info@akbartravels.com
+To: geetadiwaker81@gmail.com
+Date: 22 Jun 2019 01:26:26 +0530
+Subject: Akbar Travels Password
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <fc3d9cfe11f40dfee956327682c52001@akbartravels.com>
+
+=0D=0A=0D=0A<!DOCTYPE html>=0D=0A<html>=0D=0A<head>=0D=0A    <tit=
+le>Untitled Document</title>=0D=0A    <meta http-equiv=3D"Content=
+-Type" content=3D"text/html; charset=3Diso-8859-1" />=0D=0A</head=
+>=0D=0A<body>=0D=0A    <table width=3D"607" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" style=3D"background-color:#960606; pa=
+dding:3px;">=0D=0A  <tr style=3D"line-height:-1px;">=0D=0A    <td=
+><table width=3D"601" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"background-color:#FFF;">=0D=0A        <tr style=3D"l=
+ine-height:-1px;">=0D=0A          <td height=3D"30" valign=3D"top=
+" style=3D"font-family:Arial, Helvetica, sans-serif; color:#47474=
+7; font-size:12px; text-align:center"><strong>Note:</strong> This=
+ is a system generated message. We request you not to reply to th=
+is message.</td>=0D=0A        </tr>=0D=0A        <tr style=3D"lin=
+e-height:-1px;">=0D=0A          <td><table width=3D"591" border=3D=
+"0" cellspacing=3D"0" cellpadding=3D"0">=0D=0A              <tr s=
+tyle=3D"line-height:-1px;">=0D=0A                <td width=3D"315=
+"><img src=3D"http://www.akbartravels.com/content/images/ak/v1.0/=
+Common/e-ticket-logo.png" width=3D"280" height=3D"40" alt=3D"Akba=
+rtravels Logo" /></td>=0D=0A                <td width=3D"286" val=
+ign=3D"middle"><table width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0">=0D=0A                    <tr style=3D"line-=
+height:-1px;">=0D=0A                      <td style=3D"font-famil=
+y:Arial, Helvetica, sans-serif; color:#960606; font-size:12px; fo=
+nt-weight:bold; text-align:right; line-height:18px;">+91 22 40666=
+444 (All Networks)</td>=0D=0A                      </tr>=0D=0A   =
+                 <tr style=3D"line-height:-1px;">=0D=0A          =
+            <td style=3D"font-family:Arial, Helvetica, sans-serif=
+; color:#960606; font-size:12px; font-weight:bold; text-align:rig=
+ht; line-height:18px;"><a href=3D"mailto:mysupport@akbartravels.c=
+om" style=3D"color:#960606">mysupport@akbartravels.com</a></td>=0D=0A=
+                      </tr>=0D=0A                  </table></td>=0D=0A=
+              </tr>=0D=0A            </table></td>=0D=0A        <=
+/tr>=0D=0A         <tr style=3D"line-height:-1px;">=0D=0A        =
+  <td style=3D"padding-bottom:10px; padding-top:10px;"><table wid=
+th=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0D=0A=
+              <tr style=3D"line-height:-1px;">=0D=0A             =
+   <td style=3D"border-top:1px solid #c9c8c8; border-bottom:1px s=
+olid #c9c8c8; background-color:#e5e5e5; font-family:Arial, Helvet=
+ica, sans-serif; font-size:15px; font-weight:bold; text-align:lef=
+t; line-height:30px; padding-left:5px; color:#525252;">Forgot Pas=
+sword</td>=0D=0A              </tr>=0D=0A            </table></td=
+>=0D=0A        </tr>=0D=0A        <tr style=3D"line-height:-1px;"=
+>=0D=0A          <td><table width=3D"596" border=3D"0" align=3D"r=
+ight" cellpadding=3D"0" cellspacing=3D"0">=0D=0A              <tr=
+ style=3D"line-height:-1px;">=0D=0A                <td style=3D"f=
+ont-family:Arial, Helvetica, sans-serif; color:#474747; text-alig=
+n:left; line-height:25px; font-size:12px;"> Dear  ,<br />=0D=0A  =
+               Your request to reset your password has been recei=
+ved. Kindly use the below credentials to log in to your Akbar Tra=
+vels account<br /></td>=0D=0A              </tr>=0D=0A           =
+   <tr style=3D"line-height:-1px;">=0D=0A              <td style=3D=
+"font-family:Arial, Helvetica, sans-serif; color:#474747; text-al=
+ign:left; line-height:25px; font-size:12px;"><a href=3D"http://ww=
+w.akbartravels.com" style=3D"font-family:Arial, Helvetica, sans-s=
+erif; color:#474747; text-align:left; line-height:25px; font-size=
+:12px; color:#960606;">http://www.akbartravels.com</a></td>=0D=0A=
+              </tr>=0D=0A              <tr style=3D"line-height:-=
+1px;">=0D=0A                <td style=3D"font-family:Arial, Helve=
+tica, sans-serif; color:#960606; text-align:left; line-height:25p=
+x; font-size:13px; padding-top:10px;"><strong>User name :</strong=
+>geetadiwaker81@gmail.com</td>=0D=0A              </tr>=0D=0A    =
+          <tr style=3D"line-height:-1px;">=0D=0A                <=
+td style=3D"font-family:Arial, Helvetica, sans-serif; color:#9606=
+06; text-align:left; line-height:25px; font-size:13px;"><strong>P=
+assword :</strong>454JXG8Y</td>=0D=0A              </tr>=0D=0A   =
+           <tr style=3D"line-height:-1px;">=0D=0A                =
+<td style=3D"font-family:Arial, Helvetica, sans-serif; color:#474=
+747; text-align:left; line-height:25px; font-size:12px; padding-t=
+op:10px; padding-bottom:10px;">Once you successfully log in for t=
+he first time, we recommend that you change your password immedia=
+tely.</td>=0D=0A              </tr>=0D=0A              <tr style=3D=
+"line-height:-1px;">=0D=0A                <td style=3D"font-famil=
+y:Arial, Helvetica, sans-serif; color:#474747; text-align:left; f=
+ont-size:12px; padding-bottom:10px;">Thanks, <br />=0D=0A        =
+          Team Akbar Travels</td>=0D=0A              </tr>=0D=0A =
+             </table></td>=0D=0A        </tr>=0D=0A      </table>=
+</td>=0D=0A  </tr>=0D=0A</table>=0D=0A</body>=0D=0A</html>=0D=0A=0D=0A=
+=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A    =20
+

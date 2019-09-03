@@ -1,0 +1,998 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:ac8:26af:0:0:0:0:0 with SMTP id 44csp1020201qto;
+        Fri, 21 Jun 2019 13:10:06 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqyq0wDPAoTLodDGSzL1bi27vB1F6LdzoBrLrgeqrBQxg0iUTH4TuxXwbBMmADplwb4hwouR
+X-Received: by 2002:a6b:1488:: with SMTP id 130mr7268089iou.304.1561147806680;
+        Fri, 21 Jun 2019 13:10:06 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1561147806; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AzJ5AOHxKshX4t74d8A48/XDTMXrd/YyJBA+qxEFNEi83/BRwpRIYk2FlQlD0xbj2K
+         dzfgX/PxEeJr10OY5KKu5d+MAEYQ33heGAuRUlHY9HXVHQGdSPgDLJll2XPYepyo1wXb
+         GfquqNK7fMhj40a6xSd8Bn9NhdpEJw4gQBbOgZxnvl9g41Ejhy9fx+KCNV/V55PF+cxX
+         l8YVVFS79/nGazdRbU7YpCDkDgPLxNnlOKud/TBtrHnCNt3yJF5WRNscAM54UlEdkQph
+         Cvik5aFIlv5KWv99WFhSLO6ZGOgfmv8nuxXLGDSC36n4rvpLKcqdvL10RX0Vc1KGBlt4
+         Yi8A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:subject:date:to:from:mime-version
+         :message-id:feedback-id:dkim-signature:dkim-signature;
+        bh=2YHiqmAn4GUBe/ekctYXT+WLleUvHVVq//zW4j4+5kA=;
+        b=ylmG+MoyhBQxntrWq4Zog0Ap0df597EREYDfK9hRoYtYBassKmp2FzqY1hso+iug7x
+         gINowZ/NzzSrY1ULC7/pBQ5KgHdXZXuLnhFzQH1wOlKwrxtgPAEkR1wYe8UjvDscii3N
+         Qh2Xe7kzERTtwwdWwVWnQcE5aBWdtjNzkz24jp4uZqeUzR3DTBKYOWgri/RKjiPaFiyP
+         sa+YJMDq6LbdM+hzy4+TkNuU4czQ5xmjsR1kzJF6ajvqulu2RZHj0p1szkzl1aNULFjI
+         lwyFHX4aIIr898xwYiT5UEfxlorphPc+4FzX6EU+ERP7AiAGeAQLIvxFu2BdU32Eb6sV
+         FkXQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mails-akbartravels.com header.s=20180322082017pm header.b=ct65eTiV;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm header.b=Bv4OfEkW;
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.mails-akbartravels.com designates 104.245.209.213 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.mails-akbartravels.com
+Return-Path: <pm_bounces@pm-bounces.mails-akbartravels.com>
+Received: from mta213a-ord.mtasv.net (mta213a-ord.mtasv.net. [104.245.209.213])
+        by mx.google.com with ESMTPS id v3si3996673iot.133.2019.06.21.13.10.06
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 21 Jun 2019 13:10:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pm_bounces@pm-bounces.mails-akbartravels.com designates 104.245.209.213 as permitted sender) client-ip=104.245.209.213;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mails-akbartravels.com header.s=20180322082017pm header.b=ct65eTiV;
+       dkim=pass header.i=@pm.mtasv.net header.s=pm header.b=Bv4OfEkW;
+       spf=pass (google.com: domain of pm_bounces@pm-bounces.mails-akbartravels.com designates 104.245.209.213 as permitted sender) smtp.mailfrom=pm_bounces@pm-bounces.mails-akbartravels.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=20180322082017pm; d=mails-akbartravels.com;
+ h=Feedback-ID:Message-ID:MIME-Version:From:To:Date:Subject:Content-Type:Content-Transfer-Encoding; i=notifications@mails-akbartravels.com;
+ bh=gHgSrU+zCjcT3vTzCidKOutlftw=;
+ b=ct65eTiVeyiNQhod4qz8lvOMymrFqDBICOp4UOWik9BxZOj30W2ekBIxUg/g6iIxFE/68Mhs7NOQ
+   DZlztBVALv5LCcxn0Trgd9YH6dRnMLcUV6pp77wM/FBBcbzkRePWJBJZnrhho5UGs3VR9PLjES8t
+   ioSmgbKndyspZr5gOaM=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=pm; d=pm.mtasv.net;
+ h=Feedback-ID:Message-ID:MIME-Version:From:To:Date:Subject:Content-Type:Content-Transfer-Encoding;
+ bh=gHgSrU+zCjcT3vTzCidKOutlftw=;
+ b=Bv4OfEkWx/f2ywDrzoQ+DHQ+oJ4GMoRJ7Vf1GXUN+Av0Ywqb8SnNhc5SLM2VFQXQVOFuQU6CbN3/
+   fV+X3w4SIEh276VByJ4aCYs6UNvMbps+4FY08BDYvVNl6yozhoMtXs+E/spP1+ARVOBo667jfQ+N
+   znadm4bykBlIHiDSCgc=
+Received: by mta213a-ord.mtasv.net id h1ksps1jk5ka for <geetadiwaker81@gmail.com>; Fri, 21 Jun 2019 16:10:05 -0400 (envelope-from <pm_bounces@pm-bounces.mails-akbartravels.com>)
+X-PM-IP: 104.245.209.213
+X-IADB-IP: 104.245.209.213
+X-IADB-IP-REVERSE: 213.209.245.104
+Feedback-ID: s3655790-Z2VldGFkaXdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw=:s3655790:a153504:postmark
+X-Complaints-To: abuse@postmarkapp.com
+X-PM-Message-Id: d8af28f2-ee81-4229-a32a-bc5a7ffe3099
+X-PM-Tag: geetadiwaker81@gmail.com|1499681408|1551699600|20190622|0|wzrk_default|-4052844|
+X-PM-RCPT: |bTB8MTUzNTA0fDM2NTU3OTB8Z2VldGFkaXdha2VyODFAZ21haWwuY29t|
+Message-ID: <d8af28f2-ee81-4229-a32a-bc5a7ffe3099@mtasv.net>
+MIME-Version: 1.0
+From: "akbartravels.com" <notifications@mails-akbartravels.com>
+To: geetadiwaker81@gmail.com
+Date: 21 Jun 2019 16:10:04 -0400
+Subject: =?utf-8?Q?Hey_Friend=2C_your_New_Delhi?=
+ =?utf-8?Q?=C2=A0flight_is_waiting_=E2=9C=88?=
+ =?utf-8?Q?=EF=B8=8F?=
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0A<html style=3D"width:100%;font-family:lato, 'he=
+lvetica neue', helvetica, arial, sans-serif;-webkit-text-size-adj=
+ust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;">=0A<head>=
+<meta charset=3D"UTF-8"><meta content=3D"width=3Ddevice-width, in=
+itial-scale=3D1" name=3D"viewport"><meta name=3D"x-apple-disable-=
+message-reformatting"><meta http-equiv=3D"X-UA-Compatible" conten=
+t=3D"IE=3Dedge"><meta content=3D"telephone=3Dno" name=3D"format-d=
+etection">=0A	<title></title>=0A	<!--[if (mso 16)]>=0A    <style =
+type=3D"text/css">=0A    a {text-decoration: none;}=0A    </style=
+>=0A    <![endif]--><!--[if gte mso 9]><style>sup { font-size: 10=
+0% !important; }</style><![endif]--><!--[if !mso]><!-- -->=0A	<li=
+nk href=3D"https://fonts.googleapis.com/css?family=3DLato:400,400=
+i,700,700i" rel=3D"stylesheet" /><!--<![endif]-->=0A	<style type=3D=
+"text/css">@media only screen and (max-width:600px) {p, ul li, ol=
+ li, a { font-size:12px!important } h1 { font-size:18px!important=
+; text-align:center } h2 { font-size:16px!important; text-align:c=
+enter } h3 { font-size:14px!important; text-align:center } h1 a {=
+ font-size:18px!important } h2 a { font-size:16px!important } h3 =
+a { font-size:14px!important } .es-menu td a { font-size:12px!imp=
+ortant } .es-header-body p, .es-header-body ul li, .es-header-bod=
+y ol li, .es-header-body a { font-size:16px!important } .es-foote=
+r-body p, .es-footer-body ul li, .es-footer-body ol li, .es-foote=
+r-body a { font-size:10px!important } .es-infoblock p, .es-infobl=
+ock ul li, .es-infoblock ol li, .es-infoblock a { font-size:10px!=
+important } *[class=3D"gmail-fix"] { display:none!important } .es=
+-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3 { text-a=
+lign:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r =
+h2, .es-m-txt-r h3 { text-align:right!important } .es-m-txt-l, .e=
+s-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { text-align:left!im=
+portant } .es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img { dis=
+play:inline!important } .es-button-border { display:inline-block!=
+important } .es-button { font-size:14px!important; display:inline=
+-block!important } .es-btn-fw { border-width:10px 0px!important; =
+text-align:center!important } .es-adaptive table, .es-btn-fw, .es=
+-btn-fw-brdr, .es-left, .es-right { width:100%!important } .es-co=
+ntent table, .es-header table, .es-footer table, .es-content, .es=
+-footer, .es-header { width:100%!important; max-width:600px!impor=
+tant } .es-adapt-td { display:block!important; width:100%!importa=
+nt } .adapt-img { width:100%!important; height:auto!important } .=
+es-m-p0 { padding:0px!important } .es-m-p0r { padding-right:0px!i=
+mportant } .es-m-p0l { padding-left:0px!important } .es-m-p0t { p=
+adding-top:0px!important } .es-m-p0b { padding-bottom:0!important=
+ } .es-m-p20b { padding-bottom:20px!important } .es-mobile-hidden=
+, .es-hidden { display:none!important } .es-desk-hidden { display=
+:table-row!important; width:auto!important; overflow:visible!impo=
+rtant; float:none!important; max-height:inherit!important; line-h=
+eight:inherit!important } .es-desk-menu-hidden { display:table-ce=
+ll!important } table.es-table-not-adapt, .esd-block-html table { =
+width:auto!important } table.es-social { display:inline-block!imp=
+ortant } table.es-social td { display:inline-block!important } }=0A=
+a {=0A	word-break:break-all;=0A	font-family:lato, 'helvetica neue=
+', helvetica, arial, sans-serif;=0A	font-size:14px;=0A	text-decor=
+ation:underline;=0A}=0A#outlook a {=0A	padding:0;=0A}=0A.External=
+Class {=0A	width:100%;=0A}=0A.ExternalClass,=0A.ExternalClass p,=0A=
+.ExternalClass span,=0A.ExternalClass font,=0A.ExternalClass td,=0A=
+.ExternalClass div {=0A	line-height:100%;=0A}=0A.es-button {=0A	m=
+so-style-priority:100!important;=0A	text-decoration:none!importan=
+t;=0A}=0Aa[x-apple-data-detectors] {=0A	color:inherit!important;=0A=
+	text-decoration:none!important;=0A	font-size:inherit!important;=0A=
+	font-family:inherit!important;=0A	font-weight:inherit!important;=
+=0A	line-height:inherit!important;=0A}=0A.es-desk-hidden {=0A    =
+display:none;=0A    float:left;=0A    overflow:hidden;=0A    widt=
+h:0;=0A    max-height:0;=0A    line-height:0;=0A    mso-hide:all;=
+=0A}=0A	</style>=0A</head>=0A<body style=3D"width:100%;font-famil=
+y:lato, 'helvetica neue', helvetica, arial, sans-serif;-webkit-te=
+xt-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;=
+">=0A<div class=3D"es-wrapper-color" style=3D"background-color:#F=
+5F6F7;"><!--[if gte mso 9]>=0A			<v:background xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" fill=3D"t">=0A				<v:fill type=3D"tile" c=
+olor=3D"#f5f6f7"></v:fill>=0A			</v:background>=0A		<![endif]-->=0A=
+<table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-wrapper" s=
+tyle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height=
+:100%;background-repeat:repeat;background-position:center top;" w=
+idth=3D"100%">=0A	<tbody>=0A		<tr style=3D"border-collapse:collap=
+se;">=0A			<td style=3D"padding:0;Margin:0;" valign=3D"top">=0A		=
+	<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"es-header" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;table-layout:fixed =
+!important;width:100%;background-color:transparent;background-rep=
+eat:repeat;background-position:center top;">=0A				<tbody>=0A				=
+	<tr style=3D"border-collapse:collapse;">=0A						<td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;">=0A						<table align=3D"cent=
+er" bgcolor=3D"transparent" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"es-header-body" style=3D"mso-table-lspace:0pt;mso-table-r=
+space:0pt;border-collapse:collapse;border-spacing:0px;background-=
+color:transparent;" width=3D"650">=0A							<tbody>=0A								<tr=
+ style=3D"border-collapse:collapse;">=0A									<td align=3D"lef=
+t" style=3D"padding:0;Margin:0;">=0A									<table cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;border-collapse:collapse;border-spacing:0px;" width=3D"10=
+0%">=0A										<tbody>=0A											<tr style=3D"border-collaps=
+e:collapse;">=0A												<td align=3D"center" style=3D"padding=
+:0;Margin:0;" valign=3D"top" width=3D"650">=0A												<table =
+cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt=
+;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px=
+;" width=3D"100%">=0A													<tbody>=0A														<tr sty=
+le=3D"border-collapse:collapse;">=0A															<td align=3D"c=
+enter" class=3D"es-m-txt-c" style=3D"padding:0;Margin:0;padding-t=
+op:15px;padding-bottom:15px;"><img alt=3D"Akbar Travels" src=3D"h=
+ttps://ffwmp.stripocdn.email/content/guids/CABINET_4d96bf80295798=
+64715e110861027edf/images/44291529594734016.png" style=3D"display=
+:block;border:0;outline:none;text-decoration:none;-ms-interpolati=
+on-mode:bicubic;" title=3D"Akbar Travels" width=3D"100" /></td>=0A=
+														</tr>=0A													</tbody>=0A												</table=
+>=0A												</td>=0A											</tr>=0A										</tbody>=0A	=
+								</table>=0A									</td>=0A								</tr>=0A							</tbod=
+y>=0A						</table>=0A						</td>=0A					</tr>=0A				</tbody>=0A	=
+		</table>=0A=0A			<table align=3D"center" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"es-content" style=3D"mso-table-lspace:0pt;=
+mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;=
+table-layout:fixed !important;width:100%;">=0A				<tbody>=0A					=
+<tr style=3D"border-collapse:collapse;">=0A						<td align=3D"cen=
+ter" style=3D"padding:0;Margin:0;">=0A						<table align=3D"cente=
+r" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" class=3D=
+"es-content-body" style=3D"mso-table-lspace:0pt;mso-table-rspace:=
+0pt;border-collapse:collapse;border-spacing:0px;background-color:=
+#FFFFFF;" width=3D"650">=0A							<tbody>=0A								<tr style=3D"=
+border-collapse:collapse;">=0A									<td align=3D"left" style=3D=
+"padding:0;Margin:0;padding-top:10px;padding-bottom:10px;">=0A			=
+						<table cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-tab=
+le-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;borde=
+r-spacing:0px;" width=3D"100%">=0A										<tbody>=0A											=
+<tr style=3D"border-collapse:collapse;">=0A												<td align=3D=
+"center" style=3D"padding:0;Margin:0;" valign=3D"top" width=3D"65=
+0">=0A												<table cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:co=
+llapse;border-spacing:0px;" width=3D"100%">=0A													<tbody=
+>=0A														<tr style=3D"border-collapse:collapse;">=0A				=
+											<td align=3D"center" style=3D"Margin:0;padding-top:5px=
+;padding-bottom:5px;padding-left:5px;padding-right:5px;">=0A					=
+										<h1 style=3D"Margin:0;line-height:57px;mso-line-height-=
+rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial=
+, sans-serif;font-size:38px;font-style:normal;font-weight:normal;=
+color:#666666;"><strong>Hey!</strong></h1>=0A=0A															<p=
+ style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-ad=
+just:none;mso-line-height-rule:exactly;font-size:18px;font-family=
+:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height=
+:27px;color:#666666;">You&#39;re nearly there...</p>=0A										=
+					</td>=0A														</tr>=0A														<tr style=3D"bor=
+der-collapse:collapse;">=0A															<td align=3D"center" st=
+yle=3D"Margin:0;padding-top:15px;padding-bottom:15px;padding-left=
+:25px;padding-right:25px;"><img alt=3D"" class=3D"adapt-img" src=3D=
+"https://ffwmp.stripocdn.email/content/guids/CABINET_4d96bf802957=
+9864715e110861027edf/images/24601529594137499.jpg" style=3D"displ=
+ay:block;border:0;outline:none;text-decoration:none;-ms-interpola=
+tion-mode:bicubic;" width=3D"260" /></td>=0A														</tr>=0A=
+														<tr style=3D"border-collapse:collapse;">=0A								=
+							<td align=3D"left" esdev-links-color=3D"#0489c9" style=3D"=
+Margin:0;padding-bottom:15px;padding-left:15px;padding-right:15px=
+;padding-top:20px;">=0A															<p style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height=
+-rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', =
+helvetica, arial, sans-serif;line-height:21px;color:#666666;"><st=
+rong>Friend</strong>, You are so close to booking your flight to =
+<strong>New Delhi</strong>. Flight Fares increase occur very freq=
+uently, So hurry before the last seat is taken by someone else.</=
+p>=0A															</td>=0A														</tr>=0A														<=
+tr style=3D"border-collapse:collapse;">=0A															<td alig=
+n=3D"center" class=3D"es-m-txt-c" style=3D"Margin:0;padding-top:1=
+0px;padding-bottom:10px;padding-left:20px;padding-right:20px;"><s=
+pan class=3D"es-button-border" style=3D"border-style:solid;border=
+-color:#47598B;background:#19478A;border-width:0px;display:inline=
+-block;border-radius:7px;width:auto;"><a class=3D"es-button" href=
+=3D"https://click.pstmrk.it/2sm/wizrocketmail.net%2Fr%3Fe%3DK2IFf=
+x9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZvbmY3FxohLkFDWFs5BTEkOD=
+E7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8a3FcWFc8PzY3LHglMUBbbl0=
+zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO1tGXkB1YHA8LSg5FFZVV1Ui=
+NiZpKg%253D%253D%26r%3Dhttps%253A%252F%252Famw.akbartravels.com%2=
+52FfltRedirect%253Frd%253Dm.akbartravels.com%252Fflight%252Fprici=
+ng%253Futl%253DihDOL5b7493c28c4b20acRX2iw%2526country_selected%25=
+3DINR%2526secType%253DINT%2526srType%253DO%2526from%253DDOH%2526t=
+o%253DDEL%2526onwDate%253D2019-06-23%2526adults%253D1%2526childre=
+n%253D0%2526infants%253D0%2526fromCity%253DDoha%2526toCity%253DNe=
+w%252520Delhi%2526class%253DE%2526upl%253D9102107520190622013001%=
+2526onIndx%253D15%2526ntAmt%253D27470%26c%3D646729440%26token%3DG=
+lZfCQJWBgEDCg%253D%253D%26try%3D1/q8KQ7gM/bsg3/BKoMC0_ato/Z2VldGF=
+kaXdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYy=
+MnwwfHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-al=
+l;font-family:lato, 'helvetica neue', helvetica, arial, sans-seri=
+f;font-size:14px;text-decoration:none !important;mso-style-priori=
+ty:100 !important;-webkit-text-size-adjust:none;-ms-text-size-adj=
+ust:none;mso-line-height-rule:exactly;color:#FFFFFF;border-style:=
+solid;border-color:#19478A;border-width:10px 20px;display:inline-=
+block;background:#19478A;border-radius:7px;font-weight:normal;fon=
+t-style:normal;line-height:17px;width:auto;text-align:center;" ta=
+rget=3D"_blank">COMPLETE BOOKING</a> </span></td>=0A													=
+	</tr>=0A														<tr style=3D"border-collapse:collapse;">=0A=
+															<td align=3D"center" class=3D"es-m-txt-c" style=3D=
+"Margin:0;padding-top:10px;padding-bottom:10px;padding-left:20px;=
+padding-right:20px;"><span class=3D"es-button-border" style=3D"bo=
+rder-style:solid;border-color:#19478A;background:rgba(0, 0, 0, 0)=
+;border-width:2px;display:inline-block;border-radius:7px;width:au=
+to;"><a class=3D"es-button" href=3D"https://click.pstmrk.it/2sm/w=
+izrocketmail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1IC=
+QsNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM=
+%252FPjU8a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7=
+eCUxJTENO1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%253A=
+%252F%252Famw.akbartravels.com%252FfltRedirect%253Frd%253Dm.akbar=
+travels.com%252Fflight%252Fsearch%253Futl%253DihDOL5b7493c28c4b20=
+acRX2iw%2526secType%253DINT%2526srType%253DO%2526from%253DDOH%252=
+6to%253DDEL%2526onwDate%253D2019-06-23%2526adults%253D1%2526child=
+ren%253D0%2526infants%253D0%2526fromCity%253DDoha%2526toCity%253D=
+New%2BDelhi%2526class%253DE%26c%3D646729440%26token%3DGlZTBQNXAgg=
+CBw%253D%253D%26try%3D1/rMKQ7gM/bsg3/ccfF8y5xe4/Z2VldGFkaXdha2VyO=
+DFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cm=
+tfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-all;font-fam=
+ily:lato, 'helvetica neue', helvetica, arial, sans-serif;font-siz=
+e:14px;text-decoration:none !important;mso-style-priority:100 !im=
+portant;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;m=
+so-line-height-rule:exactly;color:#19478A;border-style:solid;bord=
+er-color:transparent;border-width:10px 20px;display:inline-block;=
+background:transparent;border-radius:7px;font-weight:normal;font-=
+style:normal;line-height:17px;width:auto;text-align:center;" targ=
+et=3D"_blank">SEE OTHER OPTIONS</a> </span></td>=0A														=
+</tr>=0A														<tr style=3D"border-collapse:collapse;">=0A=
+															<td align=3D"center" style=3D"padding:0;Margin:0;p=
+adding-top:10px;">=0A															<p style=3D"Margin:0;-webkit-=
+text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-size:18px;font-family:lato, 'helvetica neue', he=
+lvetica, arial, sans-serif;line-height:27px;color:#960606;"><stro=
+ng>Our Convenience Fee is 50% lower than everyone else*</strong><=
+/p>=0A															</td>=0A														</tr>=0A													<=
+/tbody>=0A												</table>=0A												</td>=0A											<=
+/tr>=0A										</tbody>=0A									</table>=0A									</td>=0A=
+								</tr>=0A							</tbody>=0A						</table>=0A						</td>=0A=
+					</tr>=0A				</tbody>=0A			</table>=0A=0A			<table align=3D"c=
+enter" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content" s=
+tyle=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse=
+:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;">=0A				<tbody>=0A					<tr style=3D"border-collapse:collaps=
+e;">=0A						<td align=3D"center" style=3D"padding:0;Margin:0;">=0A=
+						<table align=3D"center" bgcolor=3D"#ffffff" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"es-content-body" style=3D"mso-table=
+-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px;background-color:#FFFFFF;" width=3D"650">=0A							<t=
+body>=0A								<tr style=3D"border-collapse:collapse;">=0A						=
+			<td align=3D"left" bgcolor=3D"#f5f6f7" class=3D"esdev-adapt-of=
+f" esdev-eq=3D"false" style=3D"padding:0;Margin:0;padding-top:40p=
+x;background-color:#F5F6F7;">=0A									<table cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"esdev-mso-table" style=3D"mso-table-l=
+space:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;" width=3D"650">=0A										<tbody>=0A											<tr s=
+tyle=3D"border-collapse:collapse;">=0A												<td class=3D"es=
+dev-mso-td" esdev-width-px=3D"NaN" style=3D"padding:0;Margin:0;" =
+valign=3D"top" width=3D"87.38170347003154%">=0A												<table=
+ align=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-l=
+eft" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-co=
+llapse:collapse;border-spacing:0px;float:left;">=0A													<=
+tbody>=0A														<tr style=3D"border-collapse:collapse;">=0A=
+															<td align=3D"center" style=3D"padding:0;Margin:0;"=
+ valign=3D"top" width=3D"540">=0A															<table cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table=
+-rspace:0pt;border-collapse:collapse;border-spacing:0px;" width=3D=
+"100%">=0A																<tbody>=0A																	<tr style=3D=
+"border-collapse:collapse;">=0A																		<td align=3D"lef=
+t" class=3D"es-m-txt-r" style=3D"Margin:0;padding-top:5px;padding=
+-bottom:5px;padding-left:5px;padding-right:5px;">=0A													=
+					<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-=
+size-adjust:none;mso-line-height-rule:exactly;font-size:14px;font=
+-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line=
+-height:17px;color:#666666;"><strong style=3D"padding:0 5px;float=
+:left;">Doha</strong>=C2=A0 <a style=3D"word-break:break-all;font=
+-family:lato, 'helvetica neue', helvetica, arial, sans-serif;font=
+-size:14px;text-decoration:none;-webkit-text-size-adjust:none;-ms=
+-text-size-adjust:none;mso-line-height-rule:exactly;color:#666666=
+;padding:0 5px;float:left;" target=3D"_blank"><img alt=3D"" class=
+=3D"fr-fic fr-dib" src=3D"https://ffwmp.stripocdn.email/content/g=
+uids/CABINET_4d96bf8029579864715e110861027edf/images/621215305380=
+72798.png" style=3D"display:block !important;border:0;outline:non=
+e;text-decoration:none;-ms-interpolation-mode:bicubic;margin:0 au=
+to;" width=3D"25" /><strong style=3D"padding:0 5px;">1 Stop</stro=
+ng></a>=C2=A0<strong style=3D"padding:0 5px;float:left;">New Delh=
+i</strong></p>=0A																		</td>=0A																	</tr>=
+=0A																</tbody>=0A															</table>=0A									=
+						</td>=0A														</tr>=0A													</tbody>=0A					=
+							</table>=0A												</td>=0A												<td class=3D"es=
+dev-mso-td" esdev-width-px=3D"80" style=3D"padding:0;Margin:0;" v=
+align=3D"top" width=3D"12.618296529968454%">=0A												<table=
+ align=3D"right" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-=
+right" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-=
+collapse:collapse;border-spacing:0px;float:right;">=0A											=
+		<tbody>=0A														<tr style=3D"border-collapse:collapse;"=
+>=0A															<td align=3D"left" style=3D"padding:0;Margin:0=
+;" width=3D"80">=0A															<table cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;bo=
+rder-collapse:collapse;border-spacing:0px;" width=3D"100%">=0A			=
+													<tbody>=0A																	<tr style=3D"border-colla=
+pse:collapse;">=0A																		<td align=3D"right" class=3D"=
+es-m-txt-r" style=3D"padding:0;Margin:0;padding-top:5px;padding-l=
+eft:5px;padding-right:5px;">=0A																		<h3 style=3D"Mar=
+gin:0;line-height:18px;mso-line-height-rule:exactly;font-family:A=
+rial, sans-serif;font-size:18px;font-style:normal;font-weight:bol=
+d;color:#666666;text-align:left;"><strong>Jun 23</strong></h3>=0A=
+																		</td>=0A																	</tr>=0A														=
+		</tbody>=0A															</table>=0A															</td>=0A			=
+											</tr>=0A													</tbody>=0A												</table>=0A=
+												</td>=0A											</tr>=0A										</tbody>=0A					=
+				</table>=0A									</td>=0A								</tr>=0A							</tbody>=0A=
+						</table>=0A						</td>=0A					</tr>=0A				</tbody>=0A			</t=
+able>=0A=0A			<table align=3D"center" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"es-content" style=3D"mso-table-lspace:0pt;mso-t=
+able-rspace:0pt;border-collapse:collapse;border-spacing:0px;table=
+-layout:fixed !important;width:100%;">=0A				<tbody>=0A					<tr s=
+tyle=3D"border-collapse:collapse;">=0A						<td align=3D"center" =
+style=3D"padding:0;Margin:0;">=0A						<table align=3D"center" bg=
+color=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" class=3D"es=
+-content-body" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt=
+;border-collapse:collapse;border-spacing:0px;background-color:#FF=
+FFFF;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC=
+;border-top:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;" w=
+idth=3D"650">=0A							<tbody>=0A								<tr style=3D"border-coll=
+apse:collapse;">=0A									<td align=3D"left" class=3D"esdev-ada=
+pt-off" esdev-eq=3D"false" style=3D"padding:0;Margin:0;padding-to=
+p:15px;padding-bottom:15px;">=0A									<table cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"esdev-mso-table" style=3D"mso-table-l=
+space:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;" width=3D"648">=0A										<tbody>=0A											<tr s=
+tyle=3D"border-collapse:collapse;">=0A												<td class=3D"es=
+dev-mso-td" esdev-width-px=3D"83" style=3D"padding:0;Margin:0;" v=
+align=3D"top" width=3D"12.808641975308642%">=0A												<table=
+ align=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-l=
+eft" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-co=
+llapse:collapse;border-spacing:0px;float:left;">=0A													<=
+tbody>=0A														<tr style=3D"border-collapse:collapse;">=0A=
+															<td align=3D"left" style=3D"padding:0;Margin:0;" w=
+idth=3D"78">=0A															<table cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border=
+-collapse:collapse;border-spacing:0px;" width=3D"100%">=0A							=
+									<tbody>=0A																	<tr style=3D"border-collapse:=
+collapse;">=0A																		<td align=3D"center" class=3D"es-=
+m-txt-c" style=3D"Margin:0;padding-left:10px;padding-right:10px;p=
+adding-top:15px;padding-bottom:15px;"><img alt=3D"" src=3D"https:=
+//scripts.akbartravels.com/content/flightbooking/images/AirlineLo=
+go/RA.png" style=3D"display:block;border:0;outline:none;text-deco=
+ration:none;-ms-interpolation-mode:bicubic;" width=3D"55" /></td>=
+=0A																	</tr>=0A																</tbody>=0A										=
+					</table>=0A															</td>=0A															<td style=3D=
+"padding:0;Margin:0;" width=3D"5">=C2=A0</td>=0A														</t=
+r>=0A													</tbody>=0A												</table>=0A												<=
+/td>=0A												<td class=3D"esdev-mso-td" esdev-width-px=3D"1=
+55" style=3D"padding:0;Margin:0;" valign=3D"top" width=3D"23.9197=
+53086419753%">=0A												<table align=3D"left" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"es-left" style=3D"mso-table-lspace=
+:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing=
+:0px;float:left;">=0A													<tbody>=0A														<tr sty=
+le=3D"border-collapse:collapse;">=0A															<td align=3D"l=
+eft" style=3D"padding:0;Margin:0;" width=3D"150">=0A													=
+		<table cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-l=
+space:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-sp=
+acing:0px;" width=3D"100%">=0A																<tbody>=0A									=
+								<tr style=3D"border-collapse:collapse;">=0A														=
+				<td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;Ma=
+rgin:0;padding-top:5px;padding-left:5px;padding-right:5px;">=0A		=
+																<p style=3D"Margin:0;-webkit-text-size-adjust:non=
+e;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-siz=
+e:14px;font-family:lato, 'helvetica neue', helvetica, arial, sans=
+-serif;line-height:17px;color:#666666;"><strong>RA 240</strong></=
+p>=0A=0A																		<p style=3D"Margin:0;-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactl=
+y;font-size:14px;font-family:lato, 'helvetica neue', helvetica, a=
+rial, sans-serif;line-height:17px;color:#666666;">Royal Nepal</p>=
+=0A=0A																		<p style=3D"Margin:0;-webkit-text-size-ad=
+just:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;=
+font-size:14px;font-family:lato, 'helvetica neue', helvetica, ari=
+al, sans-serif;line-height:17px;color:#666666;">Economy</p>=0A			=
+															</td>=0A																	</tr>=0A																<=
+/tbody>=0A															</table>=0A															</td>=0A						=
+									<td style=3D"padding:0;Margin:0;" width=3D"5">=C2=A0</td=
+>=0A														</tr>=0A													</tbody>=0A												</t=
+able>=0A												</td>=0A												<td class=3D"esdev-mso-td=
+" esdev-width-px=3D"225" style=3D"padding:0;Margin:0;" valign=3D"=
+top" width=3D"34.72222222222222%">=0A												<table align=3D"=
+left" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left" style=
+=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:col=
+lapse;border-spacing:0px;float:left;">=0A													<tbody>=0A	=
+													<tr style=3D"border-collapse:collapse;">=0A									=
+						<td align=3D"left" style=3D"padding:0;Margin:0;" width=3D"2=
+20">=0A															<table cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;" width=3D"100%">=0A															=
+	<tbody>=0A																	<tr style=3D"border-collapse:collapse=
+;">=0A																		<td align=3D"right" class=3D"es-m-txt-r" =
+style=3D"padding:0;Margin:0;padding-top:5px;padding-left:5px;padd=
+ing-right:5px;">=0A																		<p style=3D"Margin:0;-webkit=
+-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-=
+rule:exactly;font-size:14px;font-family:lato, 'helvetica neue', h=
+elvetica, arial, sans-serif;line-height:17px;color:#666666;"><str=
+ong>DOH</strong></p>=0A=0A																		<p style=3D"Margin:0;=
+-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-=
+height-rule:exactly;font-size:14px;font-family:lato, 'helvetica n=
+eue', helvetica, arial, sans-serif;line-height:17px;color:#666666=
+;">01:15</p>=0A=0A																		<p style=3D"Margin:0;-webkit-=
+text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-size:14px;font-family:lato, 'helvetica neue', he=
+lvetica, arial, sans-serif;line-height:17px;color:#666666;">Doha<=
+/p>=0A																		</td>=0A																	</tr>=0A								=
+								</tbody>=0A															</table>=0A															</td>=
+=0A															<td style=3D"padding:0;Margin:0;" width=3D"5">=C2=
+=A0</td>=0A														</tr>=0A													</tbody>=0A								=
+				</table>=0A												</td>=0A												<td class=3D"esdev=
+-mso-td" esdev-width-px=3D"35" style=3D"padding:0;Margin:0;" vali=
+gn=3D"top" width=3D"5.401234567901234%">=0A												<table ali=
+gn=3D"left" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-left"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collap=
+se:collapse;border-spacing:0px;float:left;">=0A													<tbod=
+y>=0A														<tr style=3D"border-collapse:collapse;">=0A			=
+												<td align=3D"left" style=3D"padding:0;Margin:0;" widt=
+h=3D"30">=0A															<table cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-col=
+lapse:collapse;border-spacing:0px;" width=3D"100%">=0A											=
+					<tbody>=0A																	<tr style=3D"border-collapse:coll=
+apse;">=0A																		<td align=3D"center" class=3D"es-m-tx=
+t-c" style=3D"padding:0;Margin:0;padding-bottom:10px;padding-top:=
+15px;"><img alt=3D"" src=3D"https://ffwmp.stripocdn.email/content=
+/guids/CABINET_4d96bf8029579864715e110861027edf/images/4727153054=
+0334807.png" style=3D"display:block;border:0;outline:none;text-de=
+coration:none;-ms-interpolation-mode:bicubic;" width=3D"20" /></t=
+d>=0A																	</tr>=0A																</tbody>=0A								=
+							</table>=0A															</td>=0A															<td style=
+=3D"padding:0;Margin:0;" width=3D"5">=C2=A0</td>=0A														=
+</tr>=0A													</tbody>=0A												</table>=0A										=
+		</td>=0A												<td class=3D"esdev-mso-td" esdev-width-px=3D=
+"150" style=3D"padding:0;Margin:0;" valign=3D"top" width=3D"23.14=
+814814814815%">=0A												<table align=3D"right" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"es-right" style=3D"mso-table-lspac=
+e:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacin=
+g:0px;float:right;">=0A													<tbody>=0A														<tr s=
+tyle=3D"border-collapse:collapse;">=0A															<td align=3D=
+"left" style=3D"padding:0;Margin:0;" width=3D"150">=0A											=
+				<table cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table=
+-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px;" width=3D"100%">=0A																<tbody>=0A							=
+										<tr style=3D"border-collapse:collapse;">=0A												=
+						<td align=3D"left" class=3D"es-m-txt-l" style=3D"padding:0;=
+Margin:0;padding-top:5px;padding-left:5px;padding-right:5px;">=0A=
+																		<p style=3D"Margin:0;-webkit-text-size-adjust:n=
+one;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-s=
+ize:14px;font-family:lato, 'helvetica neue', helvetica, arial, sa=
+ns-serif;line-height:17px;color:#666666;"><strong>DEL</strong></p=
+>=0A=0A																		<p style=3D"Margin:0;-webkit-text-size-a=
+djust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly=
+;font-size:14px;font-family:lato, 'helvetica neue', helvetica, ar=
+ial, sans-serif;line-height:17px;color:#666666;">09:40</p>=0A=0A	=
+																	<p style=3D"Margin:0;-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-si=
+ze:14px;font-family:lato, 'helvetica neue', helvetica, arial, san=
+s-serif;line-height:17px;color:#666666;">New Delhi</p>=0A								=
+										</td>=0A																	</tr>=0A																</tbod=
+y>=0A															</table>=0A															</td>=0A											=
+			</tr>=0A													</tbody>=0A												</table>=0A							=
+					</td>=0A											</tr>=0A										</tbody>=0A									</t=
+able>=0A									</td>=0A								</tr>=0A							</tbody>=0A						=
+</table>=0A						</td>=0A					</tr>=0A				</tbody>=0A			</table>=0A=
+=0A			<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"es-content" style=3D"mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:=
+fixed !important;width:100%;">=0A				<tbody>=0A					<tr style=3D"=
+border-collapse:collapse;">=0A						<td align=3D"center" style=3D=
+"padding:0;Margin:0;">=0A						<table align=3D"center" bgcolor=3D=
+"#ffffff" cellpadding=3D"0" cellspacing=3D"0" class=3D"es-content=
+-body" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-=
+collapse:collapse;border-spacing:0px;background-color:#FFFFFF;" w=
+idth=3D"650">=0A							<tbody>=0A								<tr style=3D"border-coll=
+apse:collapse;">=0A									<td align=3D"left" style=3D"padding:0=
+;Margin:0;">=0A									<table cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-colla=
+pse:collapse;border-spacing:0px;" width=3D"100%">=0A										<tb=
+ody>=0A											<tr style=3D"border-collapse:collapse;">=0A				=
+								<td align=3D"center" style=3D"padding:0;Margin:0;" valign=
+=3D"top" width=3D"650">=0A												<table cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0p=
+t;border-collapse:collapse;border-spacing:0px;" width=3D"100%">=0A=
+													<tbody>=0A														<tr style=3D"border-collapse=
+:collapse;">=0A															<td align=3D"left" style=3D"padding=
+:0;Margin:0;padding-bottom:5px;padding-left:15px;padding-right:15=
+px;">=0A															<p style=3D"Margin:0;-webkit-text-size-adj=
+ust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;f=
+ont-size:14px;font-family:lato, 'helvetica neue', helvetica, aria=
+l, sans-serif;line-height:21px;color:#666666;">=C2=A0</p>=0A=0A		=
+													<p style=3D"Margin:0;-webkit-text-size-adjust:none;-=
+ms-text-size-adjust:none;mso-line-height-rule:exactly;font-size:2=
+0px;font-family:lato, 'helvetica neue', helvetica, arial, sans-se=
+rif;line-height:30px;color:#19478A;text-align:center;"><b>INTERNA=
+TIONAL TOUR PACKAGES</b></p>=0A															</td>=0A											=
+			</tr>=0A														<tr style=3D"border-collapse:collapse;">=
+=0A															<td align=3D"center" style=3D"padding:0;Margin:=
+0;"><a href=3D"https://click.pstmrk.it/2sm/wizrocketmail.net%2Fr%=
+3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZvbmY3FxohLkF=
+DWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8a3FcWFc8PzY3=
+LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO1tGXkB1YHA8L=
+Sg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%253A%252F%252Fwww.akbartr=
+avels.com%252Fholidays%252Finternational-tour-packages%252F%253Fu=
+tm_source%253DCT%2526utm_medium%253DABANDONEMAIL%2526utm_campaign=
+%253DINTABANDONEMAIL%26c%3D646729440%26token%3DGlJRCQpUAgIABw%253=
+D%253D%26try%3D1/rcKQ7gM/bsg3/KRWZMnSK7z/Z2VldGFkaXdha2VyODFAZ21h=
+aWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZGVmY=
+XVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-all;font-family:lat=
+o, 'helvetica neue', helvetica, arial, sans-serif;font-size:14px;=
+text-decoration:underline;-webkit-text-size-adjust:none;-ms-text-=
+size-adjust:none;mso-line-height-rule:exactly;color:#368BE8;" tar=
+get=3D"_blank"><img alt=3D"" class=3D"adapt-img" src=3D"https://f=
+fwmp.stripocdn.email/content/guids/CABINET_fc54a3e6fe857687dedb07=
+ea31daacf6/images/41161544790221540.jpg" style=3D"display:block;b=
+order:0;outline:none;text-decoration:none;-ms-interpolation-mode:=
+bicubic;" width=3D"650" /> </a></td>=0A														</tr>=0A				=
+										<tr style=3D"border-collapse:collapse;">=0A												=
+			<td align=3D"center" style=3D"padding:0;Margin:0;padding-botto=
+m:5px;padding-top:10px;">=0A															<p style=3D"Margin:0;-=
+webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-h=
+eight-rule:exactly;font-size:15px;font-family:lato, 'helvetica ne=
+ue', helvetica, arial, sans-serif;line-height:23px;color:#333333;=
+">The world is yours for the taking; to be explored, dreamt and d=
+iscovered.</p>=0A=0A															<p style=3D"Margin:0;-webkit-t=
+ext-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-size:15px;font-family:lato, 'helvetica neue', hel=
+vetica, arial, sans-serif;line-height:23px;color:#333333;">With o=
+ur bespoke International tour packages,</p>=0A=0A															<=
+p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-a=
+djust:none;mso-line-height-rule:exactly;font-size:15px;font-famil=
+y:lato, 'helvetica neue', helvetica, arial, sans-serif;line-heigh=
+t:23px;color:#333333;">you get more than just a holiday: you get =
+an experience.</p>=0A															</td>=0A														</tr>=0A=
+														<tr style=3D"border-collapse:collapse;">=0A								=
+							<td align=3D"center" class=3D"es-m-txt-c" style=3D"Margin:=
+0;padding-top:15px;padding-bottom:20px;padding-left:20px;padding-=
+right:20px;"><span class=3D"es-button-border" style=3D"border-sty=
+le:solid;border-color:#47598B;background:#19478A;border-width:0px=
+;display:inline-block;border-radius:7px;width:auto;"><a class=3D"=
+es-button" href=3D"https://click.pstmrk.it/2sm/wizrocketmail.net%=
+2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZvbmY3Fxo=
+hLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8a3FcWFc8=
+PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO1tGXkB1Y=
+HA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%253A%252F%252Fwww.akb=
+artravels.com%252Fholidays%252Finternational-tour-packages%252F%2=
+53Futm_source%253DCT%2526utm_medium%253DABANDONEMAIL%2526utm_camp=
+aign%253DINTABANDONEMAIL%26c%3D646729440%26token%3DGlJRCQpUAgIABw=
+%253D%253D%26try%3D1/rcKQ7gM/bsg3/KRWZMnSK7z/Z2VldGFkaXdha2VyODFA=
+Z21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZ=
+GVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-all;font-family=
+:lato, 'helvetica neue', helvetica, arial, sans-serif;font-size:1=
+4px;text-decoration:none !important;mso-style-priority:100 !impor=
+tant;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-=
+line-height-rule:exactly;color:#FFFFFF;border-style:solid;border-=
+color:#19478A;border-width:10px 20px;display:inline-block;backgro=
+und:#19478A;border-radius:7px;font-weight:bold;font-style:normal;=
+line-height:17px;width:auto;text-align:center;" target=3D"_blank"=
+>EXPLORE ALL PACKAGES</a> </span></td>=0A														</tr>=0A		=
+											</tbody>=0A												</table>=0A												</td>=0A=
+											</tr>=0A										</tbody>=0A									</table>=0A					=
+				</td>=0A								</tr>=0A								<tr style=3D"border-collapse:=
+collapse;">=0A									<td align=3D"left" bgcolor=3D"transparent"=
+ style=3D"Margin:0;padding-top:5px;padding-bottom:5px;padding-lef=
+t:20px;padding-right:20px;background-color:transparent;">=0A					=
+				<table cellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table=
+-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-=
+spacing:0px;" width=3D"100%">=0A										<tbody>=0A											<t=
+r style=3D"border-collapse:collapse;">=0A												<td align=3D=
+"center" style=3D"padding:0;Margin:0;" valign=3D"top" width=3D"61=
+0">=0A												<table cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:co=
+llapse;border-spacing:0px;" width=3D"100%">=0A													<tbody=
+>=0A														<tr style=3D"border-collapse:collapse;">=0A				=
+											<td align=3D"center" style=3D"padding:0;Margin:0;paddi=
+ng-top:5px;padding-bottom:5px;">=0A															<table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" style=3D"=
+mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collaps=
+e;border-spacing:0px;" width=3D"100%">=0A																<tbody>=0A=
+																	<tr style=3D"border-collapse:collapse;">=0A					=
+													<td style=3D"padding:0;Margin:0px;border-bottom:1px =
+solid #000000;background:none;height:1px;width:100%;margin:0px;">=
+=C2=A0</td>=0A																	</tr>=0A																</tbody>=0A=
+															</table>=0A															</td>=0A														</=
+tr>=0A														<tr style=3D"border-collapse:collapse;">=0A		=
+													<td align=3D"center" bgcolor=3D"transparent" style=3D=
+"padding:0;Margin:0;">=0A															<p style=3D"Margin:0;-web=
+kit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-heig=
+ht-rule:exactly;font-size:18px;font-family:lato, 'helvetica neue'=
+, helvetica, arial, sans-serif;line-height:27px;color:#000000;"><=
+strong>OTHER SERVICES</strong></p>=0A															</td>=0A					=
+									</tr>=0A														<tr style=3D"border-collapse:colla=
+pse;">=0A															<td align=3D"center" style=3D"padding:0;M=
+argin:0;padding-top:5px;padding-bottom:5px;">=0A															<t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"1=
+00%" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-co=
+llapse:collapse;border-spacing:0px;" width=3D"100%">=0A										=
+						<tbody>=0A																	<tr style=3D"border-collapse:col=
+lapse;">=0A																		<td style=3D"padding:0;Margin:0px;bo=
+rder-bottom:1px solid #000000;background:none;height:1px;width:10=
+0%;margin:0px;">=C2=A0</td>=0A																	</tr>=0A										=
+						</tbody>=0A															</table>=0A															</td>=0A=
+														</tr>=0A													</tbody>=0A												</table=
+>=0A												</td>=0A											</tr>=0A										</tbody>=0A	=
+								</table>=0A									</td>=0A								</tr>=0A								<tr s=
+tyle=3D"border-collapse:collapse;">=0A									<td align=3D"left"=
+ style=3D"padding:0;Margin:0;padding-bottom:5px;"><!--[if mso]><t=
+able width=3D"650" cellpadding=3D"0" =0A                        c=
+ellspacing=3D"0"><tr><td width=3D"315" valign=3D"top"><![endif]--=
+>=0A									<table align=3D"left" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"es-left" style=3D"mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;border-collapse:collapse;border-spacing:0px;float:left;">=
+=0A										<tbody>=0A											<tr style=3D"border-collapse:co=
+llapse;">=0A												<td align=3D"left" class=3D"es-m-p20b" st=
+yle=3D"padding:0;Margin:0;" width=3D"315">=0A												<table c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"mso-table-lspace:0pt;=
+mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;=
+" width=3D"100%">=0A													<tbody>=0A														<tr styl=
+e=3D"border-collapse:collapse;">=0A															<td align=3D"ce=
+nter" style=3D"padding:0;Margin:0;"><a href=3D"https://click.pstm=
+rk.it/2sm/wizrocketmail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewc=
+CCQBjJCw1ICQsNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1E=
+WFI%252BOTM%252FPjU8a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z=
+2trewQCAxZ7eCUxJTENO1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3=
+Dhttps%253A%252F%252Fwww.akbartravels.com%252Fvisa%252F%253Futm_s=
+ource%253DCT%2526utm_medium%253DABANDONEMAIL%2526utm_campaign%253=
+DINTABANDONEMAIL%26c%3D646729440%26token%3DGldXBARXBgkMBQ%253D%25=
+3D%26try%3D1/rsKQ7gM/bsg3/AWNESzp-BJ/Z2VldGFkaXdha2VyODFAZ21haWwu=
+Y29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZGVmYXVsd=
+HwtNDA1Mjg0NHw" style=3D"word-break:break-all;font-family:lato, '=
+helvetica neue', helvetica, arial, sans-serif;font-size:14px;text=
+-decoration:underline;-webkit-text-size-adjust:none;-ms-text-size=
+-adjust:none;mso-line-height-rule:exactly;color:#368BE8;" target=3D=
+"_blank"><img alt=3D"" class=3D"adapt-img" src=3D"https://ffwmp.s=
+tripocdn.email/content/guids/CABINET_fc54a3e6fe857687dedb07ea31da=
+acf6/images/33841544789102697.jpg" style=3D"display:block;border:=
+0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubi=
+c;" width=3D"315" /> </a></td>=0A														</tr>=0A										=
+				<tr style=3D"border-collapse:collapse;">=0A															<td=
+ align=3D"center" style=3D"padding:0;Margin:0;">=0A														=
+	<p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size=
+-adjust:none;mso-line-height-rule:exactly;font-size:14px;font-fam=
+ily:lato, 'helvetica neue', helvetica, arial, sans-serif;line-hei=
+ght:21px;color:#666666;">=C2=A0</p>=0A=0A															<p style=3D=
+"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none=
+;mso-line-height-rule:exactly;font-size:15px;font-family:lato, 'h=
+elvetica neue', helvetica, arial, sans-serif;line-height:23px;col=
+or:#333333;">Get=C2=A0visa online=C2=A0to any destination &</p>=0A=
+=0A															<p style=3D"Margin:0;-webkit-text-size-adjust:n=
+one;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-s=
+ize:15px;font-family:lato, 'helvetica neue', helvetica, arial, sa=
+ns-serif;line-height:23px;color:#333333;">enjoy a <strong>hassle-=
+free application process</strong></p>=0A															</td>=0A		=
+												</tr>=0A														<tr style=3D"border-collapse:co=
+llapse;">=0A															<td align=3D"center" class=3D"es-m-txt=
+-c" style=3D"Margin:0;padding-top:10px;padding-bottom:20px;paddin=
+g-left:20px;padding-right:20px;"><span class=3D"es-button-border"=
+ style=3D"border-style:solid;border-color:#47598B;background:#194=
+78A;border-width:0px;display:inline-block;border-radius:7px;width=
+:auto;"><a class=3D"es-button" href=3D"https://click.pstmrk.it/2s=
+m/wizrocketmail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw=
+1ICQsNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252B=
+OTM%252FPjU8a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCA=
+xZ7eCUxJTENO1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%2=
+53A%252F%252Fwww.akbartravels.com%252Fvisa%252F%253Futm_source%25=
+3DCT%2526utm_medium%253DABANDONEMAIL%2526utm_campaign%253DINTABAN=
+DONEMAIL%26c%3D646729440%26token%3DGldXBARXBgkMBQ%253D%253D%26try=
+%3D1/rsKQ7gM/bsg3/AWNESzp-BJ/Z2VldGFkaXdha2VyODFAZ21haWwuY29tfDE0=
+OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZGVmYXVsdHwtNDA1M=
+jg0NHw" style=3D"word-break:break-all;font-family:lato, 'helvetic=
+a neue', helvetica, arial, sans-serif;font-size:14px;text-decorat=
+ion:none !important;mso-style-priority:100 !important;-webkit-tex=
+t-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule=
+:exactly;color:#FFFFFF;border-style:solid;border-color:#19478A;bo=
+rder-width:10px 20px;display:inline-block;background:#19478A;bord=
+er-radius:7px;font-weight:bold;font-style:normal;line-height:17px=
+;width:auto;text-align:center;" target=3D"_blank">APPLY NOW</a> <=
+/span></td>=0A														</tr>=0A													</tbody>=0A					=
+							</table>=0A												</td>=0A											</tr>=0A								=
+		</tbody>=0A									</table>=0A									<!--[if mso]></td><td w=
+idth=3D"20"></td><td width=3D"315" valign=3D"top"><![endif]-->=0A=
+=0A									<table align=3D"right" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"es-right" style=3D"mso-table-lspace:0pt;mso-table-rs=
+pace:0pt;border-collapse:collapse;border-spacing:0px;float:right;=
+">=0A										<tbody>=0A											<tr style=3D"border-collapse:=
+collapse;">=0A												<td align=3D"left" style=3D"padding:0;M=
+argin:0;" width=3D"315">=0A												<table cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0=
+pt;border-collapse:collapse;border-spacing:0px;" width=3D"100%">=0A=
+													<tbody>=0A														<tr style=3D"border-collapse=
+:collapse;">=0A															<td align=3D"center" style=3D"paddi=
+ng:0;Margin:0;"><a href=3D"https://click.pstmrk.it/2sm/wizrocketm=
+ail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZ=
+vbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8=
+a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO=
+1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttp%253A%252F%252F=
+www.akbarforex.com%252F%253Futm_source%253DCT%2526utm_medium%253D=
+ABANDONEMAIL%2526utm_campaign%253DINTABANDONEMAIL%26c%3D646729440=
+%26token%3DBlJUBARaAwMBAQ%253D%253D%26try%3D1/r8KQ7gM/bsg3/nk2dxR=
+Q5YT/Z2VldGFkaXdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYw=
+MHwyMDE5MDYyMnwwfHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-br=
+eak:break-all;font-family:lato, 'helvetica neue', helvetica, aria=
+l, sans-serif;font-size:14px;text-decoration:underline;-webkit-te=
+xt-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rul=
+e:exactly;color:#368BE8;" target=3D"_blank"><img alt=3D"" class=3D=
+"adapt-img" src=3D"https://ffwmp.stripocdn.email/content/guids/CA=
+BINET_fc54a3e6fe857687dedb07ea31daacf6/images/30361535437233709.j=
+pg" style=3D"display:block;border:0;outline:none;text-decoration:=
+none;-ms-interpolation-mode:bicubic;" width=3D"311" /> </a></td>=0A=
+														</tr>=0A														<tr style=3D"border-collapse:=
+collapse;">=0A															<td align=3D"center" style=3D"paddin=
+g:0;Margin:0;">=0A															<p style=3D"Margin:0;-webkit-tex=
+t-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule=
+:exactly;font-size:14px;font-family:lato, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:21px;color:#666666;">=C2=A0</=
+p>=0A=0A															<p style=3D"Margin:0;-webkit-text-size-adj=
+ust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;f=
+ont-size:16px;font-family:lato, 'helvetica neue', helvetica, aria=
+l, sans-serif;line-height:24px;color:#333333;">Best foreign excha=
+nge rates in India=C2=A0<strong>delivered FREE to your doorstep</=
+strong></p>=0A															</td>=0A														</tr>=0A						=
+								<tr style=3D"border-collapse:collapse;">=0A														=
+	<td align=3D"center" class=3D"es-m-txt-c" style=3D"Margin:0;padd=
+ing-top:10px;padding-bottom:20px;padding-left:20px;padding-right:=
+20px;"><span class=3D"es-button-border" style=3D"border-style:sol=
+id;border-color:#47598B;background:#19478A;border-width:0px;displ=
+ay:inline-block;border-radius:7px;width:auto;"><a class=3D"es-but=
+ton" href=3D"https://click.pstmrk.it/2sm/wizrocketmail.net%2Fr%3F=
+e%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZvbmY3FxohLkFDW=
+Fs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8a3FcWFc8PzY3LH=
+glMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO1tGXkB1YHA8LSg=
+5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttp%253A%252F%252Fwww.akbarforex=
+.com%252F%253Futm_source%253DCT%2526utm_medium%253DABANDONEMAIL%2=
+526utm_campaign%253DINTABANDONEMAIL%26c%3D646729440%26token%3DBlJ=
+UBARaAwMBAQ%253D%253D%26try%3D1/r8KQ7gM/bsg3/nk2dxRQ5YT/Z2VldGFka=
+Xdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMn=
+wwfHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-all;=
+font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;=
+font-size:14px;text-decoration:none !important;mso-style-priority=
+:100 !important;-webkit-text-size-adjust:none;-ms-text-size-adjus=
+t:none;mso-line-height-rule:exactly;color:#FFFFFF;border-style:so=
+lid;border-color:#19478A;border-width:10px 20px;display:inline-bl=
+ock;background:#19478A;border-radius:7px;font-weight:bold;font-st=
+yle:normal;line-height:17px;width:auto;text-align:center;" target=
+=3D"_blank">BUY FOREX</a> </span></td>=0A														</tr>=0A		=
+											</tbody>=0A												</table>=0A												</td>=0A=
+											</tr>=0A										</tbody>=0A									</table>=0A					=
+				<!--[if mso]></td></tr></table><![endif]--></td>=0A								</=
+tr>=0A							</tbody>=0A						</table>=0A						</td>=0A					</tr>=
+=0A				</tbody>=0A			</table>=0A=0A			<table align=3D"center" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"es-content" style=3D"ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;=
+border-spacing:0px;table-layout:fixed !important;width:100%;">=0A=
+				<tbody>=0A					<tr style=3D"border-collapse:collapse;">=0A			=
+		</tr>=0A					<tr style=3D"border-collapse:collapse;">=0A						<=
+td align=3D"center" style=3D"padding:0;Margin:0;">=0A						<table=
+ align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"es=
+-footer-body" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;=
+border-collapse:collapse;border-spacing:0px;background-color:tran=
+sparent;" width=3D"650">=0A							<tbody>=0A								<tr style=3D"=
+border-collapse:collapse;">=0A									<td align=3D"left" style=3D=
+"padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-ri=
+ght:20px;">=0A									<table cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collap=
+se:collapse;border-spacing:0px;" width=3D"100%">=0A										<tbo=
+dy>=0A											<tr style=3D"border-collapse:collapse;">=0A					=
+							<td align=3D"center" style=3D"padding:0;Margin:0;" valign=3D=
+"top" width=3D"610">=0A												<table cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;" width=3D"100%">=0A		=
+											<tbody>=0A														<tr style=3D"border-collapse:c=
+ollapse;">=0A															<td align=3D"center" style=3D"padding=
+:0;Margin:0;">=0A															<p style=3D"Margin:0;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:=
+exactly;font-size:12px;font-family:lato, 'helvetica neue', helvet=
+ica, arial, sans-serif;line-height:18px;color:#666666;">Happy Tra=
+velling,</p>=0A=0A															<p style=3D"Margin:0;-webkit-tex=
+t-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule=
+:exactly;font-size:12px;font-family:lato, 'helvetica neue', helve=
+tica, arial, sans-serif;line-height:18px;color:#666666;">Team akb=
+artravels.com</p>=0A=0A															<p style=3D"Margin:0;-webki=
+t-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height=
+-rule:exactly;font-size:12px;font-family:lato, 'helvetica neue', =
+helvetica, arial, sans-serif;line-height:18px;color:#666666;">=C2=
+=A0</p>=0A=0A															<p style=3D"Margin:0;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-size:12px;font-family:lato, 'helvetica neue', helvetica,=
+ arial, sans-serif;line-height:18px;color:#666666;"><strong>#Save=
+MoreTravelMore</strong></p>=0A=0A															<p style=3D"Margi=
+n:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-l=
+ine-height-rule:exactly;font-size:12px;font-family:lato, 'helveti=
+ca neue', helvetica, arial, sans-serif;line-height:18px;color:#66=
+6666;">www.akbartravels.com</p>=0A															</td>=0A								=
+						</tr>=0A													</tbody>=0A												</table>=0A				=
+								</td>=0A											</tr>=0A										</tbody>=0A									=
+</table>=0A									</td>=0A								</tr>=0A								<tr style=3D"=
+border-collapse:collapse;">=0A									<td align=3D"left" style=3D=
+"padding:0;Margin:0;padding-top:20px;padding-left:20px;padding-ri=
+ght:20px;">=0A									<table cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collap=
+se:collapse;border-spacing:0px;" width=3D"100%">=0A										<tbo=
+dy>=0A											<tr style=3D"border-collapse:collapse;">=0A					=
+							<td align=3D"center" style=3D"padding:0;Margin:0;" valign=3D=
+"top" width=3D"610">=0A												<table cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;b=
+order-collapse:collapse;border-spacing:0px;" width=3D"100%">=0A		=
+											<tbody>=0A														<tr style=3D"border-collapse:c=
+ollapse;">=0A															<td align=3D"center" style=3D"padding=
+:5px;Margin:0;"><a href=3D"https://click.pstmrk.it/2sm/wizrocketm=
+ail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZ=
+vbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8=
+a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO=
+1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%253A%252F%252=
+Fplay.google.com%252Fstore%252Fapps%252Fdetails%253Fid%253Dcom.ak=
+bartravel.AkbarTravels%2526referrer%253Dutm_source%25253DCT%25252=
+6utm_medium%25253Demail%252526utm_content%25253Dfooter%252526utm_=
+campaign%25253Dabandon%26c%3D646729440%26token%3DBlZUBgVTBAAG%26t=
+ry%3D1/sMKQ7gM/bsg3/_CM90mXoKC/Z2VldGFkaXdha2VyODFAZ21haWwuY29tfD=
+E0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZGVmYXVsdHwtNDA=
+1Mjg0NHw" style=3D"word-break:break-all;font-family:lato, 'helvet=
+ica neue', helvetica, arial, sans-serif;font-size:14px;text-decor=
+ation:underline;-webkit-text-size-adjust:none;-ms-text-size-adjus=
+t:none;mso-line-height-rule:exactly;color:#666666;" target=3D"_bl=
+ank"><img alt=3D"" src=3D"https://ffwmp.stripocdn.email/content/g=
+uids/CABINET_ebe7cd0b99eeb0f3c4da350baf799f09/images/877115295680=
+48760.png" style=3D"display:block;border:0;outline:none;text-deco=
+ration:none;-ms-interpolation-mode:bicubic;" width=3D"123" /> </a=
+></td>=0A														</tr>=0A														<tr style=3D"border-=
+collapse:collapse;">=0A															<td align=3D"center" style=3D=
+"padding:5px;Margin:0;"><a href=3D"https://click.pstmrk.it/2sm/wi=
+zrocketmail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQ=
+sNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%=
+252FPjU8a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7e=
+CUxJTENO1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%253A%=
+252F%252Fitunes.apple.com%252Fin%252Fapp%252Fakbar-travels-flight=
+-ticket%252Fid955378983%253Fmt%253D8%2526referrer%253Dutm_source%=
+25253DCT%252526utm_medium%25253Demail%252526utm_content%25253Dfoo=
+ter%252526utm_campaign%25253Dabandon%26c%3D646729440%26token%3DBl=
+NeAgdQDQIBBA%253D%253D%26try%3D1/scKQ7gM/bsg3/kGyEL8wZ2b/Z2VldGFk=
+aXdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyM=
+nwwfHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-all=
+;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif=
+;font-size:14px;text-decoration:underline;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;col=
+or:#666666;" target=3D"_blank"><img alt=3D"" src=3D"https://ffwmp=
+.stripocdn.email/content/guids/CABINET_ebe7cd0b99eeb0f3c4da350baf=
+799f09/images/3891529568048564.png" style=3D"display:block;border=
+:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicub=
+ic;" width=3D"123" /> </a></td>=0A														</tr>=0A									=
+					<tr style=3D"border-collapse:collapse;">=0A															<t=
+d align=3D"center" esdev-links-color=3D"#666666" style=3D"Margin:=
+0;padding-bottom:5px;padding-left:5px;padding-right:5px;padding-t=
+op:15px;">=0A															<p style=3D"Margin:0;-webkit-text-siz=
+e-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exac=
+tly;font-size:14px;font-family:lato, 'helvetica neue', helvetica,=
+ arial, sans-serif;line-height:21px;color:#666666;"><strong>Follo=
+w us</strong></p>=0A															</td>=0A														</tr>=0A=
+														<tr style=3D"border-collapse:collapse;">=0A								=
+							<td align=3D"center" style=3D"padding:0;Margin:0;padding-t=
+op:10px;padding-bottom:10px;">=0A															<table cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"es-table-not-adapt es-social" =
+style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collaps=
+e:collapse;border-spacing:0px;">=0A																<tbody>=0A				=
+													<tr style=3D"border-collapse:collapse;">=0A									=
+									<td align=3D"center" style=3D"padding:0;Margin:0;padding=
+-right:10px;" valign=3D"top"><a href=3D"https://click.pstmrk.it/2=
+sm/wizrocketmail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJC=
+w1ICQsNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252=
+BOTM%252FPjU8a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQC=
+AxZ7eCUxJTENO1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%=
+253A%252F%252Fwww.facebook.com%252Fakbartravels%26c%3D646729440%2=
+6token%3DBlBUAgdXBggABQ%253D%253D%26try%3D1/ssKQ7gM/bsg3/uvb_9eC-=
+E4/Z2VldGFkaXdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMH=
+wyMDE5MDYyMnwwfHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-brea=
+k:break-all;font-family:lato, 'helvetica neue', helvetica, arial,=
+ sans-serif;font-size:14px;text-decoration:underline;-webkit-text=
+-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:=
+exactly;color:#666666;" target=3D"_blank"><img alt=3D"Fb" src=3D"=
+https://ffwmp.stripocdn.email/content/assets/img/social-icons/cir=
+cle-black/facebook-circle-black.png" style=3D"display:block;borde=
+r:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicu=
+bic;" title=3D"Facebook" width=3D"32" /> </a></td>=0A												=
+						<td align=3D"center" style=3D"padding:0;Margin:0;padding-ri=
+ght:10px;" valign=3D"top"><a href=3D"https://click.pstmrk.it/2sm/=
+wizrocketmail.net%2Fr%3Fe%3DK2IFfx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1I=
+CQsNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uBV1EWFI%252BOT=
+M%252FPjU8a3FcWFc8PzY3LHglMUBbbl0zeGhpZm9negQJCAJnag15Z2trewQCAxZ=
+7eCUxJTENO1tGXkB1YHA8LSg5FFZVV1UiNiZpKg%253D%253D%26r%3Dhttps%253=
+A%252F%252Fwww.instagram.com%252Fakbartravels%26c%3D646729440%26t=
+oken%3DDlxeCQBTDQMC%26try%3D1/s8KQ7gM/bsg3/ycI0URzOLv/Z2VldGFkaXd=
+ha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnww=
+fHd6cmtfZGVmYXVsdHwtNDA1Mjg0NHw" style=3D"word-break:break-all;fo=
+nt-family:lato, 'helvetica neue', helvetica, arial, sans-serif;fo=
+nt-size:14px;text-decoration:underline;-webkit-text-size-adjust:n=
+one;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:=
+#666666;" target=3D"_blank"><img alt=3D"Ig" src=3D"https://ffwmp.=
+stripocdn.email/content/assets/img/social-icons/circle-black/inst=
+agram-circle-black.png" style=3D"display:block;border:0;outline:n=
+one;text-decoration:none;-ms-interpolation-mode:bicubic;" title=3D=
+"Instagram" width=3D"32" /> </a></td>=0A																		<td ali=
+gn=3D"center" style=3D"padding:0;Margin:0;" valign=3D"top"><a hre=
+f=3D"https://click.pstmrk.it/2sm/wizrocketmail.net%2Fr%3Fe%3DK2IF=
+fx9qCQJ6Y2t%252FDSZmewcCCQBjJCw1ICQsNQYABAZvbmY3FxohLkFDWFs5BTEkO=
+DE7LnJwTQUrPyQuOS4uBV1EWFI%252BOTM%252FPjU8a3FcWFc8PzY3LHglMUBbbl=
+0zeGhpZm9negQJCAJnag15Z2trewQCAxZ7eCUxJTENO1tGXkB1YHA8LSg5FFZVV1U=
+iNiZpKg%253D%253D%26r%3Dhttps%253A%252F%252Ftwitter.com%252Fakbar=
+travelsin%26c%3D646729440%26token%3DBlNTCApWBgMHCg%253D%253D%26tr=
+y%3D1/tMKQ7gM/bsg3/1YPWay_CC-/Z2VldGFkaXdha2VyODFAZ21haWwuY29tfDE=
+0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYyMnwwfHd6cmtfZGVmYXVsdHwtNDA1=
+Mjg0NHw" style=3D"word-break:break-all;font-family:lato, 'helveti=
+ca neue', helvetica, arial, sans-serif;font-size:14px;text-decora=
+tion:underline;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;color:#666666;" target=3D"_bla=
+nk"><img alt=3D"Tw" src=3D"https://ffwmp.stripocdn.email/content/=
+assets/img/social-icons/circle-black/twitter-circle-black.png" st=
+yle=3D"display:block;border:0;outline:none;text-decoration:none;-=
+ms-interpolation-mode:bicubic;" title=3D"Twitter" width=3D"32" />=
+ </a></td>=0A																	</tr>=0A																</tbody>=0A=
+															</table>=0A															</td>=0A														</=
+tr>=0A													</tbody>=0A												</table>=0A												=
+</td>=0A											</tr>=0A										</tbody>=0A									</table>=
+=0A									</td>=0A								</tr>=0A							</tbody>=0A						</tab=
+le>=0A						</td>=0A					</tr>=0A				</tbody>=0A			</table>=0A			=
+</td>=0A		</tr>=0A	</tbody>=0A</table>=0A</div>=0A<img src=3D"htt=
+p://ea.pstmrk.it/open/djJfMjAxOTA2MjFfMTUzNTA0XzM2NTU3OTBfZ2VldGF=
+kaXdha2VyODFAZ21haWwuY29tfDE0OTk2ODE0MDh8MTU1MTY5OTYwMHwyMDE5MDYy=
+MnwwfHd6cmtfX2RlZmF1bHR8LTQwNTI4NDR8X2Q4YWYyOGYyLWVlODEtNDIyOS1hM=
+zJhLWJjNWE3ZmZlMzA5OV9nZWV0YWRpd2FrZXI4MUBnbWFpbC5jb21fImFrYmFydH=
+JhdmVscy5jb20iIDxub3RpZmljYXRpb25zQG1haWxzLWFrYmFydHJhdmVscy5jb20=
++X0hleSBGcmllbmQsIHlvdXIgTmV3IERlbGhpwqBmbGlnaHQgaXMgd2FpdGluZyDi=
+nIjvuI8=3D" width=3D"1" height=3D"1" border=3D"0" alt=3D"" /></bo=
+dy>=0A</html>=0A<img  alt=3D"" border=3D"0" height=3D"1" width=3D=
+"1" src=3D"https://wizrocketmail.net/r?e=3DK2IFfx9qCQJ6Y2t%2FDSZm=
+ewcCCQBjJCw1ICQsNQYABAZvbmY3FxohLkFDWFs5BTEkODE7LnJwTQUrPyQuOS4uB=
+V1EWFI%2BOTM%2FPjU8a2RZVEMyPi4wdS0oOVlvWFB1YHB6Ym9jfQsJBwRnBWB7Zm=
+NifQACExh1LSg5PAUiIkRfRRZteCUxJTENL1dWUEE7LnA2&c=3D722411104"></i=
+mg>
+

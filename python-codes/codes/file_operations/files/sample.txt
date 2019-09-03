@@ -1,0 +1,4 @@
+Calculator
+
+An Apple calculator app that comes with Mac computers, iPhone, and iPod touch.
+Calculator includes basic, scientific, and programmer modes and supports Reverse Polish notation.

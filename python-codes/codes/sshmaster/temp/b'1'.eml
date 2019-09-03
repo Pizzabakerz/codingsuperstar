@@ -1,0 +1,756 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:aa7:c692:0:0:0:0:0 with SMTP id n18csp3035910edq;
+        Sun, 7 Apr 2019 12:04:00 -0700 (PDT)
+X-Received: by 2002:a0c:af74:: with SMTP id j49mr21046818qvc.129.1554663840077;
+        Sun, 07 Apr 2019 12:04:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554663840; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ezWLIblnHvxhFDGn2ItGxCrmwHXQYun9oKuOZrRYNduo/jfI0DRdzmAg4uDHpE/h3j
+         muYuca2LaiYochbha0x5bL5bddXEeuJ/QsdBjtHn1pQ/hiGFZNy+vQGXAH2ZHhA4NhXX
+         CKuRGsz03XAyoP3Ishb3IfkCaAV/VvjKbtbjshucy+CMG2BCjRWpAP0eNnz2I9gQzVHI
+         51FEr87Pg80yY7kCV0TIilQvByHAJi+nkQ5FY6X4Qqo6y20DJ5Ct+JBNQrgpjaxDcPwl
+         HgOTfIw+QdxP2b0rK9dwaeehyrWkbUMcszr+b073bQyjgH53G+twUglmdD37mQi46fB7
+         HqEg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:feedback-id:reply-to:date:mime-version
+         :dkim-signature;
+        bh=dNlX/HEG2TLxjUZ4kr55xBF9UQ85YnMNUW0/UGOiw0A=;
+        b=pFbhqaCaop7Jn0lJOLcRSwANp6tOgebhqwbY7oI5XeVNsCRXZl8eZ3vzYXv1ff5yRm
+         cra2herfknpS6l6DQWtyEbeazOhuTYYkxH49B27nH1+Blu4uUZcQHdfFOQtjiHmzPEEs
+         xr/LRBpWIp8gYFHi0Wais745pFkqvOqClXFPfHp2jADdDqaBB2hCvtsFExO/D7JHRGYz
+         AxNbQnpYO8SEm/s4VoiS5Eofgw0EcJu0WNSDcZikhQxax+MkVvAl8NrXC541yHtfpb4R
+         I6ySiWyWO2Pz7iuZtnSr1W7qVozXpijfABU8onsXVu72J3vidwDBtu/0MlR3kfdg5OID
+         AKOg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=qaIapJSd;
+       spf=pass (google.com: domain of 3k0mqxbskalolttlqjhtrrzsny3yjfr-stwjuq3lttlqj.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3k0mqXBsKALolttlqjhtrrzsny3yjfr-stwjuq3lttlqj.htr@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3k0mqXBsKALolttlqjhtrrzsny3yjfr-stwjuq3lttlqj.htr@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id v20sor38051679qtj.31.2019.04.07.12.03.47
+        for <geetadiwaker81@gmail.com>
+        (Google Transport Security);
+        Sun, 07 Apr 2019 12:04:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3k0mqxbskalolttlqjhtrrzsny3yjfr-stwjuq3lttlqj.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=qaIapJSd;
+       spf=pass (google.com: domain of 3k0mqxbskalolttlqjhtrrzsny3yjfr-stwjuq3lttlqj.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3k0mqXBsKALolttlqjhtrrzsny3yjfr-stwjuq3lttlqj.htr@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:date:reply-to:feedback-id:message-id:subject:from:to;
+        bh=dNlX/HEG2TLxjUZ4kr55xBF9UQ85YnMNUW0/UGOiw0A=;
+        b=qaIapJSdubq/q1o0NYbpfn9K3/HrSX4qqd5XY0d4z6ZNTqc0iTQOs3OYqidqTr78YC
+         nNv7AZgjZbB5z7Tqq2GclYIBmQrIDylmnom746EBqzl558+nKfzplEdOse3O6QeqJEyp
+         iirpHUl9rZBujnXiKH89Rbytsm/qXHxXA018KPx+kypmGI0/3Wd9dhOlxDUTN+mUH4ei
+         TYGxFFnKZbZ3AQxEGOwTKrH34k1mEYZU3CLadMrVugEjlQgfBRs9Y6b8K8hjOHqd8+OU
+         xyV651b7qXSqopOKF2c+hmDctlOJQ11wZUenJKDYhPS+xIFA1Pi3rh8brP/Q41XhpNyd
+         /oNQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:reply-to:feedback-id
+         :message-id:subject:from:to;
+        bh=dNlX/HEG2TLxjUZ4kr55xBF9UQ85YnMNUW0/UGOiw0A=;
+        b=jVWze4H7kYU8S/sU0QhVPm5gKLSnEyi+y8r053aTHM73JX4d/XCpNDbSBh6QbyzH68
+         bO1BpSDBzCUniOGia9qbVE4CYwIgOmS++LJOfv7xyluA8GnhT9jz6m4MY6cfC61x2Ibq
+         P3HgJusx3oAq3kBpPuGYl7HVuCd4Lt/dB+vqpRF0EzDu5lW1PZKvVNYo8CKJ99DqnWfv
+         Mjht1wbcHqdR4w0tnDG7QORnLkL8Ejo5GD047csT7qYoWA4vbF/F48WSMMcISla/bLmo
+         Ze4n6RcKgfW/BCvYnZicZmtIjBVTH02O+IZANkY8fwzBNR0T4FZJp14eHVlFMEb6N0pw
+         tSSA==
+X-Gm-Message-State: APjAAAX+22pKmXhDm73K7TcLH3Ewp2BDDCdnuhoxwBtsjhQT5TITPYsc
+	N5A02go5Jt77m+k=
+X-Google-Smtp-Source: APXvYqyiQVGE5BMyHY/gI+9O8B44U8ppbbzR8i41VpsTU8fPNcYAAtNuOHHExB9rQ+T5w/pazv3s0aQ=
+MIME-Version: 1.0
+X-Received: by 2002:ac8:7c9:: with SMTP id m9mr2907150qth.26.1554663827381;
+ Sun, 07 Apr 2019 12:03:47 -0700 (PDT)
+Date: Sun, 07 Apr 2019 12:03:47 -0700
+Reply-To: Google Community Team <googlecommunityteam-noreply@google.com>
+X-Google-Id: 248176
+Feedback-ID: Len:P-35:C20063660:gamma
+X-Notifications: GAMMA:<a093bc861871c1d52c70ef8af2f871b8decb9366-20063660-110431430@google.com>
+Message-ID: <a093bc861871c1d52c70ef8af2f871b8decb9366-20063660-110431430@google.com>
+Subject: geeta, welcome to your new Google Account
+ 
+From: Google Community Team <googlecommunityteam-noreply@google.com>
+To: geetadiwaker81@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000002d1e740585f56155"
+
+--0000000000002d1e740585f56155
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+SGkgZ2VldGEsDQoNClRoYW5rIHlvdSBmb3IgY3JlYXRpbmcgYSBHb29nbGUgQWNjb3VudC4gSGVy
+ZSBpcyBzb21lIGFkdmljZSB0byBnZXQgc3RhcnRlZCAgDQp3aXRoIHlvdXIgR29vZ2xlIGFjY291
+bnQuDQoNClNlY3VyaXR5ICANCjxodHRwczovL3d3dy5nb29nbGUuY29tL2FwcHNlcnZlL21rdC9w
+L0FGbnduS1hpQkVpM3R2ckFndVdwck1ZT0xLNzJHTDhNcDh3OXUwTlBFSmNKeHBCNUlPTlZHTWJk
+Nl9BeXliMHA0V2tQRjF4M3J2UE8yQWtDampWRkxtZWY2QloyUTNxTUNqMlFkMDFPaW9QM1kxVTlK
+Rm5FTklHaXhxb0szWEtCWURFU1o5Y3NSOHM0UDZVcmNvTnhSeFhkbXNpLVQ1VmVaS0t4Pg0KDQpZ
+b3UncmUgaW4gY29udHJvbA0KDQpDaG9vc2Ugd2hhdCdzIHJpZ2h0IGZvciB5b3UuIE1hbmFnZSB5
+b3VyIHByaXZhY3kgYW5kIHNlY3VyaXR5IHNldHRpbmdzIGF0ICANCmFueSB0aW1lIGluIHlvdXIg
+R29vZ2xlIEFjY291bnQgIA0KPGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3Av
+QUZud25LV0JablR0MUROVG5fUTI2TG1henJhN2o1WWhPWHFBNmNEZzlaVUZaRG9tazBFYkpsVlNS
+ODZGeTdWMnhMMkZpQ01lMWgxZkZodmNBdm5LMkZsVDkzQXBrRDFENjE1MENpaWFCMXotYTNQZl9a
+Nnk4SGh4S1JsbnI4b0ZfMVZ6b01zTHlFYk13YXdDdnp3QXlDa0RpaWFhMThNZUZabkdDLWRiVHNz
+PiwgIA0Kd2hlcmUgeW91IGNhbiBzaWduIHVwIGZvciBQcml2YWN5IENoZWNrdXAgIA0KPGh0dHBz
+Oi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LVjdjTHpONDRvSlhGd3MtR1k5
+bjBMSERPc283bkd5V0NCcDBXVUJuQjlJMV9FeHhMWjhzOWhXRFktUzhhWUZyV1lfTXBkN2JKeWtz
+aHZWcDMxaktWbFBIQUxYaEhHaktoVllzTGFLcDE3NmRlb29mZjdXaWlYZTJoWERjUEZ5Y1RUR2VE
+M3BSeGY1V19fWi1QOXpZekw0enJwekZKMjZSU3ZDMTRseHlIZTJLVDZfX2tORkhRPiAgDQpyZW1p
+bmRlcnMsIHRha2UgdGhlICBTZWN1cml0eSBDaGVja3VwICANCjxodHRwczovL3d3dy5nb29nbGUu
+Y29tL2FwcHNlcnZlL21rdC9wL0FGbnduS1h1OWQwSTNnRElzVDQwbXV5a3I0d3FyR09WV3BNYlFU
+WnNEcmNqenRaOGdwOEowazcwaEtadGUzQXVCWGd4WGY4TGpYNzMzdFpONnFSZFUzcHR1Z0JKemdX
+RUp4SnFtZmI5Z0JmRF9BM3RrWk1VS3kzZmNabHFCT3FYV3BENFFUd1ljenA0NWZZeGE0MWZxWXkx
+OVFXUnRSNkFNNk5NM1Y1M3BkdWFjQTV4MGU5U2gwRXVfbWJZX2c+ICANCmFuZCBtb3JlLg0KDQpH
+bWFpbCAgDQo8aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9hcHBzZXJ2ZS9ta3QvcC9BRm53bktWa1hy
+OHBMRml3TXBlR1RhWVkxd2FFTFdHdUxaVGlhR0dDZUlOR0FZZ2tNemFjOFpnaUltX1kxNkxGSUtM
+cmlYVnR0aWtHSnB4LVNtZlJXNDY1WHpJUi1zeG80bHFidld0dFhhQmZ6NHpTd3F3X0dEejRZT1RB
+QkJjNlJUbElabW9rVjZ1OF9yX2Z5T3Jpd0lVb1VncE1STGlpdURlYkpISG5pdz4NCg0KQWNjZXNz
+IEdtYWlsIG9uIHRoZSBnbw0KDQpXaXRoIEdtYWlsIGZvciAgDQpBbmRyb2lkPGh0dHBzOi8vd3d3
+Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LWGZyVXRTSEwxWEhCblppLWlJVEJIcmsw
+azhHOENKSDVYdEpaOUxFNWpwbHhhZlFJcllVdnpDeDlvNWFwU050Q3UyVFBOX2RRcEFwYU54MU1Y
+Q0xZVFhRdkFZeU8zYVdCbVdwQWNGaFdwRkMtcGp6SXZHVENCSklmSnFYbnFFWG1YQUUybDI0VVVf
+ck9Ja1J6eUdhTmhDaFk3SVNBVE9ZVVNjV3M2bzNCNmptNHB4eU50RlNKNDRzUnpDQURQd2FHVHVY
+WE5zOC1EU1FyQT48L2h0dHBzOi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25L
+WGZyVXRTSEwxWEhCblppLWlJVEJIcmswazhHOENKSDVYdEpaOUxFNWpwbHhhZlFJcllVdnpDeDlv
+NWFwU050Q3UyVFBOX2RRcEFwYU54MU1YQ0xZVFhRdkFZeU8zYVdCbVdwQWNGaFdwRkMtcGp6SXZH
+VENCSklmSnFYbnFFWG1YQUUybDI0VVVfck9Ja1J6eUdhTmhDaFk3SVNBVE9ZVVNjV3M2bzNCNmpt
+NHB4eU50RlNKNDRzUnpDQURQd2FHVHVYWE5zOC1EU1FyQT4gIA0Kb3IgIA0KaU9TPGh0dHBzOi8v
+d3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LV1B0RFlzcmJ4M0tDTlNSVGw0Z1hq
+RzNza1VabU5WdU53QVJsa2kzQXh3MkhGMktvYUpsM0JJVEI1VExTdlc4RkctX1NXVG8yamswRDdi
+d0tjRkt0ZzcxYVNMTHVjNGtHa01PWGE2eUFYVVpYS0Rwc2ltZWU0QnBteGp3SWpDRXJqOUhmS19V
+dGxqWlhQZ2MxTlhPWGlSOGQ3TEl0eXg1VGdTX0dtZHZ4ZkFES0xMTTJvPiwgIA0KeW91IGdldCBv
+bmUgY2xpY2sgYWNjZXNzIHRvIHlvdXIgZW1haWwsIHJlYWwtdGltZSBub3RpZmljYXRpb25zIGFu
+ZCBhIGxvdCAgDQptb3JlIHdoZXJldmVyIHlvdSBhcmUuDQoNCkdvb2dsZSBQaG90b3MgIA0KPGh0
+dHBzOi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LV0FYNElYSW90RE8tM2Y5
+SFJLRHpEcEhKU0QwZ0dTVm5nQmsyc19fQ0FRMDJWd3BieVRmc1l4Q0lBakxJRkVRUGVGYUVpcWRX
+Sm5nRUFZTmV0d1VQX2lwSzAyUHRsUkJLUkRoTTVvSk9ON2xCWWp6bThoQXRrMUpNR3VRVHdzeTNE
+Q1ZlNG9QWkJnNmVqNGs4RVJVSnI3UGxJVGNBPg0KRGlzY292ZXIgR29vZ2xlIHByb2R1Y3RzDQoN
+CkZpbmQgdGlwcyB0byB1c2Ugb3RoZXIgR29vZ2xlIHByb2R1Y3RzICANCmhlcmU8aHR0cHM6Ly93
+d3cuZ29vZ2xlLmNvbS9hcHBzZXJ2ZS9ta3QvcC9BRm53bktVeU5LYWFtWmRmS3pNLUZaZkR6OGth
+aVJROTd0cVhjZVpSMmZvRkQ5Q2RiNjBqTldiOFhWbmRxVURwSWU1WUUtQjJiZmhoSGpUT3Z4SUZG
+c3FhZFM5OFFiaUZEd2Vsc28xYlNhZ21TeE44akRQNF9XNkp2a0xfWHRhbmxUaFdVS1dobnJscmR0
+bWdnTWVrNzRDVnJndUN2ZEloNEE+LiAgDQpGb3IgZXhhbXBsZSwgR29vZ2xlIFBob3RvcyBmb3Ig
+IA0KQW5kcm9pZDxodHRwczovL3d3dy5nb29nbGUuY29tL2FwcHNlcnZlL21rdC9wL0FGbnduS1V1
+aDRZczFaeDV5MmZtUThSWURIVGoybS00TU1BVEVTbWtSY3dWLWJQRlQzZWI4bmF6YlVVR2ItTlNI
+N0Q3QU5BU2pQYk92VUZwWWMtQmdHdWM2aGlSOTVldjgycWxMQ3NfbFI3QnVIQ3otTDFRaHdxWGM0
+YzIzWlp6R2pBMWhxZ3dpaXA0dnp4SFowS1ZWNWdmWjZodDNRbVVqTzBMN2dYU2tlYU11b1B2V1ZR
+eEdEbU4zMFVCOW5UOE1kSmNObEhVTkQ3aTZlQWtvYUpqRkZ5VklUbHNNNEFDPiAgDQpvciAgDQpp
+T1M8aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9hcHBzZXJ2ZS9ta3QvcC9BRm53bktYM25iMEZZa1hi
+OXZ0bkE0MGc3a3NlSlF1eHBCd3htQkl2VUlKUkVhaTZxS0VVZG5qYnp4eEVxUnBwTkU1MTI4cTV6
+VnV1NnZtaVB1UVM2MURVMHoxMUlUUkhubTVLMTRVZEdWRXp0R3dGeGd2b0I0M3lfT1B1T1cwQXgt
+WUFkanYydEE1dDFmQ211bGdCQ0dJbWhvSDcyTnVnWDhMZllORUpETi1CdEkwSV9KWGU0Mk1uPiAg
+DQpnaXZlcyB5b3UgZnJlZSBwaG90byBhbmQgdmlkZW8gc3RvcmFnZSBvbiB5b3VyIHBob25lLg0K
+DQpSZXBsaWVzIHRvIHRoaXMgZW1haWwgYXJlbid0IG1vbml0b3JlZCwgYnV0IGlmIHlvdSBoYXZl
+IGEgcXVlc3Rpb24gdHJ5IHRoZSAgDQpIZWxwICANCkNlbnRlcjxodHRwczovL3d3dy5nb29nbGUu
+Y29tL2FwcHNlcnZlL21rdC9wL0FGbnduS1YtM04zZ3U2MEVOMWNnNG5wSWl6N2xJWUFLSnVEZjFD
+cm1pME0zOWUxd1pyaS1zdE44UWpZcGtiNU1zbkk1MWlBMmpQUmxHbWpBQmJfNDh1UFJGUzhQT1lX
+dzZUYTNHVWUxN2owVU55aTN2QnF0emZpVTNRZC1aM2JsTUZGcWtOR1BsQmJGTm16Q1hjT3dwVTJp
+VktWSDdnPiAgDQpvciBwb3N0IGl0IHRvIHRoZSBHbWFpbCBIZWxwICANCkZvcnVtPGh0dHBzOi8v
+d3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LWGVfUWxuNEh2WWFsYWVmZHdMdFly
+T2d3Unl1a2VORDB6Z3lFZmVrcm53a0dvXy1yNkpuc2F6aDBYWGdfOTFES0RfOTRsMVBrcVRZWTRT
+VlBFMXh2ZFR1RUVDc04ydXk1Slp5dHdCbkdmTHMtcVVrVzcxWk1TWFd2dGNGemZoZHpOQzRXWGZD
+aWlqTzZvVWRhLVJaT2VLbWJuZXJfVXlKTm9jN3J5c3FIaHluc2VxVkhXT2RHLU9oR1lrdHdjTVBO
+SE1MUlBBbWNYV25XSVNjSkROc1RxY3RQd0RQTHZyeTgyYUo0TlhVOGxSdWJYaHB2RXZOT2IxPiAg
+DQp3aGVyZSBteSB0ZWFtIGFuZCBvdGhlciBleHBlcnQgdXNlcnMgYW5zd2VyIHF1ZXN0aW9ucy4N
+Cg0KRW5qb3kgeW91ciBuZXcgYWNjb3VudCwNCkdvb2dsZSBDb21tdW5pdHkgVGVhbQ0KDQpHb29n
+bGUgIA0KPGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LVXdSZTZz
+TG01M3FhS2NfaW5xUG41TmhoaU1VNjdoc1hUd09RR01PSm5ic2s4YVpWeTlIUW11QmxIR2I2ODNE
+MHlLYm02c0FxN2Foa1RnTFZPY1JPMEtGTjlDU3FZc0JyMk83SXRxNmpSWHNGUEJ5TEhub25nbTdM
+cmlycV9RdWlUTVh2TXZOSTBPQUZCZk1QX1BNRjBvalE+DQoNCkdvb2dsZSBTZWFyY2ggIA0KPGh0
+dHBzOi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LVVJ5UXdwdTd1VWhCcEVN
+a3FhRTVYMnFYWDZHWG16R2Y0SzlpY2pQU0dBTjFuNzdWenR2QVBzc3BGZ3V0TU5IaG5MS3hzT3Z0
+Q1lid2VaYkNyZEplbEpfdUNxN3RYbkItX0JSMm5fVHUtbUJsbEhwZ0RHUEoyZ2VidkpGUXhxTlRI
+MmVkVDZrcnNsbUsyZ21kRTE0MW9xRmc+DQoNCkdtYWlsICANCjxodHRwczovL3d3dy5nb29nbGUu
+Y29tL2FwcHNlcnZlL21rdC9wL0FGbnduS1dCb3FZbTdJcmlxeEJISzZwM2dDVnhKdkY1ZTVlcXN3
+SWh3YzExWnZ2MHh0T3pRNVBkTzhQSkVzUjhMX2o1Nl9BYjlzb2t5cHJjLUVBM3NnZVNKYm84Rzgy
+UGg4dnJfUE1wdUxYelBic3d3YnJJNXA1djRLeHRsblc2R2FBUEhQNWJtXy1vZUlnWWVMaTVzZ0dh
+WGtiNlU0U3g5eUJPOUFBMkx4MD4NCg0KR29vZ2xlIEFzc2lzdGFudCAgDQo8aHR0cHM6Ly93d3cu
+Z29vZ2xlLmNvbS9hcHBzZXJ2ZS9ta3QvcC9BRm53bktXTjAxaHFTUHF1ZFBJSGRkTFdoWmV4Qk1h
+c0FvRkl1bEgzQXNieVFoMWt4LTVhTWUwRGJqb3VzQWhQWmM3dlhCcEtBcnQ5MS1ocDh2dDNmcHFG
+ZTRPOHh2SmFPNTBaVy1sR0RaOGROZVpoYkZsVTdOa3EyVjIydE9zRWlFWjVEWWxlVk1FZE9JaWVo
+RG9xRUEteHgwNDBfTmNwNnBjRHlaN0VfWFlJY0NfTVJ4TG4tS3JNUkdsOURVNHd1NkU+DQoNCk1h
+cHMgIA0KPGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LWGRIRmJf
+YUtnOHBfMEJhdFkzeWV4anpXLWRER2ZuX1cwY0FpcmxSRW5oU3BVQ3J5aW9RQzduaTdjQ1JKN1pz
+Mlk2cnkyZm5xQWpXR2J0c0tzYmRzSkF4T0ZtclFWM1hwWHgxeERoVjhIRi1FbGctQzNEdkNvaXh0
+WDJtYkFJVlZkQlQyeG1PV25yV3ViYkJsUGd1VHhCYUdfOW5nPg0KDQpZb3VUdWJlICANCjxodHRw
+czovL3d3dy5nb29nbGUuY29tL2FwcHNlcnZlL21rdC9wL0FGbnduS1dpa2NDUmNpSUN4SkhhNmVK
+dU84YjV0dHNtNzdLc1RlN0FucmhDSWNvWFZ0ZDdLcWtWSXIwcDNScFZTTk5vRnBFLS1OS1BwTVhO
+V2hGdldtRU1NS3FqbTJQMUdyTkpvaE5QSlpvMFh3R3ZEWkFFVTNxSmhJc2FFMVhLZFVUczFPSU1F
+TDVnY2NBQnM0UFAzWUJ3MkE+DQoNCkRyaXZlICANCjxodHRwczovL3d3dy5nb29nbGUuY29tL2Fw
+cHNlcnZlL21rdC9wL0FGbnduS1h5OWQ5dXVLWGd1c0hjWllMSzlkSjdiY3F1MmlVeDZrVXV4bzJC
+TUt0QW4zY0szSnRjZnhwcHdKWjlyajRrdlZzaDNWaWdRMnFXeG9YRmRvdXdmVkRqN3RBdHlvMjZT
+UUxjOUZ1eVJjS0tlTVllRTFJWHk1ekZGUGF0WGRNSGI1ZkJXZHQ3eDFCS0VuUjhaQzdZa1dUUUk3
+RT4NCg0KUGhvdG9zICANCjxodHRwczovL3d3dy5nb29nbGUuY29tL2FwcHNlcnZlL21rdC9wL0FG
+bnduS1dBWDRJWElvdERPLTNmOUhSS0R6RHBISlNEMGdHU1ZuZ0JrMnNfX0NBUTAyVndwYnlUZnNZ
+eENJQWpMSUZFUVBlRmFFaXFkV0puZ0VBWU5ldHdVUF9pcEswMlB0bFJCS1JEaE01b0pPTjdsQllq
+em04aEF0azFKTUd1UVR3c3kzRENWZTRvUFpCZzZlajRrOEVSVUpyN1BsSVRjQT4NCg0KUGxheSAg
+DQo8aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9hcHBzZXJ2ZS9ta3QvcC9BRm53bktVQ3RtcHI1Q3Zw
+WmRDUlM5cko4aUNRZzVSVkl6T25WLUNIT0FuU0k0T2dQeThsVWt4ZFNnZ2JQSm94NmFrT1FRRFh4
+N0FRbU5ZdTBSdUZQNzZmSmZsLXNDMU1CZmFrdTVYZTBoeDhJWjFhMmd6aHBSVE83TEFzWTE2eW9i
+RExEaU5wanJXM3RGZ2tiVGx1ZTVQdXF6MFVQWk1xNlMwPg0KDQpDaHJvbWUgIA0KPGh0dHBzOi8v
+d3d3Lmdvb2dsZS5jb20vYXBwc2VydmUvbWt0L3AvQUZud25LV3JOMmszSjJJZ2VBdXphREdYdFBq
+dWtUcm9aaGR1Wm0xckpuMVRIbnltNDVLcExYTnR4aDRoS01NZFh0V0hMUVFrTlNLZURWSWFZMkdi
+OUo4bFhNRk05ci0wOEFUeDU3UGhkN3d6UjF5d0Nta1ZqM1FlVEdrMjBKcXpsZmVyZUtoTVE3NHMz
+Vm1oOEFLSXZVUURDTWlYa003NW9xUV8yVTA+DQoNCsKpIDIwMTkgR29vZ2xlIElyZWxhbmQgTHRk
+LCBHb3Jkb24gSG91c2UsIEJhcnJvdyBTdHJlZXQsIER1YmxpbiA0LCBJcmVsYW5kLg0KVGhpcyBl
+bWFpbCB3YXMgc2VudCB0byB5b3UgYmVjYXVzZSB5b3UgY3JlYXRlZCBhIEdvb2dsZSBBY2NvdW50
+Lg0KDQo=
+--0000000000002d1e740585f56155
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ =20
+
+
+ =20
+
+
+
+
+
+
+ =20
+
+
+
+
+ =20
+
+
+
+
+ =20
+ =20
+<html>
+     <head>
+    <meta name=3D"x-apple-disable-message-reformatting">
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, maximum-scale=3D1">
+    <!--<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1.0"/>
+    <meta name=3D"viewport" content=3D"target-densitydpi=3Ddevice-dpi"/> --=
+>
+      <style type=3D"text/css">    =20
+       =20
+    @media only screen and (max-width: 767px){
+    	 .body_wrapper{min-width:100vw !important;}
+      .device_txt{font-size:26px!important;}
+    }
+   =20
+    @media screen and (min-resolution: 288dpi) {
+      .body_wrapper{min-width:100% !important;}
+      .device_txt{font-size:26px!important;}
+	}
+      =20
+   </style>
+   <style>
+    @media screen and (min-device-width : 414px) and (-webkit-device-pixel-=
+ratio: 3){=20
+    .email_body{word-break: break-all !important;}
+    }
+    </style>
+    <style>
+    @media screen and (min-device-width : 375px) and (-webkit-device-pixel-=
+ratio: 2){=20
+    .email_body{word-break: break-all !important;}
+    }
+    </style>
+</head>
+<body style=3D"padding: 0; margin: 0;" class=3D"body_wrapper">
+<style>
+@media screen{@font-face{font-family:'Open Sans';font-style:normal;font-wei=
+ght:normal;src:local('Open Sans Light'),local('OpenSans-Light'),url(http://=
+fonts.gstatic.com/s/opensans/v9/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs=
+.woff2) format('woff2'),url(http://fonts.gstatic.com/s/opensans/v9/DXI1ORHC=
+psQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff')}}body{padding:0;ma=
+rgin:0}@media only screen and (max-width:520px){-webkit-text-size-adjust:10=
+0%}
+</style>
+<center>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" wi=
+dth=3D"520" bgcolor=3D"#ffffff" style=3D"background: #ffffff; min-width: 52=
+0px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; -=
+ms-text-size-adjust: 100%;">
+  <tr>
+    <td width=3D"20" bgcolor=3D"#eeeeee" style=3D"background: #eeeeee;"></t=
+d>
+      <td width=3D"480" style=3D"-webkit-font-smoothing: antialiased; -webk=
+it-text-size-adjust: none; -ms-text-size-adjust: 100%;">
+      <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
+">
+				<tr>
+					<td height=3D"20" bgcolor=3D"#eeeeee" style=3D"background: #eeeeee;"><=
+/td>
+				</tr>
+				<tr>
+					<td>
+  				 <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cen=
+ter" width=3D"100%" style=3D"border-bottom: 1px solid #eeeeee;">
+            <tr>
+    			    <td height=3D"49"></td>
+             </tr>
+             <tr>
+             <td align=3D"center" class=3D"whom" style=3D"color:#4285f4; fo=
+nt-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, sans-=
+serif; font-size:32px; font-weight:normal; line-height:46px; margin:0; padd=
+ing:0 25px 0 25px; text-align:center">Hi geeta,</td>
+             </tr>
+             <!--[if !mso]><!-- -->
+              <tr>
+        	      <td height=3D"20"></td>
+              </tr>
+            <!--<![endif]-->
+           =20
+            <!--[if mso]>
+              <tr>
+                <td height=3D"7">&nbsp;</td>
+              </tr>
+            <![endif]-->
+            <tr>
+              <td align=3D"center" class=3D"parasec" style=3D"color:#757575=
+; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, s=
+ans-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0; =
+padding:0 25px 0 25px; text-align:center"> Thank you for creating a Google =
+Account. Here is some advice to get started with your Google account.</td>
+             </tr>
+             <tr>
+      		    <td height=3D"30">
+
+              </td>
+             </tr>
+            =20
+  				 </table>
+					</td>
+				</tr>
+        <tr>
+          <td>
+            <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%" style=3D"border-bottom: 1px solid #eeeeee;">
+            <tr>
+      		    <td height=3D"32"></td>
+             </tr>
+             <tr>
+      		    <td width=3D"60" height=3D"77" align=3D"center" style=3D"font-s=
+ize:8px;">
+              <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKXiBEi3=
+tvrAguWprMYOLK72GL8Mp8w9u0NPEJcJxpB5IONVGMbd6_Ayyb0p4WkPF1x3rvPO2AkCjjVFLme=
+f6BZ2Q3qMCj2Qd01OioP3Y1U9JFnENIGixqoK3XKBYDESZ9csR8s4P6UrcoNxRxXdmsi-T5VeZK=
+Kx" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">
+             <img width=3D"60" height=3D"77" src=3D"https://services.google=
+.com/fh/files/emails/shield_logo_150_rt.png" alt=3D"Security" border=3D"0" =
+style=3D"width: 60px; height: 77px; text-align: center; border: none;">
+              </a>
+              </td>
+             </tr>
+             <tr>
+      		    <td height=3D"15"></td>
+             </tr>
+             <tr>
+      		    <td align=3D"center" class=3D"device_txt" style=3D"color:#75757=
+5; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, =
+sans-serif; font-size:24px; font-weight:normal; line-height:33px; margin:0;=
+ padding:0 25px 0 25px; text-align:center">You&#39;re in control</td>
+             </tr>
+             <!--[if !mso]><!-->
+             <tr>
+      		    <td height=3D"4" style=3D"line-height: 4px; font-size: 4px;"></=
+td>
+             </tr>
+             <!--<![endif]-->
+             <tr>
+               <td align=3D"center" class=3D"para" style=3D"color:#757575; =
+font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, san=
+s-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0; pa=
+dding:0 25px 0 25px; text-align:center">Choose what&#39;s right for you. Ma=
+nage your privacy and security settings at any time in your <a href=3D"http=
+s://www.google.com/appserve/mkt/p/AFnwnKWBZnTt1DNTn_Q26Lmazra7j5YhOXqA6cDg9=
+ZUFZDomk0EbJlVSR86Fy7V2xL2FiCMe1h1fFhvcAvnK2FlT93ApkD1D6150CiiaB1z-a3Pf_Z6y=
+8HhxKRlnr8oF_1VzoMsLyEbMwawCvzwAyCkDiiaa18MeFZnGC-dbTss" target=3D"_blank" =
+style=3D"color:#4285f4; text-decoration:underline;">Google Account</a>, whe=
+re you can sign up for <a href=3D"https://www.google.com/appserve/mkt/p/AFn=
+wnKV7cLzN44oJXFws-GY9n0LHDOso7nGyWCBp0WUBnB9I1_ExxLZ8s9hWDY-S8aYFrWY_Mpd7bJ=
+ykshvVp31jKVlPHALXhHGjKhVYsLaKp176deooff7WiiXe2hXDcPFycTTGeD3pRxf5W__Z-P9zY=
+zL4zrpzFJ26RSvC14lxyHe2KT6__kNFHQ" target=3D"_blank" style=3D"color:#4285f4=
+; text-decoration:underline;">Privacy Checkup</a> reminders, take the <a hr=
+ef=3D"https://www.google.com/appserve/mkt/p/AFnwnKXu9d0I3gDIsT40muykr4wqrGO=
+VWpMbQTZsDrcjztZ8gp8J0k70hKZte3AuBXgxXf8LjX733tZN6qRdU3ptugBJzgWEJxJqmfb9gB=
+fD_A3tkZMUKy3fcZlqBOqXWpD4QTwYczp45fYxa41fqYy19QWRtR6AM6NM3V53pduacA5x0e9Sh=
+0Eu_mbY_g" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underl=
+ine;">Security Checkup</a> and more.</td>
+             </tr>
+             <tr>
+        	    <td height=3D"30"></td>
+             </tr>
+           </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%" style=3D"border-bottom: 1px solid #eeeeee;">
+            <tr>
+        	    <td height=3D"32"></td>
+             </tr>
+             <tr>
+      		    <td width=3D"64" height=3D"64" align=3D"center" style=3D"font-s=
+ize:8px;">
+              <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKVkXr8p=
+LFiwMpeGTaYY1waELWGuLZTiaGGCeINGAYgkMzac8ZgiIm_Y16LFIKLriXVttikGJpx-SmfRW46=
+5XzIR-sxo4lqbvWttXaBfz4zSwqw_GDz4YOTABBc6RTlIZmokV6u8_r_fyOriwIUoUgpMRLiiuD=
+ebJHHniw" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underli=
+ne;">
+              <img width=3D"64" height=3D"64" border=3D"0" src=3D"https://s=
+ervices.google.com/fh/files/emails/owe_gmail_128dp.png" alt=3D"Gmail" style=
+=3D"width: 64px; height: 64px; text-align: center; border: none;">
+              </a>
+              </td>
+             </tr>
+             <tr>
+      		    <td height=3D"15"></td>
+             </tr>
+             <tr>
+      		    <td align=3D"center" class=3D"device_txt" style=3D"color:#75757=
+5; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, =
+sans-serif; font-size:24px; font-weight:normal; line-height:33px; margin:0;=
+ padding:0 25px 0 25px; text-align:center">Access Gmail on the go</td>
+             </tr>
+             <!--[if !mso]><!-->
+             <tr>
+      		    <td height=3D"4" style=3D"line-height: 4px; font-size: 4px;"></=
+td>
+             </tr>
+             <!--<![endif]-->
+             <tr>
+               <td align=3D"center" class=3D"para" style=3D"color:#757575; =
+font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, san=
+s-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0; pa=
+dding:0 25px 0 25px; text-align:center">With Gmail for <a href=3D"https://w=
+ww.google.com/appserve/mkt/p/AFnwnKXfrUtSHL1XHBnZi-iITBHrk0k8G8CJH5XtJZ9LE5=
+jplxafQIrYUvzCx9o5apSNtCu2TPN_dQpApaNx1MXCLYTXQvAYyO3aWBmWpAcFhWpFC-pjzIvGT=
+CBJIfJqXnqEXmXAE2l24UU_rOIkRzyGaNhChY7ISATOYUScWs6o3B6jm4pxyNtFSJ44sRzCADPw=
+aGTuXXNs8-DSQrA" target=3D"_blank" style=3D"color:#4285f4; text-decoration:=
+underline;">Android</a> or <a href=3D"https://www.google.com/appserve/mkt/p=
+/AFnwnKWPtDYsrbx3KCNSRTl4gXjG3skUZmNVuNwARlki3Axw2HF2KoaJl3BITB5TLSvW8FG-_S=
+WTo2jk0D7bwKcFKtg71aSLLuc4kGkMOXa6yAXUZXKDpsimee4BpmxjwIjCErj9HfK_UtljZXPgc=
+1NXOXiR8d7LItyx5TgS_GmdvxfADKLLM2o" target=3D"_blank" style=3D"color:#4285f=
+4; text-decoration:underline;">iOS</a>, you get one click access to your em=
+ail, real-time notifications and a lot more wherever you are.</td>
+             </tr>
+             <tr>
+        	    <td height=3D"30"></td>
+             </tr>
+           </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%" style=3D"border-bottom: 1px solid #eeeeee;">
+            <tr>
+              <td height=3D"32"></td>
+             </tr>
+             <tr>
+      		    <td width=3D"64" height=3D"64" align=3D"center" style=3D"font-s=
+ize:8px;">
+              <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKWAX4IX=
+IotDO-3f9HRKDzDpHJSD0gGSVngBk2s__CAQ02VwpbyTfsYxCIAjLIFEQPeFaEiqdWJngEAYNet=
+wUP_ipK02PtlRBKRDhM5oJON7lBYjzm8hAtk1JMGuQTwsy3DCVe4oPZBg6ej4k8ERUJr7PlITcA=
+" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">
+             <img width=3D"64" height=3D"64" border=3D"0" src=3D"https://ww=
+w.gstatic.com/images/branding/product/1x/photos_96dp.png" alt=3D"Google Pho=
+tos" style=3D"width: 64px; height: 64px; text-align: center; border: none;"=
+>
+             </a>
+              </td>
+             =20
+             </tr>
+             <tr>
+      		    <td height=3D"15"></td>
+             </tr>
+             <tr>
+      		    <td align=3D"center" class=3D"device_txt" style=3D"color:#75757=
+5; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, =
+sans-serif; font-size:24px; font-weight:normal; line-height:33px; margin:0;=
+ padding:0 25px 0 25px; text-align:center">Discover Google products</td>
+             </tr>
+             <!--[if !mso]><!-->
+             <tr>
+      		    <td height=3D"4" style=3D"line-height: 4px; font-size: 4px;"></=
+td>
+             </tr>
+             <!--<![endif]-->
+             <tr>
+               <td align=3D"center" class=3D"para1" style=3D"color:#757575;=
+ font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, sa=
+ns-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0; p=
+adding:0 20px 0 20px; text-align:center">Find tips to use other Google prod=
+ucts <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKUyNKaamZdfKzM-F=
+ZfDz8kaiRQ97tqXceZR2foFD9Cdb60jNWb8XVndqUDpIe5YE-B2bfhhHjTOvxIFFsqadS98QbiF=
+Dwelso1bSagmSxN8jDP4_W6JvkL_XtanlThWUKWhnrlrdtmggMek74CVrguCvdIh4A" target=
+=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">here</a>. F=
+or example, Google Photos for <a href=3D"https://www.google.com/appserve/mk=
+t/p/AFnwnKUuh4Ys1Zx5y2fmQ8RYDHTj2m-4MMATESmkRcwV-bPFT3eb8nazbUUGb-NSH7D7ANA=
+SjPbOvUFpYc-BgGuc6hiR95ev82qlLCs_lR7BuHCz-L1QhwqXc4c23ZZzGjA1hqgwiip4vzxHZ0=
+KVV5gfZ6ht3QmUjO0L7gXSkeaMuoPvWVQxGDmN30UB9nT8MdJcNlHUND7i6eAkoaJjFFyVITlsM=
+4AC" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">=
+Android</a> or <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKX3nb0=
+FYkXb9vtnA40g7kseJQuxpBwxmBIvUIJREai6qKEUdnjbzxxEqRppNE5128q5zVuu6vmiPuQS61=
+DU0z11ITRHnm5K14UdGVEztGwFxgvoB43y_OPuOW0Ax-YAdjv2tA5t1fCmulgBCGImhoH72NugX=
+8LfYNEJDN-BtI0I_JXe42Mn" target=3D"_blank" style=3D"color:#4285f4; text-dec=
+oration:underline;">iOS</a> gives you free photo and video storage on your =
+phone.</td>
+             </tr>
+             <tr>
+        	    <td height=3D"30"></td>
+             </tr>
+           </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center" width=3D"100%">
+            <tr>
+              <td height=3D"27"></td>
+             </tr>
+             <tr>
+                <td align=3D"center" class=3D"parasec" style=3D"color:#7575=
+75; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial,=
+ sans-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0=
+; padding:0 25px 0 25px; text-align:center">Replies to this email aren&#39;=
+t monitored, but if you have a question try the <a href=3D"https://www.goog=
+le.com/appserve/mkt/p/AFnwnKV-3N3gu60EN1cg4npIiz7lIYAKJuDf1Crmi0M39e1wZri-s=
+tN8QjYpkb5MsnI51iA2jPRlGmjABb_48uPRFS8POYWw6Ta3GUe17j0UNyi3vBqtzfiU3Qd-Z3bl=
+MFFqkNGPlBbFNmzCXcOwpU2iVKVH7g" target=3D"_blank" style=3D"color:#4285f4; t=
+ext-decoration:underline;">Help Center</a> or post it to the <a href=3D"htt=
+ps://www.google.com/appserve/mkt/p/AFnwnKXe_Qln4HvYalaefdwLtYrOgwRyukeND0zg=
+yEfekrnwkGo_-r6Jnsazh0XXg_91DKD_94l1PkqTYY4SVPE1xvdTuEECsN2uy5JZytwBnGfLs-q=
+UkW71ZMSXWvtcFzfhdzNC4WXfCiijO6oUda-RZOeKmbner_UyJNoc7rysqHhynseqVHWOdG-OhG=
+YktwcMPNHMLRPAmcXWnWIScJDNsTqctPwDPLvry82aJ4NXU8lRubXhpvEvNOb1" target=3D"_=
+blank" style=3D"color:#4285f4; text-decoration:underline;">Gmail Help Forum=
+</a> where my team and other expert users answer questions.</td>
+             </tr>
+             <tr>
+      		    <td height=3D"25"></td>
+             </tr>
+             <tr>
+      		    <td align=3D"center" class=3D"parasec" style=3D"color:#757575; =
+font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, san=
+s-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0; pa=
+dding:0 25px 0 25px; text-align:center">Enjoy your new account,</td>
+             </tr>
+            =20
+            =20
+            =20
+             <tr>
+              <td align=3D"center" class=3D"parasec" style=3D"color:#757575=
+; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&quot;, Arial, s=
+ans-serif; font-size:17px; font-weight:normal; line-height:24px; margin:0; =
+padding:0 25px 0 25px; text-align:center">
+               Google Community Team
+</td>
+             </tr>
+             <tr>
+              <td height=3D"35"></td>
+             </tr>
+            =20
+            =20
+            =20
+             <tr>
+               <td width=3D"134" height=3D"46" align=3D"center" style=3D"fo=
+nt-size:8px;">
+               <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKUwRe6=
+sLm53qaKc_inqPn5NhhiMU67hsXTwOQGMOJnbsk8aZVy9HQmuBlHGb683D0yKbm6sAq7ahkTgLV=
+OcRO0KFN9CSqYsBr2O7Itq6jRXsFPByLHnongm7Lrirq_QuiTMXvMvNI0OAFBfMP_PMF0ojQ" t=
+arget=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">
+               <img width=3D"134" height=3D"46" border=3D"0" src=3D"https:/=
+/services.google.com/fh/files/emails/google_log_new.png" alt=3D"Google" sty=
+le=3D"width: 134px; height: 46px; text-align: center; border: none;">
+               </a>
+               </td>
+             </tr>
+             <tr>
+              <td height=3D"31"></td>
+             </tr>
+             <tr>
+              <td align=3D"center">
+                <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" ali=
+gn=3D"center" width=3D"405" class=3D"strip" style=3D"padding-left:4px">=20
+                  <tr>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                      <a href=3D"https://www.google.com/appserve/mkt/p/AFnw=
+nKURyQwpu7uUhBpEMkqaE5X2qXX6GXmzGf4K9icjPSGAN1n77VztvAPsspFgutMNHhnLKxsOvtC=
+YbweZbCrdJelJ_uCq7tXnB-_BR2n_Tu-mBllHpgDGPJ2gebvJFQxqNTH2edT6krslmK2gmdE141=
+oqFg" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;"=
+>
+                        <img width=3D"32" height=3D"32" border=3D"0" src=3D=
+"https://services.google.com/fh/files/emails/owe_googleg_32dp.png" alt=3D"G=
+oogle Search" style=3D"font-size:4px; width: 32px; height: 32px; text-align=
+: center; border: none;">
+                      </a>
+                    </td>
+                   =20
+                    <td width=3D"20" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                    <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnK=
+WBoqYm7IriqxBHK6p3gCVxJvF5e5eqswIhwc11Zvv0xtOzQ5PdO8PJEsR8L_j56_Ab9sokyprc-=
+EA3sgeSJbo8G82Ph8vr_PMpuLXzPbswwbrI5p5v4KxtlnW6GaAPHP5bm_-oeIgYeLi5sgGaXkb6=
+U4Sx9yBO9AA2Lx0" target=3D"_blank" style=3D"color:#4285f4; text-decoration:=
+underline;">
+                    <img src=3D"https://services.google.com/fh/files/emails=
+/owe-new_gmail_32dp.png" width=3D"32" height=3D"32" alt=3D"Gmail" style=3D"=
+font-size:8px; width: 32px; height:32px;">
+                      </a>
+                    </td>
+                    <td width=3D"18" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                    <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnK=
+WN01hqSPqudPIHddLWhZexBMasAoFIulH3AsbyQh1kx-5aMe0DbjousAhPZc7vXBpKArt91-hp8=
+vt3fpqFe4O8xvJaO50ZW-lGDZ8dNeZhbFlU7Nkq2V22tOsEiEZ5DYleVMEdOIiehDoqEA-xx040=
+_Ncp6pcDyZ7E_XYIcC_MRxLn-KrMRGl9DU4wu6E" target=3D"_blank" style=3D"color:#=
+4285f4; text-decoration:underline;">
+                    <img src=3D"https://www.gstatic.com/images/branding/pro=
+duct/2x/assistant_64dp.png" width=3D"32" height=3D"32" alt=3D"Google Assist=
+ant" style=3D"font-size:3px; width: 32px; height: 32px;">
+                      </a>
+                    </td>
+                    <td width=3D"18" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                    <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnK=
+XdHFb_aKg8p_0BatY3yexjzW-dDGfn_W0cAirlREnhSpUCryioQC7ni7cCRJ7Zs2Y6ry2fnqAjW=
+GbtsKsbdsJAxOFmrQV3XpXx1xDhV8HF-Elg-C3DvCoixtX2mbAIVVdBT2xmOWnrWubbBlPguTxB=
+aG_9ng" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline=
+;">
+                    <img width=3D"32" height=3D"32" border=3D"0" src=3D"htt=
+ps://services.google.com/fh/files/emails/owe_maps_32dp.png" alt=3D"Maps" st=
+yle=3D"font-size:8px; width: 32px; height: 32px; text-align: center; border=
+: none;">
+                      </a>
+                    </td>
+                   =20
+                   =20
+                    <td width=3D"22" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                    <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnK=
+WikcCRciICxJHa6eJuO8b5ttsm77KsTe7AnrhCIcoXVtd7KqkVIr0p3RpVSNNoFpE--NKPpMXNW=
+hFvWmEMMKqjm2P1GrNJohNPJZo0XwGvDZAEU3qJhIsaE1XKdUTs1OIMEL5gccABs4PP3YBw2A" =
+target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">
+                    <img width=3D"32" height=3D"32" border=3D"0" src=3D"htt=
+ps://services.google.com/fh/files/emails/owe_youtube_32dp.png" alt=3D"YouTu=
+be" style=3D"font-size:7px; width: 32px; height:32px; text-align: center; b=
+order: none; -ms-interpolation-mode: bicubic;">
+                      </a>
+                    </td>
+                   =20
+                    <td width=3D"22" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                   <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnKX=
+y9d9uuKXgusHcZYLK9dJ7bcqu2iUx6kUuxo2BMKtAn3cK3JtcfxppwJZ9rj4kvVsh3VigQ2qWxo=
+XFdouwfVDj7tAtyo26SQLc9FuyRcKKeMYeE1IXy5zFFPatXdMHb5fBWdt7x1BKEnR8ZC7YkWTQI=
+7E" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline;">
+                    <img width=3D"32" height=3D"32" border=3D"0" src=3D"htt=
+ps://services.google.com/fh/files/emails/owe_drive_32dp.png" alt=3D"Drive" =
+style=3D"font-size:8px; width: 32px; height: 32px; text-align: center; bord=
+er: none;">
+                      </a>
+                    </td>
+                   =20
+                    <td width=3D"17" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                    <a href=3D"https://www.google.com/appserve/mkt/p/AFnwnK=
+WAX4IXIotDO-3f9HRKDzDpHJSD0gGSVngBk2s__CAQ02VwpbyTfsYxCIAjLIFEQPeFaEiqdWJng=
+EAYNetwUP_ipK02PtlRBKRDhM5oJON7lBYjzm8hAtk1JMGuQTwsy3DCVe4oPZBg6ej4k8ERUJr7=
+PlITcA" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underline=
+;">
+                      <img width=3D"32" height=3D"32" border=3D"0" src=3D"h=
+ttps://services.google.com/fh/files/emails/owe_photos_32dp.png" alt=3D"Phot=
+os" style=3D"font-size:8px; width: 32px; height: 32px; text-align: center; =
+border: none;">=20
+                    </a>
+                    </td>=20
+                   =20
+                    <td width=3D"16" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                      <a href=3D"https://www.google.com/appserve/mkt/p/AFnw=
+nKUCtmpr5CvpZdCRS9rJ8iCQg5RVIzOnV-CHOAnSI4OgPy8lUkxdSggbPJox6akOQQDXx7AQmNY=
+u0RuFP76fJfl-sC1MBfaku5Xe0hx8IZ1a2gzhpRTO7LAsY16yobDLDiNpjrW3tFgkbTlue5Puqz=
+0UPZMq6S0" target=3D"_blank" style=3D"color:#4285f4; text-decoration:underl=
+ine;">
+                        <img width=3D"32" height=3D"32" border=3D"0" src=3D=
+"https://services.google.com/fh/files/emails/owe_play_32dp.png" alt=3D"Play=
+" style=3D"width: 32px; height:32px; text-align: center; border: none;">
+                      </a>
+                    </td>                   =20
+                    <td width=3D"18" style=3D"margin:0; padding:0"></td>
+                    <td width=3D"32" height=3D"32" class=3D"prod-icon" styl=
+e=3D"margin:0; padding:0 0 0 0">
+                     <a href=3D"https://www.google.com/appserve/mkt/p/AFnwn=
+KWrN2k3J2IgeAuzaDGXtPjukTroZhduZm1rJn1THnym45KpLXNtxh4hKMMdXtWHLQQkNSKeDVIa=
+Y2Gb9J8lXMFM9r-08ATx57Phd7wzR1ywCmkVj3QeTGk20JqzlfereKhMQ74s3Vmh8AKIvUQDCMi=
+XkM75oqQ_2U0" target=3D"_blank" style=3D"color:#4285f4; text-decoration:und=
+erline;">
+                       <img width=3D"32" height=3D"32" border=3D"0" src=3D"=
+https://services.google.com/fh/files/emails/owe_chrome_32dp.png" alt=3D"Chr=
+ome" style=3D"font-size:8px; width: 32px; height:32px; text-align: center; =
+border: none;">
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+             </tr>
+             <tr>
+  				<td height=3D"28"></td>
+				</tr>
+        <tr>
+          <td height=3D"19" bgcolor=3D"#eeeeee" style=3D"background: #eeeee=
+e;"></td>
+          </tr>
+             <tr>
+             <td class=3D"footer" valign=3D"middle" style=3D"background:#ee=
+e; color:#777; font-family:&quot;Roboto&quot;, OpenSans, &quot;Open Sans&qu=
+ot;, Arial, sans-serif; font-size:10px; font-weight:normal; line-height:14p=
+x; margin:0; padding:0 6px 0 6px; text-align:center" align=3D"center">
+                =C2=A9 2019 Google Ireland Ltd, Gordon House, Barrow Street=
+, Dublin 4, Ireland.<br>This email was sent to you because you created a Go=
+ogle Account.
+            </td>
+             </tr>
+           </table>
+          </td>
+        </tr>
+       =20
+				<tr>
+					<td height=3D"18" bgcolor=3D"#eeeeee" style=3D"background: #eeeeee;"><=
+/td>
+				</tr>
+			</table>
+		</td>
+		<td width=3D"20" bgcolor=3D"#eeeeee" style=3D"background: #eeeeee;"></td>
+	</tr>
+</table>
+<div style=3D"display:none; white-space:nowrap; font:15px courier; line-hei=
+ght:0;">
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0
+</div>
+</center>
+
+<img height=3D"1" width=3D"3" src=3D"https://www.google.com/appserve/mkt/im=
+g/AFnwnKUqMKMiGM5Gk3TOqdviXAJbIJVEqlqdpROL1V64-2hEtA.gif"></body>
+</html>
+ =20
+
+--0000000000002d1e740585f56155--

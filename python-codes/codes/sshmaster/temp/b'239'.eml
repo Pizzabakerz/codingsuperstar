@@ -1,0 +1,221 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:ac8:681:0:0:0:0:0 with SMTP id f1csp1758983qth;
+        Thu, 25 Apr 2019 04:46:15 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqw0TpX7rh0ZDbc3JiVm/1da0B2OMuIFGjudMG37a8w21WZUg4yD5os2DYypq+coRtA069IG
+X-Received: by 2002:aca:efc1:: with SMTP id n184mr3062007oih.121.1556192775113;
+        Thu, 25 Apr 2019 04:46:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1556192775; cv=none;
+        d=google.com; s=arc-20160816;
+        b=mONmgSr0pa8KendWUYMtltA3k6AHRA4VAs0pWxnFo63NIO/Kt0OzDUuAnNIVSdGh7F
+         JzapHEhGQAdGhPGfscJCRm5lHeH6oB1+qM0teyOatQjC7nRNCkgSLqGBoYnCQeoVRRgS
+         uE1lyzAWANg1crCI3DXiepZ6IlmNYEPf9mhVJuS4wNIfQDeqnSBJhgTochYy4o81cMDs
+         u+RHa0wn4cbK14fLMT1hr41zxSvpHHxZFVlz0CfqcQ0FPcvFueffeLzsWp/xbDQglwK0
+         9VxgAonUuc1THL2lt4mxgZm8HI6wjljiQb4+r25DYKLu5xPHZVIK4HPMdDlctLP+VlBv
+         di0w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:message-id:feedback-id:list-unsubscribe:errors-to
+         :reply-to:from:subject:to:date:dkim-signature;
+        bh=j/H6KWtK7FL3zGORVu4mpGavaeXHkW0nz+O7Xc8Xxxs=;
+        b=jpKHZkWoHRFACiVnSrLFPltfPqXcCLeClHkVgovtR9/Tn3DNuQRIHJy07jdESsMOFu
+         VLY59A+P1ZyPvt7gDEAfCgFffsxBJDpKZ8bfJ5wny81/x4yiKwSjYTwczumPvlN2GCEp
+         A4M+WrTEY9mY1DoIDXqMRADx5VqE2eHpXovcODJg8ml2cNTo5OCWTLV63eEjtZGq0fJ7
+         e+jiYh37ZGhmF6OLT3mGee7r9QEuqXhkID8niqCppxn/LWfEZ9WhiODyRxoy0+DCsPp5
+         mx3SAlqWnWFSuOJ8qb3JZxfQ7W7SmlQIP8v55E6rAFIhLHhaApLTNJu+Zpzlguj3icM1
+         OQIA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=VNXZ8O2e;
+       spf=pass (google.com: domain of notification@facebookmail.com designates 69.171.232.151 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+Return-Path: <notification@facebookmail.com>
+Received: from mx-out.facebook.com (69-171-232-151.mail-mail.facebook.com. [69.171.232.151])
+        by mx.google.com with ESMTPS id g188si11936032oif.89.2019.04.25.04.46.14
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 25 Apr 2019 04:46:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of notification@facebookmail.com designates 69.171.232.151 as permitted sender) client-ip=69.171.232.151;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=VNXZ8O2e;
+       spf=pass (google.com: domain of notification@facebookmail.com designates 69.171.232.151 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1556192774;
+	bh=j/H6KWtK7FL3zGORVu4mpGavaeXHkW0nz+O7Xc8Xxxs=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=VNXZ8O2eBeRLgwm51C8bxs2FT//H+baNWecMJx69S72M5Yf8wRg3k/HHyGLq8O11O
+	 CUbH89lFbU3CD7uEIGw/7bk+Vbbc6FO5qTW7c2aEEA/VnRE1vq8yoJ2SnnM/6FJiGy
+	 GejGb96LAJp6yjnRF8zTwNg3zL0j98968rH03YWM=
+Received: from facebook.com (vJvGxvCJUFZfeZvY8TpfEpeEL0o+jp+bMyFB2r/YK3RgAVQcQVuBPJ4tKu+wgLXv 2401:db00:1110:50e8:face:0000:0013:0000)
+ by facebook.com with Thrift id bab07708674f11e99c3b248a0796a3da-a0943570;
+ Thu, 25 Apr 2019 04:46:14 -0700
+X-Facebook: from 2401:db00:1110:8100:face:0:42:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Thu, 25 Apr 2019 04:46:14 -0700
+To: Geeta Diwaker <geetadiwaker81@gmail.com>
+Subject: Manvendra Pratap Singh confirmed your Facebook friend request
+X-Priority: 3
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification@facebookmail.com
+From: "Manvendra Pratap Singh on Facebook" <notification@facebookmail.com>
+Reply-to: noreply <noreply@facebookmail.com>
+Errors-To: notification@facebookmail.com
+X-Facebook-Notify: friend_confirmed; mailid=587583d30a13fG5afb4cd6fe28G5875886c6a411G1b
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS1sDLclcdbIFJPA&u=100035372449320&mid=587583d30a13fG5afb4cd6fe28G5875886c6a411G1b>
+X-FB-FFV: actor_on_fb
+Feedback-ID: 0:friend_confirmed:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <4cc18feeb33fffd48e3c421f867f0bd7@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_4cc18feeb33fffd48e3c421f867f0bd7"
+
+
+--b1_4cc18feeb33fffd48e3c421f867f0bd7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+View Timeline
+https://www.facebook.com/n/?manvendra.pratapsingh.121772&aref=3D1556189171=
+590161&medium=3Demail&mid=3D587583d30a13fG5afb4cd6fe28G5875886c6a411G1b&bc=
+ode=3D2.1556192774.AbzyOrKk-uESAFeSoLw&n_m=3Dgeetadiwaker81%40gmail.com&ll=
+oc=3Dtimeline
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Hi Geeta,
+
+Geeta, Manvendra has confirmed that you're friends on Facebook.
+
+Thanks,
+The Facebook Team
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to geetadiwaker81@gmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS1sDLclcdbIFJPA&u=3D100035372449320&mi=
+d=3D587583d30a13fG5afb4cd6fe28G5875886c6a411G1b
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+
+
+--b1_4cc18feeb33fffd48e3c421f867f0bd7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional =
+//EN"><html><head><title>Facebook</title><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Dutf-8" /></head><body =
+style=3D"margin:0;padding:0;" dir=3D"ltr"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" id=3D"email_table" =
+style=3D"border-collapse:collapse;width:98%;"><tr><td id=3D"email_content" =
+style=3D"font-family:&#039;lucida =
+grande&#039;,tahoma,verdana,arial,sans-serif;font-size:12px;"><span =
+style=3D"width:620px;color:#FFFFFF;display:none =
+!important;font-size:1px;">Geeta, Manvendra Pratap Singh has confirmed =
+that you&#039;re friends on Facebook.</span><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:620px;"><tr><td =
+style=3D"font-size:16px;font-family:&#039;lucida grande&#039;,tahoma,verda=
+na,arial,sans-serif;background:#3b5998;color:#FFFFFF;font-weight:bold;vert=
+ical-align:baseline;letter-spacing:-0.03em;padding:5px 20px;"><a =
+style=3D"color:#3b5998;text-decoration:none;" href=3D"https://www.facebook=
+.com/n/?manvendra.pratapsingh.121772&amp;aref=3D1556189171590161&amp;mediu=
+m=3Demail&amp;mid=3D587583d30a13fG5afb4cd6fe28G5875886c6a411G1b&amp;bcode=
+=3D2.1556192774.AbzyOrKk-uESAFeSoLw&amp;n_m=3Dgeetadiwaker81%40gmail.com&a=
+mp;lloc=3Dlogo"><span style=3D"background:#3b5998;color:#FFFFFF;font-weigh=
+t:bold;font-family:&#039;lucida =
+grande&#039;,tahoma,verdana,arial,sans-serif;vertical-align:middle; =
+font-size:16px;letter-spacing:-0.03em;vertical-align:baseline;">facebook</=
+span></a></td></tr></table><table border=3D"0" width=3D"620px" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:620px;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:0px;background-color:#f2f2f2;border-left:none;border-right:=
+none;border-top:none;border-bottom:none;"><table border=3D"0" =
+width=3D"620px" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;font-f=
+amily:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px;width:620px=
+;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:20px;background-color:#fff;border-left:none;border-right:no=
+ne;border-top:none;border-bottom:none;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td valign=3D"top" =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding-right:15px;text-align:left;"><a href=3D"https://www.faceboo=
+k.com/n/?manvendra.pratapsingh.121772&amp;aref=3D1556189171590161&amp;medi=
+um=3Demail&amp;mid=3D587583d30a13fG5afb4cd6fe28G5875886c6a411G1b&amp;bcode=
+=3D2.1556192774.AbzyOrKk-uESAFeSoLw&amp;n_m=3Dgeetadiwaker81%40gmail.com&a=
+mp;lloc=3Dimage" style=3D"color:#3b5998;text-decoration:none;"><img =
+src=3D"https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50a/p50x50/57306097_=
+388159645363372_6950861315342598144_n.jpg?_nc_cat=3D100&amp;_nc_ad=3Dz-m&a=
+mp;_nc_cid=3D0&amp;_nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3Dcb5522d05=
+82f1c785bb9cecfe1146cc7&amp;oe=3D5D3786E5" style=3D"border:0;" =
+/></a></td><td valign=3D"top" style=3D"font-size:11px;font-family:LucidaGr=
+ande,tahoma,verdana,arial,sans-serif;width:100%;text-align:left;"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;"><span =
+style=3D"color:#111111;font-size:13px;font-weight:bold;">Geeta, <a =
+href=3D"https://www.facebook.com/n/?manvendra.pratapsingh.121772&amp;aref=
+=3D1556189171590161&amp;medium=3Demail&amp;mid=3D587583d30a13fG5afb4cd6fe2=
+8G5875886c6a411G1b&amp;bcode=3D2.1556192774.AbzyOrKk-uESAFeSoLw&amp;n_m=3D=
+geetadiwaker81%40gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;">Manvendra Pratap Singh</a> =
+has confirmed that you&#039;re friends on Facebook.</span></td></tr></tabl=
+e></td></tr></table></td></tr></table></td></tr></table></td></tr><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:0px;width:620px;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:7px 20px;background-color:#f2f2f2;border-left:none;border-r=
+ight:none;border-top:1px solid #ccc;border-bottom:1px solid #ccc;"><table =
+cellspacing=3D"0" cellpadding=3D"0" style=3D""><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding-left:65px;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"border-width: 1px;border-style: solid;border-color: #29447E =
+#29447E #1a356e;background-color: #5b74a8;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;font-f=
+amily:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:2px 6px =
+4px;border-top:1px solid #8a9cc2;"><a href=3D"https://www.facebook.com/n/?=
+manvendra.pratapsingh.121772&amp;aref=3D1556189171590161&amp;medium=3Demai=
+l&amp;mid=3D587583d30a13fG5afb4cd6fe28G5875886c6a411G1b&amp;bcode=3D2.1556=
+192774.AbzyOrKk-uESAFeSoLw&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=
+=3Dtimeline" style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+13px;">View Timeline</span></a></td></tr></table></td></tr></table></td></=
+tr></table></td></tr></table></td></tr></table></td></tr></table><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:620px;"><tr><td =
+style=3D"font-size:11px;font-family:&#039;lucida grande&#039;, tahoma, =
+verdana, arial, sans-serif;padding:30px 20px;background-color:#fff;border-=
+left:none;border-right:none;border-top:none;border-bottom:none;color:#9999=
+99;border:none;">This message was sent to <a =
+href=3D"mailto:geetadiwaker81&#064;gmail.com" style=3D"color:#3b5998;text-=
+decoration:none;">geetadiwaker81&#064;gmail.com</a>. If you don&#039;t =
+want to receive these emails from Facebook in the future, please <a =
+href=3D"https://www.facebook.com/o.php?k=3DAS1sDLclcdbIFJPA&amp;u=3D100035=
+372449320&amp;mid=3D587583d30a13fG5afb4cd6fe28G5875886c6a411G1b" =
+style=3D"color:#3b5998;text-decoration:none;">unsubscribe</a>.<br =
+/>Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo =
+Park, CA 94025</td></tr></table><span style=3D"width:620px;"><img =
+src=3D"https://www.facebook.com/email_open_log_pic.php?mid=3D587583d30a13f=
+G5afb4cd6fe28G5875886c6a411G1b" style=3D"border:0;width:1px;height:1px;" =
+/></span></td></tr></table></body></html>
+
+
+
+--b1_4cc18feeb33fffd48e3c421f867f0bd7--
+

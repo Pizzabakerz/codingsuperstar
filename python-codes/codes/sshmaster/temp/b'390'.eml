@@ -1,0 +1,268 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:ac8:26af:0:0:0:0:0 with SMTP id 44csp437665qto;
+        Tue, 16 Jul 2019 22:11:33 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqyflcbdTz8enZlnOr4v8upFehl/yzXnlY/yoQ+F+98y4l67pHji4kzT0Xc5f4DWobiD6Cic
+X-Received: by 2002:a65:6108:: with SMTP id z8mr7653174pgu.289.1563340293166;
+        Tue, 16 Jul 2019 22:11:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1563340293; cv=none;
+        d=google.com; s=arc-20160816;
+        b=I3o3/HtSfnGEbX6VqL8LygrbODuyZOHgdDleKBsefoUyFK9CXaWPUv7oYctCex7o5O
+         wjsG0jVoDFcUpvFjyR0lckxmukH13mXIf14u1/w5T1xPypQWh5atj0S7oIagZ+q8Y7bS
+         zwxEduW0mVIgoVJyzu7p1rGGzGbO5XhNPcVrlNuvmk/+F0FZ/uv+AyvfJlpB8XnOTpXr
+         Y7uIPTDvsy0IXeQoUdnUuQjM+QDlWkIU5qlZqqGNkuYqa5ddEM1XjczsGhxyOwEnp2Ig
+         glc/jNNghg7VhaHSw8gmStLhejUeBWWqLHVsmdA8z+bb18xIkGrO8A33VK+aQnWCdDjJ
+         iTWg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:message-id:feedback-id:list-unsubscribe:errors-to
+         :reply-to:from:subject:to:date:dkim-signature;
+        bh=YvrIYfIGH84AI5lic+3kfij1yzcbVFZz3uYeq/CnOFY=;
+        b=pmISZlvwE6UM/T3z1GuEdgJJUHywxxFPm5B9vGom/jjOTm26Q7Hb6xWqvprUtxCfjm
+         Li13ZpEOr6nXWdKzTX6eKv1GmW9Ttzz+pKBHyIA4aO/mtaLD4Br/b1S2Mc6L3j2xDc9z
+         HE9jWZ0HL9HmmTw/9N2adAGy5NqgdR4xyMxiWP3jl6ALZBFWhO0mng93dDN/prtq3Yz8
+         Rm9xSEQzn+VDM1yuXVIyrx8L/g0y+npJ33KLqZPzuoLWI7UPjOwSRtkBGb7Hsssiide7
+         l8kuqa6+aIZ8AXmf+3SZ2HAKwW62wpDCfpKyGmcA1cKr5M6pNt/l723ONehsrbEzpen+
+         uHyg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=iLaIBvNb;
+       spf=pass (google.com: domain of notification@facebookmail.com designates 66.220.144.150 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+Return-Path: <notification@facebookmail.com>
+Received: from mx-out.facebook.com (66-220-144-150.mail-mail.facebook.com. [66.220.144.150])
+        by mx.google.com with ESMTPS id h15si21941304plk.74.2019.07.16.22.11.32
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 16 Jul 2019 22:11:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of notification@facebookmail.com designates 66.220.144.150 as permitted sender) client-ip=66.220.144.150;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b=iLaIBvNb;
+       spf=pass (google.com: domain of notification@facebookmail.com designates 66.220.144.150 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1563340292;
+	bh=YvrIYfIGH84AI5lic+3kfij1yzcbVFZz3uYeq/CnOFY=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=iLaIBvNbcFeMvgDVtwngsxxzW0S+uGryHNtNS0hn5+WfyJLzbi7gsU/d/3fGuNDk+
+	 iV+ScQkLwclsQjD9HvUYcExqk5+yn2+lUuFH0X/7UnFJVqD/8Gg9iDOv++Ax37nBmW
+	 jtSGunzVgQRDjYCAerHHFABoAvNclXh7exRHS9LA=
+Received: from facebook.com (yinO+6lKj3claHm0TwnzZt+z0UJvQcmGjHMXOh5Q200fB8SvzluTRYPQA1EuK+DD 2401:db00:0030:802e:face:0000:0005:0000)
+ by facebook.com with Thrift id 57bcc69aa85111e99e3f248a07b6b520-e64bc700;
+ Tue, 16 Jul 2019 22:11:32 -0700
+X-Facebook: from 2401:db00:12:e153:face:0:6b:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Tue, 16 Jul 2019 22:11:32 -0700
+To: Geeta Diwaker <geetadiwaker81@gmail.com>
+Subject: Dolly Rani sent you a message.
+X-Priority: 3
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification@facebookmail.com
+From: "Dolly Rani" <notification@facebookmail.com>
+Reply-to: noreply <noreply@facebookmail.com>
+Errors-To: notification@facebookmail.com
+X-Facebook-Notify: msg; from=100008055662555; t=cid.c.100008055662555:100035372449320; mailid=58dd93d3ab670G5afb4cd6fe28G0G0
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS0fiTAJGYD0Ld8K&u=100035372449320&mid=58dd93d3ab670G5afb4cd6fe28G0G0>
+Feedback-ID: 0:msg:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <6854b07a859ba1514505f9ac4acc0dfe@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_6854b07a859ba1514505f9ac4acc0dfe"
+
+
+--b1_6854b07a859ba1514505f9ac4acc0dfe
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Geeta,
+
+Dolly Rani sent you a message.
+
+Thanks,
+The Facebook Team
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to geetadiwaker81@gmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS0fiTAJGYD0Ld8K&u=3D100035372449320&mi=
+d=3D58dd93d3ab670G5afb4cd6fe28G0G0
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+To help keep your account secure, please don't forward this email. Follow =
+the link below to learn more.
+https://www.facebook.com/email_forward_notice/?mid=3D58dd93d3ab670G5afb4cd=
+6fe28G0G0
+
+
+--b1_6854b07a859ba1514505f9ac4acc0dfe
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional =
+//EN"><html><head><title>Facebook</title><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Dutf-8" /><style>@media all and (max-width: =
+480px){*[class].ib_t{min-width:100% =
+!important}*[class].ib_row{display:block =
+!important}*[class].ib_ext{display:block !important;padding:10px 0 5px =
+0;vertical-align:top !important;width:100% =
+!important}*[class].ib_img,*[class].ib_mid{vertical-align:top =
+!important}*[class].mb_blk{display:block =
+!important;padding-bottom:10px;width:100% =
+!important}*[class].mb_hide{display:none =
+!important}*[class].mb_inl{display:inline =
+!important}*[class].d_mb_flex{display:block !important}}.d_mb_show{display=
+:none}.d_mb_show_center{display:table;margin:auto}.d_mb_flex{display:flex}=
+@media only screen and (max-device-width: 480px){.d_mb_hide{display:none =
+!important}.d_mb_show{display:block !important}.d_mb_flex{display:block =
+!important}}.mb_text h1,.mb_text h2,.mb_text h3,.mb_text h4,.mb_text =
+h5,.mb_text h6{line-height:normal}.mb_work_text =
+h1{font-size:18px;line-height:normal;margin-top:4px}.mb_work_text =
+h2,.mb_work_text =
+h3{font-size:16px;line-height:normal;margin-top:4px}.mb_work_text =
+h4,.mb_work_text h5,.mb_work_text =
+h6{font-size:14px;line-height:normal}.mb_work_text =
+a{color:#1270e9}.mb_work_text p{margin-top:4px}</style></head><body =
+style=3D"margin:0;padding:0;" dir=3D"ltr" bgcolor=3D"#ffffff"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" =
+id=3D"email_table" style=3D"border-collapse:collapse;"><tr><td =
+id=3D"email_content" style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;background:#ffffff;"><table =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td height=3D"1" colspan=3D"3" =
+style=3D"line-height:1px;"><span =
+style=3D"color:#FFFFFF;font-size:1px;">=C2=A0 =C2=A0 Dolly Rani sent you a =
+message. =C2=A0 Open Messenger =C2=A0 You&#039;ll need to use Messenger to =
+see and respond to Dolly &#039;s message. With Messenger, you can text, =
+and make voice and video calls for free (standard mobile data and text =
+message charges apply). =C2=A0 =C2=A0 =C2=A0</span></td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;html_width:100%;"><tr =
+style=3D""><td height=3D"9" style=3D"line-height:9px;" =
+colspan=3D"4">&nbsp;</td></tr><tr><td align=3D"left" style=3D""><a =
+href=3D"https://www.facebook.com/n/?mme_redirect%2F&amp;username=3D1000080=
+55662555&amp;source=3Demail&amp;cp=3Dgeetadiwaker81%40gmail.com&amp;medium=
+=3Demail&amp;mid=3D58dd93d3ab670G5afb4cd6fe28G0G0&amp;bcode=3D2.1563340292=
+.Aby8QhXXy-Q1eTeLlUc&amp;n_m=3Dgeetadiwaker81%40gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;"><img =
+src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/aRdFHbNNxSH.png" =
+width=3D"32" height=3D"32" style=3D"border:0;" /></a></td><td width=3D"9" =
+style=3D"display:block;width:9px;">&nbsp;&nbsp;&nbsp;</td><td =
+align=3D"left" style=3D"font-size:17px;line-height:22px;"><span =
+class=3D"mb_text"><a href=3D"https://www.facebook.com/n/?mme_redirect%2F&a=
+mp;username=3D100008055662555&amp;source=3Demail&amp;cp=3Dgeetadiwaker81%4=
+0gmail.com&amp;medium=3Demail&amp;mid=3D58dd93d3ab670G5afb4cd6fe28G0G0&amp=
+;bcode=3D2.1563340292.Aby8QhXXy-Q1eTeLlUc&amp;n_m=3Dgeetadiwaker81%40gmail=
+.com" style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"white-space:nowrap; =
+color:black;">Messenger</span></a></span></td><td align=3D"right" =
+style=3D"width:100%;font-size:15px;line-height:20px;"><a =
+href=3D"https://www.facebook.com/n/?mme_redirect%2F&amp;username=3D1000080=
+55662555&amp;source=3Demail&amp;cp=3Dgeetadiwaker81%40gmail.com&amp;medium=
+=3Demail&amp;mid=3D58dd93d3ab670G5afb4cd6fe28G0G0&amp;bcode=3D2.1563340292=
+.Aby8QhXXy-Q1eTeLlUc&amp;n_m=3Dgeetadiwaker81%40gmail.com" =
+style=3D"color:#0084ff;text-decoration:none;">Open =
+Messenger</a></td></tr><tr style=3D"border-bottom:solid 1px #e5e5e5;"><td =
+height=3D"9" style=3D"line-height:9px;" =
+colspan=3D"4">&nbsp;</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td =
+style=3D""><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"center" class=3D"ib_t" =
+style=3D"border-collapse:collapse;"><tr><td align=3D"center" style=3D""><a =
+href=3D"https://facebook.com/email/appredirect/?fallback_uri=3Dhttps%3A%2F=
+%2Fwww.facebook.com%2Fdolly.rani.3720&amp;native_uri=3Dfb%3A%2F%2Fprofile%=
+2F100008055662555&amp;email_type=3Demail" =
+style=3D"color:#3b5998;text-decoration:none;"><img src=3D"https://scontent=
+.xx.fbcdn.net/v/t1.0-1/c0.1.50.50a/p50x50/13240607_1757749301170242_717497=
+6733903851576_n.jpg?_nc_cat=3D111&amp;_nc_oc=3DAQmwgXuF4bxMk4Zr1VGPG42tYwv=
+Tt0ewv7y13MVKASvrfq0PpTX8C9Al93uFicEZdGbrle6zxrO6iHKQtRd0toKw&amp;_nc_ad=
+=3Dz-m&amp;_nc_cid=3D0&amp;_nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D8=
+6a99aa60511138e823d60a0dde15663&amp;oe=3D5DB61C1C" width=3D"72" =
+style=3D"border:0;border-radius:50%;" =
+/></a></td></tr></table></td></tr><tr style=3D""><td height=3D"28" =
+style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D""><span =
+style=3D"text-align:center;display:block;font-family:SFUIText-Regular, =
+Segoe UI, Helvetica Neue, Helvetica, Arial, =
+sans-serif;font-size:20px;line-height:24px;"><a href=3D"https://facebook.c=
+om/email/appredirect/?fallback_uri=3Dhttps%3A%2F%2Fwww.facebook.com%2Fdoll=
+y.rani.3720&amp;native_uri=3Dfb%3A%2F%2Fprofile%2F100008055662555&amp;emai=
+l_type=3Demail" style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold; color:black;">Dolly Rani</span></a> sent you a =
+message.</span></td></tr><tr style=3D""><td height=3D"28" =
+style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D""><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" =
+class=3D"ib_t" style=3D"border-collapse:collapse;"><tr><td =
+align=3D"center" style=3D""><a href=3D"https://www.facebook.com/n/?mme_red=
+irect%2F&amp;username=3D100008055662555&amp;source=3Demail&amp;cp=3Dgeetad=
+iwaker81%40gmail.com&amp;medium=3Demail&amp;mid=3D58dd93d3ab670G5afb4cd6fe=
+28G0G0&amp;bcode=3D2.1563340292.Aby8QhXXy-Q1eTeLlUc&amp;n_m=3Dgeetadiwaker=
+81%40gmail.com" style=3D"color:#3b5998;text-decoration:none;display:block;=
+width:100%;"><span style=3D"border-radius:4px;padding:12px 0px 12px =
+0px;text-align:center;font-family:SFUIText-Regular, Segoe UI, Helvetica =
+Neue, Helvetica, Arial, sans-serif;font-size:16px;line-height:21px;display=
+:inline-block;color:#ffffff;background-color:#0084ff;width:280px;font-weig=
+ht:bold;">Open Messenger</span></a></td></tr></table></td></tr><tr =
+style=3D""><td height=3D"28" =
+style=3D"line-height:28px;">&nbsp;</td></tr><tr><td style=3D""><span =
+style=3D"text-align:center;display:block;font-family:SFUIText-Regular, =
+Segoe UI, Helvetica Neue, Helvetica, Arial, =
+sans-serif;font-size:15px;line-height:20px;color:#8e8e8e;">You&#039;ll =
+need to use Messenger to see and respond to <span =
+class=3D"blueName">Dolly</span>&#039;s message. With Messenger, you can =
+text, and make voice and video calls for free (standard mobile data and =
+text message charges apply).</span></td></tr><tr style=3D""><td =
+height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr><tr><td =
+style=3D""><tr style=3D""><td height=3D"16" =
+style=3D"line-height:16px;">&nbsp;</td></tr></td></tr><tr style=3D""><td =
+height=3D"28" style=3D"line-height:28px;">&nbsp;</td></tr></table></td><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"left" style=3D"border-collapse:collapse;"><tr =
+style=3D"border-top:solid 1px #e5e5e5;"><td height=3D"19" =
+style=3D"line-height:19px;">&nbsp;</td></tr><tr><td =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">This =
+message was sent to <a href=3D"mailto:geetadiwaker81&#064;gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;">geetadiwaker81&#064;gmail.co=
+m</a>. If you don&#039;t want to receive these emails from Facebook in the =
+future, please <a href=3D"https://www.facebook.com/o.php?k=3DAS0fiTAJGYD0L=
+d8K&amp;u=3D100035372449320&amp;mid=3D58dd93d3ab670G5afb4cd6fe28G0G0" =
+style=3D"color:#3b5998;text-decoration:none;">unsubscribe</a>.<br =
+/>Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo =
+Park, CA 94025</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;"><span =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">To help =
+keep your account secure, please don&#039;t forward this email. <a =
+href=3D"https://www.facebook.com/email_forward_notice/?mid=3D58dd93d3ab670=
+G5afb4cd6fe28G0G0" style=3D"color:#3b5998;text-decoration:none;">Learn =
+more.</a></span></td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr =
+style=3D""><td height=3D"20" style=3D"line-height:20px;" =
+colspan=3D"3">&nbsp;</td></tr></table><span style=3D""><img =
+src=3D"https://www.facebook.com/email_open_log_pic.php?mid=3D58dd93d3ab670=
+G5afb4cd6fe28G0G0" style=3D"border:0;width:1px;height:1px;" =
+/></span></td></tr></table></body></html>
+
+
+
+--b1_6854b07a859ba1514505f9ac4acc0dfe--
+

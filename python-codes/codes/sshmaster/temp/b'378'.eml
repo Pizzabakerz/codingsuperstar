@@ -1,0 +1,113 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:ac8:26af:0:0:0:0:0 with SMTP id 44csp7953908qto;
+        Tue, 9 Jul 2019 07:59:03 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwr7e862GG5/czimMkpjw9dlRS/8vuM61dfiYmKU1QSZWeKxIBmziMti3xzha4baILf3mya
+X-Received: by 2002:a2e:854d:: with SMTP id u13mr14613198ljj.236.1562684343112;
+        Tue, 09 Jul 2019 07:59:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1562684343; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Fa0Mo+/PpkUFI0yqaluS6b/l63YeULtPZEM/V5iTtaz/Z9DWaY/Wsdw39fqlyHixKH
+         14SOtCGOvBRmpBCA0eXtBV7jknU/dm6dlsZ7435GmB1wRxP/Yk67k2nLqD2UcMoqlxTa
+         tKuIx7WJ+URBubTjtgzin3Ou8f+U7SaJe5Km4ivqlHTHy8dIaU36qsf/oR724uYyf/dJ
+         xXiTULk5wzmv0o+Qkxc/+9CuYizEWPJUhmd+jkcBlvDqUp16j6LeR4I1Kr13vJA/urkS
+         ydRQSuc+RQmXYJhDnFlk+omZMXAlYz74DdfEC4bhtG2zLHCOB1qInZeMAgHvzXw6neAs
+         nf+Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:subject:to:from:dkim-signature;
+        bh=yNLTNEhH7t1xn5QbrwYkWLngQiflTkyfyw7OpMqJlZg=;
+        b=isIO+dfE98HHhEz/fOgKR6nZKr8KzuC37uBY+f3fkaPFnEV8LjO0gplcXmevL/RDU3
+         fqelxPPWg54zb5uh9A40MbbymceCSK9HhnQsYcCi5h/BeO6JEwdAlQtcA/Mg0enhGUdi
+         7frtOs96dTpXIr6rNnK8OYZhetwZ5O5M92zdm6LUuflFo3jsXIETHFeP852qoqNuNFV/
+         ra8OYPuj13z3JgxmyS3R/uZr0jZ/zD4wRtIP3COxjZompfFwmwepLnmPd5SJOzj35HBL
+         kcxaIwih10U2elaxUfJorCwPszQRaBeIDBtJ9+dxKeyiaTgACZ2jKC0WqSWpAXk1nOkE
+         JhKQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@corp.mail.ru header.s=mail header.b=ZYAtox0d;
+       spf=pass (google.com: domain of welcome@corp.mail.ru designates 217.69.141.123 as permitted sender) smtp.mailfrom=welcome@corp.mail.ru;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=corp.mail.ru
+Return-Path: <welcome@corp.mail.ru>
+Received: from mailer9.mail.ru (mailer9.mail.ru. [217.69.141.123])
+        by mx.google.com with ESMTPS id p13si19680160lja.156.2019.07.09.07.59.02
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 09 Jul 2019 07:59:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of welcome@corp.mail.ru designates 217.69.141.123 as permitted sender) client-ip=217.69.141.123;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@corp.mail.ru header.s=mail header.b=ZYAtox0d;
+       spf=pass (google.com: domain of welcome@corp.mail.ru designates 217.69.141.123 as permitted sender) smtp.mailfrom=welcome@corp.mail.ru;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=corp.mail.ru
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=corp.mail.ru; s=mail;
+	h=Date:Message-Id:Content-Type:Subject:To:From; bh=yNLTNEhH7t1xn5QbrwYkWLngQiflTkyfyw7OpMqJlZg=;
+	b=ZYAtox0dTpuuBPtdFSup9fn0Mz5T/BzbWAdffP51HKXbu49ebjCc+T89jg2hgAUZHY1LLwI4AyJnGDZBo0GlSeACacMp1tyMs6xInGWyNAHvw56gMTmjjTsBMyce9fMo1PJVHmNlJdSMbhfEobdKLtoSbW4y3X8XO3fyr9Fs3G8=;
+Received: from root by mailer9.mail.ru with local (envelope-from <welcome@corp.mail.ru>)
+	id 1hkraA-00023x-Nx
+	for geetadiwaker81@gmail.com; Tue, 09 Jul 2019 17:59:02 +0300
+From: =?UTF-8?B?0JrQvtC80LDQvdC00LAgTWFpbC5ydQ==?= <welcome@corp.mail.ru>
+To:  geetadiwaker81@gmail.com
+Subject: =?UTF-8?B?0KHQsdC+0YAg0L/QuNGB0LXQvCDQsiDQv9C+0YfRgtC+0LLRi9C5INGP?==?UTF-8?B?0YnQuNC6?= geetadiwaker81@mail.ru =?UTF-8?B?0L3QsNGB0YLRgNC+0LXQvQ==?=
+Content-Type: multipart/alternative;
+ boundary="------------070606010707060803080703"
+Message-Id: <E1hkraA-00023x-Nx.welcome-corp-mail-ru@mailer9.mail.ru>
+Date: Tue, 09 Jul 2019 17:59:02 +0300
+
+This is a multi-part message in MIME format.
+--------------070606010707060803080703
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+
+Здравствуйте, geeta!
+
+Поздравляем, вы успешно настроили сбор писем с почтового ящика geetadiwaker81@gmail.com в geetadiwaker81@mail.ru. Перенос к нам всех писем займет какое-то время, обычно от одного до нескольких часов в зависимости от объема переписки.
+
+Обратите внимание! Иногда почтовый сервис Gmail реагирует на большое количество запросов от нашего сервера как на нестандартную активность и может попросить вас изменить пароль. Если вы измените пароль в почтовом ящике geetadiwaker81@gmail.com, не забудьте изменить его также на странице настроек сбора писем <https://e.mail.ru/settings/collector>, иначе мы не сможем забирать ваши письма.
+
+Если сбор почты не заработал, попробуйте в веб-интерфейсе Gmail проверить настройки Почты, возможно, у вас отключен функция передачи писем через протоколы POP и IMAP.
+
+С уважением,
+Команда Mail.ru
+
+
+--------------070606010707060803080703
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<table width="515" border="0" cellspacing="0" cellpadding="0"><tr><td align="left">
+<div style="width:515px;">
+	<font color="#000000" face="Arial" size="5">
+          <h1
+            style="font-size:20px;font-family:Arial,Tahoma,Verdana,sans-serif;
+            font-weight: normal;
+            color:#000000!important;line-height:22px;margin:0 0 30px
+            0;">Здравствуйте, geeta!</h1>
+        </font> <font color="#000000" face="Arial" size="2">
+          <p
+            style="font-size:12px;font-family:Arial,Tahoma,Verdana,sans-serif;color:#000000!important;line-height:14px;margin:0
+            0 15px 0;">Поздравляем, вы успешно настроили сбор писем с почтового ящика geetadiwaker81@gmail.com в geetadiwaker81@mail.ru. Перенос к нам всех писем займет какое-то время, обычно от одного до нескольких часов в зависимости от объема переписки.</p>
+        </font> <font color="#000000" face="Arial" size="2">
+          <p
+            style="font-size:12px;font-family:Arial,Tahoma,Verdana,sans-serif;color:#000000!important;line-height:14px;margin:0
+            0 15px 0;">Обратите внимание! Иногда почтовый сервис Gmail реагирует на большое количество запросов от нашего сервера как на нестандартную активность и может попросить вас изменить пароль. Если вы измените пароль в почтовом ящике geetadiwaker81@gmail.com, не забудьте изменить его также на странице <a href="https://e.mail.ru/settings/collector">настроек сбора писем</a>, иначе мы не сможем забирать ваши письма.</p>
+        </font> <font color="#000000" face="Arial" size="2">
+          <p
+            style="font-size:12px;font-family:Arial,Tahoma,Verdana,sans-serif;color:#000000!important;line-height:14px;margin:0
+            0 40px 0;">Если сбор почты не заработал, попробуйте в веб-интерфейсе Gmail проверить настройки Почты, возможно, у вас отключен функция передачи писем через протоколы POP и IMAP.</p>
+        </font> <font color="#000000" face="Arial" size="2">
+          <p style="font-size:12px;font-family:Arial,Tahoma,Verdana,sans-serif;color:#000000!important;line-height:14px;margin:0;">С уважением,
+Команда Mail.ru</p>
+    </font> 
+	
+</div>
+</td></tr></table>
+</body>
+</html>
+
+--------------070606010707060803080703--
+

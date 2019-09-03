@@ -1,0 +1,471 @@
+Delivered-To: geetadiwaker81@gmail.com
+Received: by 2002:aed:24c9:0:0:0:0:0 with SMTP id u9csp897689qtc;
+        Sat, 13 Apr 2019 10:20:08 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqxYB2dmbpPOjdb7RHzFPM1Ryrpn8NsPWO+nAUmGz2QmiKFNv/cGW5Gdd8vRiuG0LSpYQICh
+X-Received: by 2002:aa7:db48:: with SMTP id n8mr25368884edt.66.1555176008233;
+        Sat, 13 Apr 2019 10:20:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1555176008; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Kw+Kji0WcI5z3ac8lrrlGEw62CACuPvUHkpW5/vvoP6Yb8OM66rj75puyQqZlbaZ9l
+         /4Ok9E182U9pUGbw0ighgAZaV6alocS59JENtLXWqS9tNDwTNrz7YJ+zKgEDHfxiz8xI
+         BGiJ5wb+KaKp9gcGA5aUk4IClzvRSZKSOvPVB53TyszexXXyxSNmEScF6l6E9mmSiobr
+         uL2kqDqNQBCqUWQpBRb2JYB8AdVkGVa/tUX62wX8o8wyVzGpXxvIsCkr83D+SrQEBNXQ
+         EbvLoO39XuXNwGmWUMd68YgnxRrrjIKTSgkTb5ZN/7xE8SiVz2qlJMmLvip7uHUSE+WE
+         cg1g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:message-id:feedback-id:list-unsubscribe:errors-to
+         :reply-to:from:subject:to:date:dkim-signature;
+        bh=vj+gsQr5EU0voyWXLpuqQgVA0fXkV+RYj3XgEOHS/BU=;
+        b=PwcqU5+Gx5AeZfBl/6eTM2bcQOP0y9CApFZ3tqzXDrZVqYJtpJzVkeHzhmAmIPomUb
+         TZ8D4ABwFAZM2WrkhAkTju1va+iPF9l31NBkJXZdOFmHLDfBB5s8rjHuNCDL+Lt+g4bP
+         MEPm3XGRuVTdzo/6eNnnvJ1rVmUWt2wHcoyVkWCXUIiNXOF8j8ZTMH2y+6wOsPcURD2K
+         CCubS/xAGzM6UsDCybE9gI7bAbhbImsyswfToSJahx7Eze04GrSIVAUO7+dV40x6q6wm
+         QuqArk8nX79w/L5HCVgCxtvH+7DS+fkD9BVlMPpyi0L5zyU6F3fcYBnMtMfVK5Ey8pkV
+         UPTA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b="S/5F2Fgy";
+       spf=pass (google.com: domain of notification@facebookmail.com designates 66.220.155.136 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+Return-Path: <notification@facebookmail.com>
+Received: from mx-out.facebook.com (66-220-155-136.mail-mail.facebook.com. [66.220.155.136])
+        by mx.google.com with ESMTPS id i19si2474266edg.404.2019.04.13.10.20.07
+        for <geetadiwaker81@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 13 Apr 2019 10:20:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of notification@facebookmail.com designates 66.220.155.136 as permitted sender) client-ip=66.220.155.136;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@facebookmail.com header.s=s1024-2013-q3 header.b="S/5F2Fgy";
+       spf=pass (google.com: domain of notification@facebookmail.com designates 66.220.155.136 as permitted sender) smtp.mailfrom=notification@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1555176007;
+	bh=0x2S8dZaFr7+HxUPeCkfFI0AOjDoK5CBjsj8cNCyHvs=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=S/5F2Fgy25Ho4dAo207nLoAEAtZNM+Nrv5xfQ6xskCmMf8Yv/UdiI+cavOotuA1rL
+	 F5gNntx/jXG0mL4FrPuerOLtoKlddXAWntcwESk/PZpT9hKrZBX0GQthSCYrkv7CvF
+	 8qPYD9CrqKehK1SPTqcDQrdQQErI1xH0TbJzy0xE=
+Received: from facebook.com (ss+BkHAtEa0kGaQfluKv75n32944ZpjPKbyVvd2qqTnce1Yeh9KNPHv/ITYpweE2 2401:db00:3020:b00f:face:0000:0025:0000)
+ by facebook.com with Thrift id 622f86ca5e1011e980d9000af7a250e4-f133b550;
+ Sat, 13 Apr 2019 10:20:07 -0700
+X-Facebook: from 2401:db00:3020:a114:face:0:91:0 ([MTI3LjAuMC4x]) 
+	by www.facebook.com with HTTPS (ZuckMail);
+Date: Sat, 13 Apr 2019 10:20:07 -0700
+To: Geeta Diwaker <geetadiwaker81@gmail.com>
+Subject: K K Khatri confirmed your Facebook friend request
+X-Priority: 3
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification@facebookmail.com
+From: "K K Khatri on Facebook" <notification@facebookmail.com>
+Reply-to: noreply <noreply@facebookmail.com>
+Errors-To: notification@facebookmail.com
+X-Facebook-Notify: friend_confirmed; mailid=5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS3yYwtdL7myKPCw&u=100035372449320&mid=5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b>
+X-FB-FFV: actor_on_fb
+Feedback-ID: 0:friend_confirmed:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+Message-ID: <9699853a4e9733b9d8006cfd38c02b39@3e723b591bdb95ce8f5c9b7032dc572ca97351d0da5efc73459c1fbaf438e43b>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_9699853a4e9733b9d8006cfd38c02b39"
+
+
+--b1_9699853a4e9733b9d8006cfd38c02b39
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+View Timeline
+https://www.facebook.com/n/?profile.php&id=3D100006962922064&aref=3D155517=
+2405090698&medium=3Demail&mid=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1=
+b&bcode=3D2.1555176007.Abxi7t4MqjOlE8OgCWo&n_m=3Dgeetadiwaker81%40gmail.co=
+m&lloc=3Dtimeline
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Hi Geeta,
+
+Geeta, K has confirmed that you're friends on Facebook.
+
+Thanks,
+The Facebook Team
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+This message was sent to geetadiwaker81@gmail.com. If you don't want to =
+receive these emails from Facebook in the future, please follow the link =
+below to unsubscribe.
+https://www.facebook.com/o.php?k=3DAS3yYwtdL7myKPCw&u=3D100035372449320&mi=
+d=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b
+Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo Park, =
+CA 94025
+
+
+--b1_9699853a4e9733b9d8006cfd38c02b39
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional =
+//EN"><html><head><title>Facebook</title><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Dutf-8" /></head><body =
+style=3D"margin:0;padding:0;" dir=3D"ltr"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" id=3D"email_table" =
+style=3D"border-collapse:collapse;width:98%;"><tr><td id=3D"email_content" =
+style=3D"font-family:&#039;lucida =
+grande&#039;,tahoma,verdana,arial,sans-serif;font-size:12px;"><span =
+style=3D"width:620px;color:#FFFFFF;display:none =
+!important;font-size:1px;">Geeta, K K Khatri has confirmed that =
+you&#039;re friends on Facebook. You may know some of K&#039;s friends: =
+Tigers Blue 2 mutual friends Add Friend Saurabh Kumawat 2 mutual friends =
+Add Friend Vikas Singhal 2 mutual friends Add Friend Vivek Kumawat 2 =
+mutual friends Add Friend Mohit Sharma 2 mutual friends Add Friend Kulwant =
+Raj Singh Rajawat 2 mutual friends Add Friend</span><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:620px;"><tr><td =
+style=3D"font-size:16px;font-family:&#039;lucida grande&#039;,tahoma,verda=
+na,arial,sans-serif;background:#3b5998;color:#FFFFFF;font-weight:bold;vert=
+ical-align:baseline;letter-spacing:-0.03em;padding:5px 20px;"><a =
+style=3D"color:#3b5998;text-decoration:none;" href=3D"https://www.facebook=
+.com/n/?profile.php&amp;id=3D100006962922064&amp;aref=3D1555172405090698&a=
+mp;medium=3Demail&amp;mid=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b&am=
+p;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgCWo&amp;n_m=3Dgeetadiwaker81%40gmai=
+l.com&amp;lloc=3Dlogo"><span style=3D"background:#3b5998;color:#FFFFFF;fon=
+t-weight:bold;font-family:&#039;lucida =
+grande&#039;,tahoma,verdana,arial,sans-serif;vertical-align:middle; =
+font-size:16px;letter-spacing:-0.03em;vertical-align:baseline;">facebook</=
+span></a></td></tr></table><table border=3D"0" width=3D"620px" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:620px;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:0px;background-color:#f2f2f2;border-left:none;border-right:=
+none;border-top:none;border-bottom:none;"><table border=3D"0" =
+width=3D"620px" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;font-f=
+amily:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px;width:620px=
+;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:20px;background-color:#fff;border-left:none;border-right:no=
+ne;border-top:none;border-bottom:none;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td valign=3D"top" =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding-right:15px;text-align:left;"><a href=3D"https://www.faceboo=
+k.com/n/?profile.php&amp;id=3D100006962922064&amp;aref=3D1555172405090698&=
+amp;medium=3Demail&amp;mid=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b&a=
+mp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgCWo&amp;n_m=3Dgeetadiwaker81%40gma=
+il.com&amp;lloc=3Dimage" =
+style=3D"color:#3b5998;text-decoration:none;"><img src=3D"https://scontent=
+.xx.fbcdn.net/v/t1.0-1/c0.4.50.50a/p50x50/49949462_2209942749247801_425422=
+407658897408_n.jpg?_nc_cat=3D100&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_nc_=
+zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3Df8f6dbec6d22fb76035958654483f9d6=
+&amp;oe=3D5D47317F" style=3D"border:0;" /></a></td><td valign=3D"top" =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;width:100%;text-align:left;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding-bottom:10px;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;"><span =
+style=3D"color:#111111;font-size:13px;font-weight:bold;">Geeta, <a =
+href=3D"https://www.facebook.com/n/?profile.php&amp;id=3D100006962922064&a=
+mp;aref=3D1555172405090698&amp;medium=3Demail&amp;mid=3D5866b812f16b8G5afb=
+4cd6fe28G5866bcac5198aG1b&amp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgCWo&amp=
+;n_m=3Dgeetadiwaker81%40gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;">K K Khatri</a> has confirmed =
+that you&#039;re friends on =
+Facebook.</span></td></tr></table></td></tr><tr><td style=3D"font-size:11p=
+x;font-family:LucidaGrande,tahoma,verdana,arial,sans-serif;padding-top:10p=
+x;border-top:1px solid #e8e8e8;"><div>You may know some of K&#039;s =
+friends:<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"padding: =
+5px;"></td></tr><tr><td width=3D"350" style=3D"font-size:11px;font-family:=
+LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px 5px 10px =
+0px;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td width=3D"350" =
+valign=3D"middle" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,=
+verdana,arial,sans-serif;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+valign=3D"top" style=3D"padding-right:5px;font-size: 0px;"><a =
+href=3D"https://www.facebook.com/tigers.blue?fref=3Dfriend_confirmed_notif=
+_email" style=3D"color:#3b5998;text-decoration:none;"><img =
+style=3D"border: 0px none;" alt=3D"Tigers Blue" src=3D"https://scontent.xx=
+.fbcdn.net/v/t1.0-1/c73.35.573.573a/s50x50/57038410_108569570337623_911963=
+8895800090624_n.jpg?_nc_cat=3D106&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_nc=
+_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D22a187d97522509879d52fce7e469e0=
+7&amp;oe=3D5D4AEB97" width=3D"50" height=3D"50" /></a></td><td =
+valign=3D"top" style=3D"width:100%;"><span style=3D"font-size: 11px; =
+color: #999999;
+                padding: 0px 0px 10px 0px;"><span style=3D"font-size: =
+11px; color: #3B5998;
+                font-weight: bold;"><a href=3D"https://www.facebook.com/ti=
+gers.blue?fref=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3B5998;text-decoration:none;font-size:11px;">Tigers =
+Blue</a></span><br />2 mutual friends</span></td></tr></table></td><td =
+valign=3D"top" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,ver=
+dana,arial,sans-serif;padding-right:30px;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-width: =
+1px;border-style: solid;border-color: #29447E #29447E =
+#1a356e;background-color: #5b74a8;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:2px 6px 4px;border-top:1px solid #8a9cc2;"><a =
+href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2F&amp;f_to_add=
+=3D100035537407897&amp;ref=3Demail&amp;hash=3DAUoOiBvbj5ip8ctr&amp;mfl_act=
+=3D1&amp;aref=3D1555172405090698&amp;medium=3Demail&amp;mid=3D5866b812f16b=
+8G5afb4cd6fe28G5866bcac5198aG1b&amp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgC=
+Wo&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dadd_f" =
+style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+11px;">Add Friend</span></a></td></tr></table></td></tr></table></td></tr>=
+</table></td><td width=3D"350" style=3D"font-size:11px;font-family:LucidaG=
+rande,tahoma,verdana,arial,sans-serif;padding:0px 5px 10px 0px;"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td width=3D"350" =
+valign=3D"middle" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,=
+verdana,arial,sans-serif;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+valign=3D"top" style=3D"padding-right:5px;font-size: 0px;"><a =
+href=3D"https://www.facebook.com/vivek.kumawat.5680?fref=3Dfriend_confirme=
+d_notif_email" style=3D"color:#3b5998;text-decoration:none;"><img =
+style=3D"border: 0px none;" alt=3D"Saurabh Kumawat" src=3D"https://sconten=
+t.xx.fbcdn.net/v/t1.0-1/c0.12.50.50a/p50x50/53657197_261241821476221_28111=
+33086815748096_n.jpg?_nc_cat=3D102&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_n=
+c_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D2b1d69f048d947cdf17c4d834f8f8f=
+3a&amp;oe=3D5D464662" width=3D"50" height=3D"50" /></a></td><td =
+valign=3D"top" style=3D"width:100%;"><span style=3D"font-size: 11px; =
+color: #999999;
+                padding: 0px 0px 10px 0px;"><span style=3D"font-size: =
+11px; color: #3B5998;
+                font-weight: bold;"><a href=3D"https://www.facebook.com/vi=
+vek.kumawat.5680?fref=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3B5998;text-decoration:none;font-size:11px;">Saurabh =
+Kumawat</a></span><br />2 mutual friends</span></td></tr></table></td><td =
+valign=3D"top" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,ver=
+dana,arial,sans-serif;padding-right:30px;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-width: =
+1px;border-style: solid;border-color: #29447E #29447E =
+#1a356e;background-color: #5b74a8;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:2px 6px 4px;border-top:1px solid #8a9cc2;"><a =
+href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2F&amp;f_to_add=
+=3D100027712148520&amp;ref=3Demail&amp;hash=3DAUo7I3tTJDf-MvhQ&amp;mfl_act=
+=3D1&amp;aref=3D1555172405090698&amp;medium=3Demail&amp;mid=3D5866b812f16b=
+8G5afb4cd6fe28G5866bcac5198aG1b&amp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgC=
+Wo&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dadd_f" =
+style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+11px;">Add Friend</span></a></td></tr></table></td></tr></table></td></tr>=
+</table></td></tr><tr><td width=3D"350" style=3D"font-size:11px;font-famil=
+y:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px 5px 10px =
+0px;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td width=3D"350" =
+valign=3D"middle" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,=
+verdana,arial,sans-serif;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+valign=3D"top" style=3D"padding-right:5px;font-size: 0px;"><a =
+href=3D"https://www.facebook.com/vikas.singhal.77312?fref=3Dfriend_confirm=
+ed_notif_email" style=3D"color:#3b5998;text-decoration:none;"><img =
+style=3D"border: 0px none;" alt=3D"Vikas Singhal" src=3D"https://scontent.=
+xx.fbcdn.net/v/t1.0-1/c0.2.50.50a/p50x50/52917956_252046215729004_35707889=
+13146494976_n.jpg?_nc_cat=3D101&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_nc_z=
+or=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3Da923c91c30638aee1d0373805ef17079&=
+amp;oe=3D5D397439" width=3D"50" height=3D"50" /></a></td><td =
+valign=3D"top" style=3D"width:100%;"><span style=3D"font-size: 11px; =
+color: #999999;
+                padding: 0px 0px 10px 0px;"><span style=3D"font-size: =
+11px; color: #3B5998;
+                font-weight: bold;"><a href=3D"https://www.facebook.com/vi=
+kas.singhal.77312?fref=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3B5998;text-decoration:none;font-size:11px;">Vikas =
+Singhal</a></span><br />2 mutual friends</span></td></tr></table></td><td =
+valign=3D"top" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,ver=
+dana,arial,sans-serif;padding-right:30px;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-width: =
+1px;border-style: solid;border-color: #29447E #29447E =
+#1a356e;background-color: #5b74a8;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:2px 6px 4px;border-top:1px solid #8a9cc2;"><a =
+href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2F&amp;f_to_add=
+=3D100027708827517&amp;ref=3Demail&amp;hash=3DAUoJzmMIGTo3-AiT&amp;mfl_act=
+=3D1&amp;aref=3D1555172405090698&amp;medium=3Demail&amp;mid=3D5866b812f16b=
+8G5afb4cd6fe28G5866bcac5198aG1b&amp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgC=
+Wo&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dadd_f" =
+style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+11px;">Add Friend</span></a></td></tr></table></td></tr></table></td></tr>=
+</table></td><td width=3D"350" style=3D"font-size:11px;font-family:LucidaG=
+rande,tahoma,verdana,arial,sans-serif;padding:0px 5px 10px 0px;"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td width=3D"350" =
+valign=3D"middle" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,=
+verdana,arial,sans-serif;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+valign=3D"top" style=3D"padding-right:5px;font-size: 0px;"><a =
+href=3D"https://www.facebook.com/vivek.kumawat.1656?fref=3Dfriend_confirme=
+d_notif_email" style=3D"color:#3b5998;text-decoration:none;"><img =
+style=3D"border: 0px none;" alt=3D"Vivek Kumawat" src=3D"https://scontent.=
+xx.fbcdn.net/v/t1.0-1/c0.8.50.50a/p50x50/49342392_276124473255880_53547788=
+66021826560_n.jpg?_nc_cat=3D111&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_nc_z=
+or=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3Dbdb8b348297de26a2c2f34dcb8e5fb0a&=
+amp;oe=3D5D3EFE41" width=3D"50" height=3D"50" /></a></td><td =
+valign=3D"top" style=3D"width:100%;"><span style=3D"font-size: 11px; =
+color: #999999;
+                padding: 0px 0px 10px 0px;"><span style=3D"font-size: =
+11px; color: #3B5998;
+                font-weight: bold;"><a href=3D"https://www.facebook.com/vi=
+vek.kumawat.1656?fref=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3B5998;text-decoration:none;font-size:11px;">Vivek =
+Kumawat</a></span><br />2 mutual friends</span></td></tr></table></td><td =
+valign=3D"top" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,ver=
+dana,arial,sans-serif;padding-right:30px;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-width: =
+1px;border-style: solid;border-color: #29447E #29447E =
+#1a356e;background-color: #5b74a8;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:2px 6px 4px;border-top:1px solid #8a9cc2;"><a =
+href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2F&amp;f_to_add=
+=3D100025749873335&amp;ref=3Demail&amp;hash=3DAUoFSi4XNllqVZ7I&amp;mfl_act=
+=3D1&amp;aref=3D1555172405090698&amp;medium=3Demail&amp;mid=3D5866b812f16b=
+8G5afb4cd6fe28G5866bcac5198aG1b&amp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgC=
+Wo&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dadd_f" =
+style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+11px;">Add Friend</span></a></td></tr></table></td></tr></table></td></tr>=
+</table></td></tr><tr><td width=3D"350" style=3D"font-size:11px;font-famil=
+y:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px 5px 10px =
+0px;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td width=3D"350" =
+valign=3D"middle" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,=
+verdana,arial,sans-serif;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+valign=3D"top" style=3D"padding-right:5px;font-size: 0px;"><a =
+href=3D"https://www.facebook.com/profile.php?id=3D100025387810682&amp;fref=
+=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3b5998;text-decoration:none;"><img style=3D"border: 0px =
+none;" alt=3D"Mohit Sharma" src=3D"https://scontent.xx.fbcdn.net/v/t1.0-1/=
+c0.0.50.50a/p50x50/55533198_375746103281647_7938679161785155584_n.jpg?_nc_=
+cat=3D104&amp;_nc_ad=3Dz-m&amp;_nc_cid=3D0&amp;_nc_zor=3D9&amp;_nc_ht=3Dsc=
+ontent.xx&amp;oh=3D45c81aec5a27ed72ce2b8bb404125591&amp;oe=3D5D29BD2B" =
+width=3D"50" height=3D"50" /></a></td><td valign=3D"top" =
+style=3D"width:100%;"><span style=3D"font-size: 11px; color: #999999;
+                padding: 0px 0px 10px 0px;"><span style=3D"font-size: =
+11px; color: #3B5998;
+                font-weight: bold;"><a href=3D"https://www.facebook.com/pr=
+ofile.php?id=3D100025387810682&amp;fref=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3B5998;text-decoration:none;font-size:11px;">Mohit =
+Sharma</a></span><br />2 mutual friends</span></td></tr></table></td><td =
+valign=3D"top" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,ver=
+dana,arial,sans-serif;padding-right:30px;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-width: =
+1px;border-style: solid;border-color: #29447E #29447E =
+#1a356e;background-color: #5b74a8;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:2px 6px 4px;border-top:1px solid #8a9cc2;"><a =
+href=3D"https://www.facebook.com/n/?find-friends%2Fbrowser%2F&amp;f_to_add=
+=3D100025387810682&amp;ref=3Demail&amp;hash=3DAUpfL9sMCoORmQL5&amp;mfl_act=
+=3D1&amp;aref=3D1555172405090698&amp;medium=3Demail&amp;mid=3D5866b812f16b=
+8G5afb4cd6fe28G5866bcac5198aG1b&amp;bcode=3D2.1555176007.Abxi7t4MqjOlE8OgC=
+Wo&amp;n_m=3Dgeetadiwaker81%40gmail.com&amp;lloc=3Dadd_f" =
+style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+11px;">Add Friend</span></a></td></tr></table></td></tr></table></td></tr>=
+</table></td><td width=3D"350" style=3D"font-size:11px;font-family:LucidaG=
+rande,tahoma,verdana,arial,sans-serif;padding:0px 5px 10px 0px;"><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td width=3D"350" =
+valign=3D"middle" style=3D"font-size:11px;font-family:LucidaGrande,tahoma,=
+verdana,arial,sans-serif;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+valign=3D"top" style=3D"padding-right:5px;font-size: 0px;"><a =
+href=3D"https://www.facebook.com/kulwant.rajawat.37?fref=3Dfriend_confirme=
+d_notif_email" style=3D"color:#3b5998;text-decoration:none;"><img =
+style=3D"border: 0px none;" alt=3D"Kulwant Raj Singh Rajawat" =
+src=3D"https://scontent.xx.fbcdn.net/v/t1.0-1/c0.8.50.50a/p50x50/47085389_=
+319647458873061_9162784238880161792_n.jpg?_nc_cat=3D107&amp;_nc_ad=3Dz-m&a=
+mp;_nc_cid=3D0&amp;_nc_zor=3D9&amp;_nc_ht=3Dscontent.xx&amp;oh=3D9b6f8d833=
+7e192f0f86c77f58149315b&amp;oe=3D5D3E2880" width=3D"50" height=3D"50" =
+/></a></td><td valign=3D"top" style=3D"width:100%;"><span =
+style=3D"font-size: 11px; color: #999999;
+                padding: 0px 0px 10px 0px;"><span style=3D"font-size: =
+11px; color: #3B5998;
+                font-weight: bold;"><a href=3D"https://www.facebook.com/ku=
+lwant.rajawat.37?fref=3Dfriend_confirmed_notif_email" =
+style=3D"color:#3B5998;text-decoration:none;font-size:11px;">Kulwant Raj =
+Singh Rajawat</a></span><br />2 mutual =
+friends</span></td></tr></table></td><td valign=3D"top" =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding-right:30px;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"border-width: 1px;border-style: solid;border-color: #29447E =
+#29447E #1a356e;background-color: #5b74a8;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;font-f=
+amily:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:2px 6px =
+4px;border-top:1px solid #8a9cc2;"><a href=3D"https://www.facebook.com/n/?=
+find-friends%2Fbrowser%2F&amp;f_to_add=3D100024834272618&amp;ref=3Demail&a=
+mp;hash=3DAUrDnl84S9HEM_Fh&amp;mfl_act=3D1&amp;aref=3D1555172405090698&amp=
+;medium=3Demail&amp;mid=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b&amp;=
+bcode=3D2.1555176007.Abxi7t4MqjOlE8OgCWo&amp;n_m=3Dgeetadiwaker81%40gmail.=
+com&amp;lloc=3Dadd_f" style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+11px;">Add Friend</span></a></td></tr></table></td></tr></table></td></tr>=
+</table></td></tr><tr></tr></table></div></td></tr></table></td></tr></tab=
+le></td></tr></table></td></tr><tr><td style=3D"font-size:11px;font-family=
+:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:0px;width:620px;"><t=
+able border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:100%;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding:7px 20px;background-color:#f2f2f2;border-left:none;border-r=
+ight:none;border-top:1px solid #ccc;border-bottom:1px solid #ccc;"><table =
+cellspacing=3D"0" cellpadding=3D"0" style=3D""><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;padding-left:65px;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"border-width: 1px;border-style: solid;border-color: #29447E =
+#29447E #1a356e;background-color: #5b74a8;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"font-size:11px;font-f=
+amily:LucidaGrande,tahoma,verdana,arial,sans-serif;padding:2px 6px =
+4px;border-top:1px solid #8a9cc2;"><a href=3D"https://www.facebook.com/n/?=
+profile.php&amp;id=3D100006962922064&amp;aref=3D1555172405090698&amp;mediu=
+m=3Demail&amp;mid=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b&amp;bcode=
+=3D2.1555176007.Abxi7t4MqjOlE8OgCWo&amp;n_m=3Dgeetadiwaker81%40gmail.com&a=
+mp;lloc=3Dtimeline" style=3D"color:#3b5998;text-decoration:none;"><span =
+style=3D"font-weight:bold;white-space:nowrap;color: #ffffff;font-size: =
+13px;">View Timeline</span></a></td></tr></table></td></tr></table></td></=
+tr></table></td></tr></table></td></tr></table></td></tr></table><table =
+border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;width:620px;"><tr><td =
+style=3D"font-size:11px;font-family:&#039;lucida grande&#039;, tahoma, =
+verdana, arial, sans-serif;padding:30px 20px;background-color:#fff;border-=
+left:none;border-right:none;border-top:none;border-bottom:none;color:#9999=
+99;border:none;">This message was sent to <a =
+href=3D"mailto:geetadiwaker81&#064;gmail.com" style=3D"color:#3b5998;text-=
+decoration:none;">geetadiwaker81&#064;gmail.com</a>. If you don&#039;t =
+want to receive these emails from Facebook in the future, please <a =
+href=3D"https://www.facebook.com/o.php?k=3DAS3yYwtdL7myKPCw&amp;u=3D100035=
+372449320&amp;mid=3D5866b812f16b8G5afb4cd6fe28G5866bcac5198aG1b" =
+style=3D"color:#3b5998;text-decoration:none;">unsubscribe</a>.<br =
+/>Facebook, Inc., Attention: Community Support, 1 Facebook Way, Menlo =
+Park, CA 94025</td></tr></table><span style=3D"width:620px;"><img =
+src=3D"https://www.facebook.com/email_open_log_pic.php?mid=3D5866b812f16b8=
+G5afb4cd6fe28G5866bcac5198aG1b" style=3D"border:0;width:1px;height:1px;" =
+/></span></td></tr></table></body></html>
+
+
+
+--b1_9699853a4e9733b9d8006cfd38c02b39--
+
