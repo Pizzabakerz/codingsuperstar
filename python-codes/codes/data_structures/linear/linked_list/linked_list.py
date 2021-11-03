@@ -4,6 +4,7 @@
 
 # undo functions in softwares
 import pdb
+from typing import Counter
 
 class Node:
     def __init__(self,item):
@@ -47,31 +48,50 @@ class LinkedList:
             self.head.next = current
         self.size += 1
 
-    def add_item_mid(self,value,after):        
-        node = Node(value)
-        current = None
-        if self.head == None:
-            self.head = node
-        elif self.head.item == after:
-            node.next = self.head.next
-            self.head.next = node            
-        else:
-            current = self.head
-            while current.next:                     
-                current = current.next
-                # pdb.set_trace()
-                if current.item == after:                    
-                    node.next = current.next
-                    current.next = node
-                    break
+    def delete_element(self,value):
+        if self.head == None: return 0
+        current = self.head
+        prev = None
+        while current != None:
+            if current.item == value: break
+            prev = current
+            current = current.next
         
-        self.size += 1                                    
-
+        if current != None:
+            prev.next = current.next
+            self.size = self.size-1
+            # current = None
+        
+    def add_item_middle(self,value,before):
+        node = Node(value)
+        current = self.head
+        prev = None
+        if self.head == None: return 0
+        else:
+            while current != None:
+                if current.item == before: break
+                prev = current
+                current = current.next
+            prev.next = node
+            node.next = current
+            self.size = self.size + 1
+            
     def view_list(self):    
         # # Print the linked list item
         while self.head != None:
             print(self.head.item, end="->")
             self.head = self.head.next
+    
+    def reverse_list(self):       
+        prev = None
+        if self.head != None:
+            current = self.head
+            while current != None:                                
+                temp = current.next           
+                current.next = prev
+                prev = current
+                current = temp
+            self.head = prev
     
     def get_list_size(self):
         print("\n",self.size)
@@ -79,25 +99,30 @@ class LinkedList:
 
 if __name__ == '__main__':
     linked_list = LinkedList()
-    
+    linked_list.delete_element(20)
     linked_list.add_item(1)
     linked_list.add_item(2)
-    linked_list.add_item(3)        
-    linked_list.add_item_mid(11,3)
-    # linked_list.add_item(4)
-    # linked_list.add_item(5)
-    # linked_list.add_item(6)
-    # linked_list.add_item(7)
+    linked_list.add_item(3)            
+    linked_list.add_item(4)
+    linked_list.add_item_middle(100,2)
+    linked_list.add_item(5)
+    linked_list.add_item(6)
+    linked_list.delete_element(3)
+
+    linked_list.add_item(7)
+    linked_list.add_item_middle(20,4)
     
-    linked_list.view_list()
+    
     # linked_list.add_item_prefix(1)
     # linked_list.add_item_prefix(2)
     # linked_list.add_item_prefix(3)    
-    linked_list.add_item_prefix(5)    
-    linked_list.add_item_prefix(6)
-    linked_list.add_item_mid(10,6)    
-    linked_list.add_item_prefix(7)    
-    linked_list.add_item_prefix(8)
+    # linked_list.add_item_prefix(5)    
+    # linked_list.add_item_prefix(6)    
+    # linked_list.add_item_prefix(7)    
+    # linked_list.add_item_prefix(8)
+    # linked_list.view_list()
+
+    linked_list.reverse_list()
     linked_list.view_list()
 
     linked_list.get_list_size()
